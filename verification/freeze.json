@@ -1,0 +1,3178 @@
+{
+  "time": "2026-11-14T02:42:31+08:00",
+  "task_id": "uf-20261114-replace1746-dpop",
+  "run_id": "uf-20261114-replace1746-dpop-retry-1",
+  "uid": 1746,
+  "workspace": "D:\\hc\\userFeedback\\cache\\replacement-1746-20261114-r1\\source",
+  "artifact_directory": "D:\\hc\\userFeedback\\cache\\execution-security-new11-20261112\\evaluation\\uf-20261114-replace1746-dpop-retry-1\\frozen-artifact",
+  "git_head_after_model": "0dd6d0738f4d7c848fbe228ed695f6e491677757",
+  "initial_sha": "0dd6d0738f4d7c848fbe228ed695f6e491677757",
+  "trajectory_file": "D:\\hc\\userFeedback\\cache\\runs\\uf-20261114-replace1746-dpop-retry-1\\frozen\\trajectory-original.jsonl",
+  "trajectory_sha256": "8ac591b56673b7efb3c44a3dbd366be3265b817bf9539b46f858d6eb777fe5dc",
+  "session_ids": [
+    "544cf8b7-9fb5-4183-8181-d5b53ca2f987"
+  ],
+  "prompt_ids": [
+    "da06f5a4-00e7-4ad9-aa9f-25520f4dc674"
+  ],
+  "user_turns": 1,
+  "prompt_sha256": "31f5442db38d9c76ccceee808fcccb27a14f937932ace9218528f79211428ea9",
+  "frozen_files": [
+    {
+      "path": ".codeclimate.yml",
+      "sha256": "0ec031c81cbfa8096dec1d4504fc09efa53ed1f7a9521773607db467102e22fb",
+      "bytes": 440
+    },
+    {
+      "path": ".codecov.yml",
+      "sha256": "e650176ac73600a2c3bc8dc8f238561ce2d09828cccb80ad95d00985b3089a1a",
+      "bytes": 121
+    },
+    {
+      "path": ".github/CODE_OF_CONDUCT.md",
+      "sha256": "4ab8117a3f99524999fee1689e9b620ad9eff48d7b3cf763fbeb349b922a49ba",
+      "bytes": 1423
+    },
+    {
+      "path": ".github/FUNDING.yml",
+      "sha256": "73deadfc8e012e9cff3c12d1e9a518f74d623cdbdc8af6266201552f37bf7486",
+      "bytes": 252
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/ask-for-help.md",
+      "sha256": "827db56c9f2ef2468e5271ce956ff4db80f1daa6bf259dfc1a8157c743cb576e",
+      "bytes": 238
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/bug_report.md",
+      "sha256": "c6e788b9bad7aeecfe2bfd042969fe17490772be24523a3385ad20bda42fd2dd",
+      "bytes": 508
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/feature_request.md",
+      "sha256": "973f049e43ba6ef4916a27fc0dcdb6eaccc4ce8f42807cfe7c564107dc71d874",
+      "bytes": 615
+    },
+    {
+      "path": ".github/SECURITY.md",
+      "sha256": "0279b0fa235496958809711026e3fb770b946874856a98d1f95be9e5fadf07a7",
+      "bytes": 980
+    },
+    {
+      "path": ".github/VULNERABILITY_REPORT.yml",
+      "sha256": "80f5c2070775b712fc249bb9367a5d9e198010d908d5648c4ac8d4067d23f575",
+      "bytes": 1308
+    },
+    {
+      "path": ".github/renovate.json",
+      "sha256": "6616fd409f6ec383d56b36ec3f356e487f1a734be5553f2689e0788fa68a4ad0",
+      "bytes": 197
+    },
+    {
+      "path": ".github/workflows/changelog.yml",
+      "sha256": "18c9f6d62fcfbe6f06c2555bf565bd5f8b688bb9649bb5fdcb660df14a9ca53e",
+      "bytes": 965
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "sha256": "1692fec92c59bea114e2fdf0734a03d00ad1c2cb2997f849bd9588e9ecafe98f",
+      "bytes": 641
+    },
+    {
+      "path": ".github/workflows/codeql-analysis.yml",
+      "sha256": "baff93ad6e2ff22ee9cdc211381de0e601cd29e4f4eb7f65ff6ef34596f5f80d",
+      "bytes": 1326
+    },
+    {
+      "path": ".github/workflows/docs.yml",
+      "sha256": "b8dd2017887d2ca21956058257037b472a2d5a80b2e91e74f75b1b23df55ace4",
+      "bytes": 573
+    },
+    {
+      "path": ".github/workflows/lint.yml",
+      "sha256": "f680266fe2a68c4950ab527e79af7f66fb04f6aeb18acbd00c3ac7bffb989d6e",
+      "bytes": 1292
+    },
+    {
+      "path": ".github/workflows/pypi.yml",
+      "sha256": "4894b838d425aa74fd53ad0ec206c685f3aa775dbec7bd3898e955a0c5b79329",
+      "bytes": 1929
+    },
+    {
+      "path": ".github/workflows/python.yml",
+      "sha256": "7faea93be2481f4bbc91755ee7a5d001d372dd61451474b8ddbc0fe74a627d31",
+      "bytes": 3017
+    },
+    {
+      "path": ".github/zizmor.yml",
+      "sha256": "095064c7f18123aad952274ad339c6fcc25f1bf8081604d4243ed1a3680e5b0e",
+      "bytes": 143
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "3b31a4a1707d43b063e523b3665c077e2b3c2ce7ae87ed0443c5ad0954be3815",
+      "bytes": 205
+    },
+    {
+      "path": ".pre-commit-config.yaml",
+      "sha256": "fd7e63179f7ce85af45123a74275ced3d1f66310280a6cd286810ab11451aee0",
+      "bytes": 850
+    },
+    {
+      "path": ".readthedocs.yaml",
+      "sha256": "a4d39d54cd8c3a3558330e0b6e739841482080712eb89d317136ef89c65269e5",
+      "bytes": 213
+    },
+    {
+      "path": "AGENTS.md",
+      "sha256": "c55b91b3929ccfef6f9cd2b1a1156100d948a64b6f707758c7a24c452b6053b8",
+      "bytes": 1733
+    },
+    {
+      "path": "BACKERS.md",
+      "sha256": "ca784208058d0bf81e145278d92d89756016129581fe126f120e7bebf167e737",
+      "bytes": 3708
+    },
+    {
+      "path": "COMMERCIAL-LICENSE",
+      "sha256": "bb44c473d95ed438f5f2268a2c708d60bf3865b7e24c82767e51144e5c49d913",
+      "bytes": 9115
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "8e1b48518de9c6cd00cb48c7fe5b8023fd90d5552ca12ebe7362a0df30ddbe45",
+      "bytes": 1514
+    },
+    {
+      "path": "Makefile",
+      "sha256": "a4eaab30d794714aad531e26fc7de9dbf5069cf1fbf2fffe83c4dc46404ab534",
+      "bytes": 544
+    },
+    {
+      "path": "README.md",
+      "sha256": "68ea0ed6d01748ef10cbed50aba7a8d2e2b4b33e48928ba740ca928a41854cd7",
+      "bytes": 9317
+    },
+    {
+      "path": "authlib/__init__.py",
+      "sha256": "da4e9504d6c5bb512b0681e1a7d45cbfdb0362b0b58d62d6bdf4a4caaf8dd806",
+      "bytes": 487
+    },
+    {
+      "path": "authlib/_joserfc_helpers.py",
+      "sha256": "981af3eea46f59040c369e3015f8724f1c4dc45f4be6a118e64831546f446eab",
+      "bytes": 1809
+    },
+    {
+      "path": "authlib/common/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "authlib/common/encoding.py",
+      "sha256": "00deec6c4a5dcd5d238a4b76cd935488dc3f6f5f802d130b35fe844b4c627e6b",
+      "bytes": 1750
+    },
+    {
+      "path": "authlib/common/errors.py",
+      "sha256": "2f8fc20c243b334f25ae7335ed0256acb5e821ea9ab73453e967059e8e052ad1",
+      "bytes": 1667
+    },
+    {
+      "path": "authlib/common/hooks.py",
+      "sha256": "5ec56744dd6366de78d6ea7360afdd77bf1db0450c95d39ad34eb37cca6064af",
+      "bytes": 6438
+    },
+    {
+      "path": "authlib/common/language.py",
+      "sha256": "c5e0c38ddb56a374a850e2b542136a48541378c519081bdf3b37edceabc9b64e",
+      "bytes": 487
+    },
+    {
+      "path": "authlib/common/security.py",
+      "sha256": "7c99375c589e2988a408defc54fd78a0af0f80fa30bf113dee424fe4958f4c2d",
+      "bytes": 1415
+    },
+    {
+      "path": "authlib/common/urls.py",
+      "sha256": "943c9ee97d0e5e21b301ff3b72c7d58ac3b3f3ef139bb5bc3e108ece2459ae97",
+      "bytes": 4822
+    },
+    {
+      "path": "authlib/consts.py",
+      "sha256": "e01e2599eb0a00be81b427068c73efb88f793b084a04d94e3d36272a36a1ab4d",
+      "bytes": 302
+    },
+    {
+      "path": "authlib/deprecate.py",
+      "sha256": "5967965c38708983d1ee524cdcc5b1e815cf77b91b0c39b76915f7f9c113ce3e",
+      "bytes": 1705
+    },
+    {
+      "path": "authlib/integrations/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "authlib/integrations/base_client/__init__.py",
+      "sha256": "d7b154c3c636b02d6a3fab785360ff88a8805c2f98c6bde24a21085fcea9e156",
+      "bytes": 893
+    },
+    {
+      "path": "authlib/integrations/base_client/async_app.py",
+      "sha256": "0ce216ee6496e060053221b0755b4b9a464f37046cfcb2ceec05932587ff1c66",
+      "bytes": 5901
+    },
+    {
+      "path": "authlib/integrations/base_client/async_openid.py",
+      "sha256": "99a62367d0bc2197b3b2518ac074d5336d51bac8ce4d443b4208744b8705a574",
+      "bytes": 6014
+    },
+    {
+      "path": "authlib/integrations/base_client/errors.py",
+      "sha256": "88fb8b582a6769d1f136a65adf4b92d1546135abbfa4e3882c70228a683de192",
+      "bytes": 709
+    },
+    {
+      "path": "authlib/integrations/base_client/framework_integration.py",
+      "sha256": "cf177e79e8ebf333bd09b836793818130868aa0748f7f7613dde36493fe383fd",
+      "bytes": 1965
+    },
+    {
+      "path": "authlib/integrations/base_client/registry.py",
+      "sha256": "507c8becb407a4a7252d54d155dcbb3aafe2953a93ab2f07c028fcc192225f4f",
+      "bytes": 4752
+    },
+    {
+      "path": "authlib/integrations/base_client/sync_app.py",
+      "sha256": "315c07064e06bf5c0f35480a2abcfeff6f0851e259a80a9849c977756a658781",
+      "bytes": 14652
+    },
+    {
+      "path": "authlib/integrations/base_client/sync_openid.py",
+      "sha256": "edac5c0d6c297e3fea44b4fb56f6b27bdc8cd2333b6534da5ca0488c8e1a5e02",
+      "bytes": 10159
+    },
+    {
+      "path": "authlib/integrations/django_client/__init__.py",
+      "sha256": "cf78e289c4bb2998a040a6f056c36563220760a0c5762262d3ce3c88d925f209",
+      "bytes": 516
+    },
+    {
+      "path": "authlib/integrations/django_client/apps.py",
+      "sha256": "1f7ce5723138c7d40bbb2b38cf04250869e5e4d847293d60d300ae413170fc1a",
+      "bytes": 5242
+    },
+    {
+      "path": "authlib/integrations/django_client/integration.py",
+      "sha256": "553532029ee28c2d117cfc99e7fc34caa2f52df9eb4f37a6146ebc9cd77e69f5",
+      "bytes": 651
+    },
+    {
+      "path": "authlib/integrations/django_oauth1/__init__.py",
+      "sha256": "75783232475747977a5e9067c7f5ab924ae3ecb79b26b81053b74aea59bce039",
+      "bytes": 229
+    },
+    {
+      "path": "authlib/integrations/django_oauth1/authorization_server.py",
+      "sha256": "c6d239d2831129f039b646ee2163d03fdf16c79ffe5ba29943c373340e2e9681",
+      "bytes": 4560
+    },
+    {
+      "path": "authlib/integrations/django_oauth1/nonce.py",
+      "sha256": "8f08670374850a81ad10decb04bbf7a7229cd6b59ea4533dfe24d2a6de81bd1e",
+      "bytes": 396
+    },
+    {
+      "path": "authlib/integrations/django_oauth1/resource_protector.py",
+      "sha256": "25694c149ab21bf9a212c91298a70706b5e65907b6e4fd7183fb2b5bb502b9c9",
+      "bytes": 2400
+    },
+    {
+      "path": "authlib/integrations/django_oauth2/__init__.py",
+      "sha256": "8265a80aca5182f9ad3b756e037e3e165b85e699a06e8fa8432783d4a5b6ad54",
+      "bytes": 333
+    },
+    {
+      "path": "authlib/integrations/django_oauth2/authorization_server.py",
+      "sha256": "e8fd29610a52f378a05e6f97c9499d21f4cbab4fcede4a4a0291150f29c76990",
+      "bytes": 4463
+    },
+    {
+      "path": "authlib/integrations/django_oauth2/endpoints.py",
+      "sha256": "7651b092d753fe68850990ca61315a88ac413f10652f47069490ac135f7006fe",
+      "bytes": 1838
+    },
+    {
+      "path": "authlib/integrations/django_oauth2/requests.py",
+      "sha256": "80d6495fcb5ef5bbd3b6c26e7579bc0477798a6c272e788950969931bd8b857d",
+      "bytes": 2683
+    },
+    {
+      "path": "authlib/integrations/django_oauth2/resource_protector.py",
+      "sha256": "e540945d5e6fc085fac183169e79bb60980359e8d560662ccb60dde666c540be",
+      "bytes": 2668
+    },
+    {
+      "path": "authlib/integrations/django_oauth2/signals.py",
+      "sha256": "b5cfcd9082f81b1e793faaa5a51535f5b0a490f88c2cb7a12e82fde694ae2b0d",
+      "bytes": 235
+    },
+    {
+      "path": "authlib/integrations/flask_client/__init__.py",
+      "sha256": "743181eaa03217ddeef4a0cd9e2a2e19352a9d5a97bd8d685bc539633d5e545a",
+      "bytes": 1803
+    },
+    {
+      "path": "authlib/integrations/flask_client/apps.py",
+      "sha256": "fcc0fd40fbd78a0cfea65eeb9c8549aa75caf54882906c3214ebe52b044754ba",
+      "bytes": 5389
+    },
+    {
+      "path": "authlib/integrations/flask_client/integration.py",
+      "sha256": "05b8e85179d2f93478a3b3ab51ae2a547d1ce28c02de3073b7b58ff7f1c6a226",
+      "bytes": 828
+    },
+    {
+      "path": "authlib/integrations/flask_oauth1/__init__.py",
+      "sha256": "20929ef43da365db59d9f78b58101a79fe53206c3c598a5e515becc00d52ea59",
+      "bytes": 310
+    },
+    {
+      "path": "authlib/integrations/flask_oauth1/authorization_server.py",
+      "sha256": "9a8800f2d6a2f9c536fb473524bf1abff7b8ed25d76da1036e4ea18c3f5f1241",
+      "bytes": 6146
+    },
+    {
+      "path": "authlib/integrations/flask_oauth1/cache.py",
+      "sha256": "885fe6bd6be4bfa4bb9f46e6e50f6452a048957726c20c71d357213d9336ef1a",
+      "bytes": 3012
+    },
+    {
+      "path": "authlib/integrations/flask_oauth1/resource_protector.py",
+      "sha256": "05550caadd4104cba6d5c4a779a4eb0e02bdf8bbde4a6d7580bcabbaacb6faed",
+      "bytes": 3910
+    },
+    {
+      "path": "authlib/integrations/flask_oauth2/__init__.py",
+      "sha256": "710eef84342e5e9d91e4830f4e96faad1d0284a02dfed998f799a5ace8d85ce7",
+      "bytes": 284
+    },
+    {
+      "path": "authlib/integrations/flask_oauth2/authorization_server.py",
+      "sha256": "dc58f635a405f396fd7c2fd22e7100a6d83ddbb1c808ec11cce1bee38577510a",
+      "bytes": 5932
+    },
+    {
+      "path": "authlib/integrations/flask_oauth2/errors.py",
+      "sha256": "92eebb20b692612f62d36f08a71dba4d8b255d32bd5168ae9aa7f4eed8db202a",
+      "bytes": 1085
+    },
+    {
+      "path": "authlib/integrations/flask_oauth2/requests.py",
+      "sha256": "91379c7266e46e8130408da418f7ee8742898a200f45829aa06f47674fab6df2",
+      "bytes": 1819
+    },
+    {
+      "path": "authlib/integrations/flask_oauth2/resource_protector.py",
+      "sha256": "6cd57ecf9d06fb8242e8d527255d7caf105035440b48f15e7170ef17708047a7",
+      "bytes": 3946
+    },
+    {
+      "path": "authlib/integrations/flask_oauth2/signals.py",
+      "sha256": "660c1c0a834c4a6ad44091d4bf4b8c487f450737431358b35a0fb421cb8a73a5",
+      "bytes": 341
+    },
+    {
+      "path": "authlib/integrations/httpx_client/__init__.py",
+      "sha256": "af1f97b9649a5f9837dde60a2eece0e65a0d10de6d170392e6368acee53a0c76",
+      "bytes": 1107
+    },
+    {
+      "path": "authlib/integrations/httpx_client/_compat.py",
+      "sha256": "2cea46cdfb58bf08da76d53cd57f9eae02f5ad8aa08ba51d37c5b8f2ccb81a2f",
+      "bytes": 393
+    },
+    {
+      "path": "authlib/integrations/httpx_client/assertion_client.py",
+      "sha256": "73fb8552593d1c76ccaeb74e2d3ae74f20197c55c1043bfe935af5739da48976",
+      "bytes": 3849
+    },
+    {
+      "path": "authlib/integrations/httpx_client/oauth1_client.py",
+      "sha256": "f6c1da51b6bc593020d78aa9e281e64884341ad0e1546772848d7ccf2e1cd258",
+      "bytes": 4448
+    },
+    {
+      "path": "authlib/integrations/httpx_client/oauth2_client.py",
+      "sha256": "56b64c963ae24df44e65ddd81b78162d619c677b87de69cbcfd07838c51fba55",
+      "bytes": 10075
+    },
+    {
+      "path": "authlib/integrations/httpx_client/utils.py",
+      "sha256": "acae89ef0766dd13f9945b5a543fab44a537f2bbd7f283d43ef33b26a4e9d0c9",
+      "bytes": 995
+    },
+    {
+      "path": "authlib/integrations/requests_client/__init__.py",
+      "sha256": "7495a7f7d80c6ba3574345df41265ccedb45f4e517edaf77e8bd4fb4713ef669",
+      "bytes": 831
+    },
+    {
+      "path": "authlib/integrations/requests_client/assertion_session.py",
+      "sha256": "1df0b51ba8bcd1cad4e50d853ed3fd1820895ae18fd919a63fc276ac2d1b3f7a",
+      "bytes": 2464
+    },
+    {
+      "path": "authlib/integrations/requests_client/oauth1_session.py",
+      "sha256": "267fe6d25396c874df33ba2720420a03c097fa4c2d681e7928017edf9f2357f5",
+      "bytes": 2324
+    },
+    {
+      "path": "authlib/integrations/requests_client/oauth2_session.py",
+      "sha256": "5ec90e5ed27d7a4cecbda1612853cc3a9b9e0695b40339c7631c3c8ccec9d5f3",
+      "bytes": 5668
+    },
+    {
+      "path": "authlib/integrations/requests_client/utils.py",
+      "sha256": "93ada52816bf59616dfd01151492767d957443799f085856a60d6209bbb826d8",
+      "bytes": 456
+    },
+    {
+      "path": "authlib/integrations/sqla_oauth2/__init__.py",
+      "sha256": "b301dbb0a30ef51c2c80b2c22855794358c6a57b46be8b753e106e729e5bd143",
+      "bytes": 652
+    },
+    {
+      "path": "authlib/integrations/sqla_oauth2/client_mixin.py",
+      "sha256": "9bf3edfc7006dd6fe66573e78e2d101c399a05aae06675c2a34bf2ed0b527281",
+      "bytes": 4648
+    },
+    {
+      "path": "authlib/integrations/sqla_oauth2/functions.py",
+      "sha256": "9e9441635075b2975520a319b91589e0250a115aa3333e36fde4233cc9ae0b63",
+      "bytes": 3231
+    },
+    {
+      "path": "authlib/integrations/sqla_oauth2/tokens_mixins.py",
+      "sha256": "a6ee1e4b23cc144a295d304ce64d953ab7101ca46c1fc4f9f01b4dcaef16c648",
+      "bytes": 2308
+    },
+    {
+      "path": "authlib/integrations/starlette_client/__init__.py",
+      "sha256": "a883f3782152089d409c227f23db6f98bdaa0ce26d68f530806ecc6f8c33dd52",
+      "bytes": 713
+    },
+    {
+      "path": "authlib/integrations/starlette_client/apps.py",
+      "sha256": "bbf7c52aae3f8f68a579112f7f11f6308ef6d790784f3de968cebf2f2768386f",
+      "bytes": 5739
+    },
+    {
+      "path": "authlib/integrations/starlette_client/integration.py",
+      "sha256": "327fcfc323b4fa3a0febee3475edb400c84781a5f111df7efe2adc384624a472",
+      "bytes": 2815
+    },
+    {
+      "path": "authlib/jose/__init__.py",
+      "sha256": "030c90bfa3947a0f29e86889f7a192297bae2e6284fbba6868e2cfdf4e5c2eeb",
+      "bytes": 2047
+    },
+    {
+      "path": "authlib/jose/drafts/__init__.py",
+      "sha256": "017030f6bebee97b156ee82da09eb3167d2ef398980ecb152cb6c31a6f872165",
+      "bytes": 520
+    },
+    {
+      "path": "authlib/jose/drafts/_jwe_algorithms.py",
+      "sha256": "aa46333c0b5e612b358d16467379710553db632f231607ff3b6184f8b5b4c543",
+      "bytes": 7199
+    },
+    {
+      "path": "authlib/jose/drafts/_jwe_enc_cryptodome.py",
+      "sha256": "d949c830d9b82a9a96ec5f56d9ec0084852714c83124eb171edb8bb0e3b47285",
+      "bytes": 1830
+    },
+    {
+      "path": "authlib/jose/drafts/_jwe_enc_cryptography.py",
+      "sha256": "2a1b56ae3e61006135cdfe6fdaefdadd2e07b89f59e80c832a2904a82c228bc1",
+      "bytes": 1713
+    },
+    {
+      "path": "authlib/jose/errors.py",
+      "sha256": "8454fbcccd1e863ac00e9a630e7f592619e02e7bd0f199e18a09426d6f13a030",
+      "bytes": 3398
+    },
+    {
+      "path": "authlib/jose/jwk.py",
+      "sha256": "2ea084ecad56a3381247f507c1711a8f05498e30705e420a79b4f567f033144d",
+      "bytes": 491
+    },
+    {
+      "path": "authlib/jose/rfc7515/__init__.py",
+      "sha256": "6219f8017c2835711cf476316ccb91db5edb3254180f70bbc2db39d44d6e2c18",
+      "bytes": 343
+    },
+    {
+      "path": "authlib/jose/rfc7515/jws.py",
+      "sha256": "75aba627b6c143fe0fc33bbe85f5a7581bea60e4aa3f85fc6fde3a050bb33442",
+      "bytes": 13754
+    },
+    {
+      "path": "authlib/jose/rfc7515/models.py",
+      "sha256": "8fe4d79e743692d2de64bd0301acfceaad50cd8237d83f61bb2cae8768d29a3a",
+      "bytes": 2471
+    },
+    {
+      "path": "authlib/jose/rfc7516/__init__.py",
+      "sha256": "493bf11d61f1b1a0ef3caf6c2d37aec0d8dd34d6672265dfeb7b3a43dcf01535",
+      "bytes": 490
+    },
+    {
+      "path": "authlib/jose/rfc7516/jwe.py",
+      "sha256": "e8745dca6ab39f22c87d70a8a313979c33345f9043e660d1440ad89bdbe56db3",
+      "bytes": 32511
+    },
+    {
+      "path": "authlib/jose/rfc7516/models.py",
+      "sha256": "adf96cab8873fe6b1c88fd527447ad3c69d1b4bdad8a3447f1ff9d656ecf0b44",
+      "bytes": 4272
+    },
+    {
+      "path": "authlib/jose/rfc7517/__init__.py",
+      "sha256": "f4660364c66b5fce5912d777ab1865a5e8bb8b1e9e0b7cb49529db198a0c1e8c",
+      "bytes": 380
+    },
+    {
+      "path": "authlib/jose/rfc7517/_cryptography_key.py",
+      "sha256": "6e9fb69222a9cca74e592bb331308c86cc9976f74452bbfd9d857234196aab2b",
+      "bytes": 1361
+    },
+    {
+      "path": "authlib/jose/rfc7517/asymmetric_key.py",
+      "sha256": "36808f066f2b8e85b52e89f2b7e2cfe38fd3667c1c791bfa0ca1e845be030d1c",
+      "bytes": 6464
+    },
+    {
+      "path": "authlib/jose/rfc7517/base_key.py",
+      "sha256": "50258cbd09637ced9827b7e4715c031764d20927a01ccfc0235e0a66cc4474af",
+      "bytes": 3358
+    },
+    {
+      "path": "authlib/jose/rfc7517/jwk.py",
+      "sha256": "d5bae3d87e3772f2c5acd4086d8b73ec23ebfcc0a31ba6a666e0207736569850",
+      "bytes": 2029
+    },
+    {
+      "path": "authlib/jose/rfc7517/key_set.py",
+      "sha256": "49a75ee242eead4f408260bfce0781a409d62877ed8ad8885d8cf212bf604d59",
+      "bytes": 1748
+    },
+    {
+      "path": "authlib/jose/rfc7518/__init__.py",
+      "sha256": "aafc50f8dedd959bb6778aa0df4ac7d0990da7efde79a63454adb4bc0bf857f5",
+      "bytes": 963
+    },
+    {
+      "path": "authlib/jose/rfc7518/ec_key.py",
+      "sha256": "208a433bd84acc31a139df02c70c47d3c88effa8fbb11f3a709066eb0374485c",
+      "bytes": 3921
+    },
+    {
+      "path": "authlib/jose/rfc7518/jwe_algs.py",
+      "sha256": "d51af8f2a134b13c5d1887e3ae18f9c2d1a9215c7951c364102db3cc13c1c079",
+      "bytes": 11466
+    },
+    {
+      "path": "authlib/jose/rfc7518/jwe_encs.py",
+      "sha256": "e678385cdeb0518eac4f139bdc9a87d5001e0d2609a534073b90b3a6533225eb",
+      "bytes": 5038
+    },
+    {
+      "path": "authlib/jose/rfc7518/jwe_zips.py",
+      "sha256": "e3fb8ac3506c99704199f8e23105d9ceb93ee5e6bf653fb2c20ec3774f1b951e",
+      "bytes": 1160
+    },
+    {
+      "path": "authlib/jose/rfc7518/jws_algs.py",
+      "sha256": "036d4200891edb0bd002a4e5d2865d91963981bca10c75d31d16257c8deebbdb",
+      "bytes": 6540
+    },
+    {
+      "path": "authlib/jose/rfc7518/oct_key.py",
+      "sha256": "ecc719200235a51936b38144c5939b996dcc410e35609343950c7d01f21b1c18",
+      "bytes": 3737
+    },
+    {
+      "path": "authlib/jose/rfc7518/rsa_key.py",
+      "sha256": "3e65f6596777acb9b08a1a8684960f5ba0b9d1a12662085f6ec64a3ceff86d15",
+      "bytes": 4581
+    },
+    {
+      "path": "authlib/jose/rfc7518/util.py",
+      "sha256": "00c39e804ef2a4f2cc48d1756ba8678651f3e794a632d51b2c1ee4b59c118c08",
+      "bytes": 262
+    },
+    {
+      "path": "authlib/jose/rfc7519/__init__.py",
+      "sha256": "2227b3083dad819b1c593ab2fcdb66558ea23398f8af86f702a39e79fa4a8687",
+      "bytes": 283
+    },
+    {
+      "path": "authlib/jose/rfc7519/claims.py",
+      "sha256": "9d797c8843489e1dd70394252f79b52ec0904164f944b39544556158aea91f00",
+      "bytes": 8831
+    },
+    {
+      "path": "authlib/jose/rfc7519/jwt.py",
+      "sha256": "3bfe04f312093875bb4f60e912d9ad3072865387842288dfe4d7aa40f348202a",
+      "bytes": 6188
+    },
+    {
+      "path": "authlib/jose/rfc8037/__init__.py",
+      "sha256": "bf7b94b532aee08befbac6c76a5858b48d5db7439fb1040e26f65fb41092f6c3",
+      "bytes": 118
+    },
+    {
+      "path": "authlib/jose/rfc8037/jws_eddsa.py",
+      "sha256": "126d6c980bf0746c8d9c79f61e3e5b2f8401143972997175898ffe8fa09ef61e",
+      "bytes": 717
+    },
+    {
+      "path": "authlib/jose/rfc8037/okp_key.py",
+      "sha256": "231a3a521d371d5d3d9ff3ae171855dbc6d13302893644615b24410a4cf9d0b0",
+      "bytes": 3995
+    },
+    {
+      "path": "authlib/jose/util.py",
+      "sha256": "ef95ea2a3f9a74139ede4be9df73895bd82fb1b8e468eac9a24fec4131f64fc7",
+      "bytes": 2200
+    },
+    {
+      "path": "authlib/oauth1/__init__.py",
+      "sha256": "5c27e741117422681dc908ad122ca6b03a6d2cfeefdd57123b54505b304f34fb",
+      "bytes": 933
+    },
+    {
+      "path": "authlib/oauth1/client.py",
+      "sha256": "abe8ae0331809250cc69ff0d7fe4773e1e5d25cedf10cebae90006789c3a9756",
+      "bytes": 6844
+    },
+    {
+      "path": "authlib/oauth1/errors.py",
+      "sha256": "a60d0d6948043637d337f6dae74ff2401f5a48d7b932d7b9303962905bb2a416",
+      "bytes": 46
+    },
+    {
+      "path": "authlib/oauth1/rfc5849/__init__.py",
+      "sha256": "8f5569d937dd17a4207093cd65275e5e202b3bdc632987614d3369d504e3c865",
+      "bytes": 1112
+    },
+    {
+      "path": "authlib/oauth1/rfc5849/authorization_server.py",
+      "sha256": "0a98fdf4a3198b7cfeae738693df82d8e6cdf99df39106e352d769751bd9e97b",
+      "bytes": 13926
+    },
+    {
+      "path": "authlib/oauth1/rfc5849/base_server.py",
+      "sha256": "06d0678acc8e58fd5ea5fcf2a7d039cef319bb7ae60896b3c8793d5c4b6983cc",
+      "bytes": 3972
+    },
+    {
+      "path": "authlib/oauth1/rfc5849/client_auth.py",
+      "sha256": "b5e3ff6a0b2b73fb040ca00ab581a92ef18d0ac8d55fb9f5c67e7da0b95cc722",
+      "bytes": 7347
+    },
+    {
+      "path": "authlib/oauth1/rfc5849/errors.py",
+      "sha256": "55c172d5fd3f3dac67832efaf445334d1dc3bdef38442f3cfb9cbf2ef762fbb7",
+      "bytes": 2285
+    },
+    {
+      "path": "authlib/oauth1/rfc5849/models.py",
+      "sha256": "c453f5ce2da4ea740f42c26a4ed0a8c78b9ec4dfe32e3a9baab3da92d5ed208d",
+      "bytes": 3810
+    },
+    {
+      "path": "authlib/oauth1/rfc5849/parameters.py",
+      "sha256": "f4e715270b43e0d74de23cebe23fca2b437a582aaa52f209c6d6ad0828823a60",
+      "bytes": 3030
+    },
+    {
+      "path": "authlib/oauth1/rfc5849/resource_protector.py",
+      "sha256": "b2a670e32d04838aac560817ca16c731cba2f27469dce84082d8d7f5e507db55",
+      "bytes": 1279
+    },
+    {
+      "path": "authlib/oauth1/rfc5849/rsa.py",
+      "sha256": "5f60ed95df61367a62ed12bfd2c12e65754f7e2f35691c9f11c287b213a665d7",
+      "bytes": 907
+    },
+    {
+      "path": "authlib/oauth1/rfc5849/signature.py",
+      "sha256": "bb91ff3072c5196858049d9c92571e77ca1a2f3c52810c5361a250cf3e78420e",
+      "bytes": 13715
+    },
+    {
+      "path": "authlib/oauth1/rfc5849/util.py",
+      "sha256": "a7d2b3f13911a9abb76be9504893429bb0e6efd186f1f939c532a384d00492f7",
+      "bytes": 167
+    },
+    {
+      "path": "authlib/oauth1/rfc5849/wrapper.py",
+      "sha256": "ffb4e5e4aebf1a45ad8d796bea8d630be23665d8037a6f69fe7b2e0f8b7add84",
+      "bytes": 4073
+    },
+    {
+      "path": "authlib/oauth2/__init__.py",
+      "sha256": "f5fca7ed2e16b3f676c8ea40460525c1991e44f8c60ae8eca4df682a51708e72",
+      "bytes": 603
+    },
+    {
+      "path": "authlib/oauth2/auth.py",
+      "sha256": "0ec6d41200f58a046479636238775957c1439474c3af59d6c0f649254f3faad3",
+      "bytes": 3587
+    },
+    {
+      "path": "authlib/oauth2/authorization_session.py",
+      "sha256": "d250583aa4a5c1ace07bec1f0494dba6fd1a348ed50764731f7401e126f32c51",
+      "bytes": 3404
+    },
+    {
+      "path": "authlib/oauth2/base.py",
+      "sha256": "d08bb1d504b763438727d81dda7e7de57ca0c3f947c7aa2c256b449935f191f9",
+      "bytes": 2025
+    },
+    {
+      "path": "authlib/oauth2/claims.py",
+      "sha256": "042366a719fd61291ba633e2a93de57bd719a882d98e7050707299edef7323a7",
+      "bytes": 3314
+    },
+    {
+      "path": "authlib/oauth2/client.py",
+      "sha256": "e89be7d56afdb92a7b6585946fdd77b80a4d8ac98b9f6e49cd833cfbf77a61d7",
+      "bytes": 21825
+    },
+    {
+      "path": "authlib/oauth2/drafts/__init__.py",
+      "sha256": "5784f4e2391175b8380481f1f3b1992136de576cf26cce29915edd83ee519d73",
+      "bytes": 294
+    },
+    {
+      "path": "authlib/oauth2/drafts/id_jag.py",
+      "sha256": "82d32e26e8a920427fef12a00cefb707ccd6b6d56d67963ec5e844598d1cbcc0",
+      "bytes": 15971
+    },
+    {
+      "path": "authlib/oauth2/form_post/__init__.py",
+      "sha256": "bbc574f5b7fd5e16bcef348b264194179f2ea8cd5bb08185d40ffb833a060d6c",
+      "bytes": 224
+    },
+    {
+      "path": "authlib/oauth2/form_post/response_mode.py",
+      "sha256": "9ee4d9bf0fc2aeca37eae2ca5391f5991c54a247bf0acb1ccae219c30812852d",
+      "bytes": 3104
+    },
+    {
+      "path": "authlib/oauth2/multiple_response_types/__init__.py",
+      "sha256": "b4bc1139d8ddc3fc22b8cfb25c95652f81a046ab0195e324f6d85c43e2eb4537",
+      "bytes": 433
+    },
+    {
+      "path": "authlib/oauth2/multiple_response_types/authorization_server.py",
+      "sha256": "94bbe1f14c817c10dd8edc82782c8884c1de0805e9500e255d09632a195c8c22",
+      "bytes": 6944
+    },
+    {
+      "path": "authlib/oauth2/multiple_response_types/grant.py",
+      "sha256": "c7d86928e230e4e3cf3fc3b1368e5dd5c7964d1eea8ace7fadfce4778be83202",
+      "bytes": 1903
+    },
+    {
+      "path": "authlib/oauth2/rfc6749/__init__.py",
+      "sha256": "e189206122212e125837e05ed8e135c0d0fe9a9735a83e13b32724f5bb79b003",
+      "bytes": 3335
+    },
+    {
+      "path": "authlib/oauth2/rfc6749/authenticate_client.py",
+      "sha256": "7329d547754b50cc2cf5dee7ddb85276b557eebe0f9c9e6f72d5fe849950deb5",
+      "bytes": 3890
+    },
+    {
+      "path": "authlib/oauth2/rfc6749/authorization_server.py",
+      "sha256": "68ec707bd62e69d7e26a1c9d3295e5f594272cfa4d231c43360a2ab8fe871580",
+      "bytes": 24413
+    },
+    {
+      "path": "authlib/oauth2/rfc6749/endpoint.py",
+      "sha256": "7b179e554fb331ef47815d9eaefa210ed3a1eda2c7b63a7afa4df20068502a8e",
+      "bytes": 2957
+    },
+    {
+      "path": "authlib/oauth2/rfc6749/errors.py",
+      "sha256": "6a128b2a3782dc0f13bb0c7920efb2c258f54fc15ae2f74a7559e79dc00b4a54",
+      "bytes": 7846
+    },
+    {
+      "path": "authlib/oauth2/rfc6749/grants/__init__.py",
+      "sha256": "cef68c9a2124747c0ca796d5b9d9f371e0bfdd0c496672c7b3055fd7d076c400",
+      "bytes": 1237
+    },
+    {
+      "path": "authlib/oauth2/rfc6749/grants/authorization_code.py",
+      "sha256": "335baf9bdad4abcf12ed6247bd1a39606eb02151e5a0dc159bb1cc64a6d09490",
+      "bytes": 16446
+    },
+    {
+      "path": "authlib/oauth2/rfc6749/grants/base.py",
+      "sha256": "7f877146ed67e6d5f9ea5c33582175d75e425f616a8e3541da0322274153125a",
+      "bytes": 11397
+    },
+    {
+      "path": "authlib/oauth2/rfc6749/grants/client_credentials.py",
+      "sha256": "ffd8002c261d0035c1df7cd2a24c58f628e14325d0c873ddab13c260d71a677c",
+      "bytes": 4029
+    },
+    {
+      "path": "authlib/oauth2/rfc6749/grants/implicit.py",
+      "sha256": "eb86b327118c58fa9361843c66e432e8cbd1f3263ab010ede78538775efc9949",
+      "bytes": 9118
+    },
+    {
+      "path": "authlib/oauth2/rfc6749/grants/refresh_token.py",
+      "sha256": "88f2923f5c98c8939111112178eb0bf70c087c1a1457ac4d0836d5832a32dd08",
+      "bytes": 6470
+    },
+    {
+      "path": "authlib/oauth2/rfc6749/grants/resource_owner_password_credentials.py",
+      "sha256": "92fb81b322bf5518a9cef07b7f92a76d73f2ec23ff9441f25fbf455346780579",
+      "bytes": 5876
+    },
+    {
+      "path": "authlib/oauth2/rfc6749/hooks.py",
+      "sha256": "c393b616a7016c6c3b9505944db4c8818bb16ca859ef08b9e24620115b895006",
+      "bytes": 700
+    },
+    {
+      "path": "authlib/oauth2/rfc6749/models.py",
+      "sha256": "e910d7e66886e467f6c2b10100e04f0da9ce1b6dac3395177f8b31a551ae7f12",
+      "bytes": 13570
+    },
+    {
+      "path": "authlib/oauth2/rfc6749/parameters.py",
+      "sha256": "7d7a1e9e45d3b4c32b855aad6dc48d096d9bcf3c2d3284370b0837363d4b2472",
+      "bytes": 8346
+    },
+    {
+      "path": "authlib/oauth2/rfc6749/requests.py",
+      "sha256": "4fdbb0a6c1ceaf7bed56afbfb2873e29d3109638b8fa0f0439414f42f1a6c331",
+      "bytes": 3459
+    },
+    {
+      "path": "authlib/oauth2/rfc6749/resource_protector.py",
+      "sha256": "a84a7e6867b009c30d804eedbb76cef63fa6cb58916de4982bd397d62ec0cef7",
+      "bytes": 5851
+    },
+    {
+      "path": "authlib/oauth2/rfc6749/responses.py",
+      "sha256": "ff938a9e3450713275b0ad3e66fae36a9eecd5bc53c9a98389c9ce85417be395",
+      "bytes": 3694
+    },
+    {
+      "path": "authlib/oauth2/rfc6749/token_endpoint.py",
+      "sha256": "4b18b2f349688f8d40e1fc81a103f490840e844ccba5674f1b84654345f10dd5",
+      "bytes": 1083
+    },
+    {
+      "path": "authlib/oauth2/rfc6749/util.py",
+      "sha256": "12df5d2eabe6579b56d4c21de40e68be84ffd385a40bcb48bfb1ed2c184354a8",
+      "bytes": 1773
+    },
+    {
+      "path": "authlib/oauth2/rfc6749/wrappers.py",
+      "sha256": "4e0cac44f62561c05a324ff4bd52b6e7f5ee41b5ede616fcb608b4b7467b487a",
+      "bytes": 1278
+    },
+    {
+      "path": "authlib/oauth2/rfc6750/__init__.py",
+      "sha256": "c68ca890a574ee5f092f91e43199bcc9caab4db6daf27ad118bcf8b1a6ae697e",
+      "bytes": 686
+    },
+    {
+      "path": "authlib/oauth2/rfc6750/errors.py",
+      "sha256": "cecbec1441cb1fe4cd921676a7d730bf419bab2e3b04ae67b41838687a2368e5",
+      "bytes": 2762
+    },
+    {
+      "path": "authlib/oauth2/rfc6750/form_body.py",
+      "sha256": "b7fc95d0a9125d18d0e4f1201360b75c5a78d2dd0e87cc350508a1e45267a612",
+      "bytes": 2375
+    },
+    {
+      "path": "authlib/oauth2/rfc6750/parameters.py",
+      "sha256": "b027c3acb8eaa32a17a70542bedcc747b12e659110cad6ab9359f6a7758853a5",
+      "bytes": 1235
+    },
+    {
+      "path": "authlib/oauth2/rfc6750/token.py",
+      "sha256": "12b1658086940f28b5449dc406be3d6708d86cc70225f8bc41af3ee025ad095a",
+      "bytes": 5874
+    },
+    {
+      "path": "authlib/oauth2/rfc6750/validator.py",
+      "sha256": "d36fc4d708854d69642df03b34c340879101cee0c19788d106aed59921b98694",
+      "bytes": 1462
+    },
+    {
+      "path": "authlib/oauth2/rfc7009/__init__.py",
+      "sha256": "905a62531b3ddd9b47bdbdd61347a4aa6d5b99b8fc747c214463dbf2d207d26c",
+      "bytes": 309
+    },
+    {
+      "path": "authlib/oauth2/rfc7009/parameters.py",
+      "sha256": "91f6965c9fe5af74c15f37cff4f647844a2022ee9046527224e9808468370b11",
+      "bytes": 797
+    },
+    {
+      "path": "authlib/oauth2/rfc7009/revocation.py",
+      "sha256": "ba404b35558d93204a724906dde8ebf1a24a951f5fae7731a8654fe6502a8da6",
+      "bytes": 4590
+    },
+    {
+      "path": "authlib/oauth2/rfc7521/__init__.py",
+      "sha256": "3e07dd94cba3d44aaa30e617498803ab442f62dfbe239b8a7210247606fc97eb",
+      "bytes": 67
+    },
+    {
+      "path": "authlib/oauth2/rfc7521/client.py",
+      "sha256": "91ae5a15b62e66272b7c9d90f9ab8c36d13662e8abc9c08a9317659478d787aa",
+      "bytes": 3323
+    },
+    {
+      "path": "authlib/oauth2/rfc7523/__init__.py",
+      "sha256": "775b53bfa37aa8f378878baa56caa0a11ac5d23dc9ac3729ff0c742aa2736150",
+      "bytes": 833
+    },
+    {
+      "path": "authlib/oauth2/rfc7523/assertion.py",
+      "sha256": "49acd2d11d528142248ab9532bc693813004ef606417364c01205b269828a98e",
+      "bytes": 2359
+    },
+    {
+      "path": "authlib/oauth2/rfc7523/auth.py",
+      "sha256": "14d07245019da2b5ba7cc467d5a1724b35adb5c19019c80704ba18336f29ea6d",
+      "bytes": 4837
+    },
+    {
+      "path": "authlib/oauth2/rfc7523/client.py",
+      "sha256": "b626d9e092500ce7dd586622d6540f9405f0777a88f572f0c8f6518052b283b7",
+      "bytes": 6568
+    },
+    {
+      "path": "authlib/oauth2/rfc7523/jwt_bearer.py",
+      "sha256": "15b0c16f22fead1088ad00eabbbe7fcc8994c03e71ba5cc09644258f394fab09",
+      "bytes": 9724
+    },
+    {
+      "path": "authlib/oauth2/rfc7523/token.py",
+      "sha256": "487bba3508c86dde4ea355124989d5dbac25cf9f3da17e94763a7f1361206ab3",
+      "bytes": 3916
+    },
+    {
+      "path": "authlib/oauth2/rfc7523/validator.py",
+      "sha256": "f1996cccf6ee9461783414c75cd60cd3ac2ea6606f483ac404e04bd4d2138c21",
+      "bytes": 3357
+    },
+    {
+      "path": "authlib/oauth2/rfc7591/__init__.py",
+      "sha256": "ad4e1cd478210dabf5726fc90f52d097fbcfea075221f8522dd48b94ebb015ad",
+      "bytes": 670
+    },
+    {
+      "path": "authlib/oauth2/rfc7591/claims.py",
+      "sha256": "9d54ae2c4b8ae5d363b7aa94b5ec50ecf9d12eeac73a95e412f6e16c6992c450",
+      "bytes": 12471
+    },
+    {
+      "path": "authlib/oauth2/rfc7591/endpoint.py",
+      "sha256": "5ce311a93fdbdfc11ff8788240c62b224be4650e714594aac74a3402d8600bb8",
+      "bytes": 9183
+    },
+    {
+      "path": "authlib/oauth2/rfc7591/errors.py",
+      "sha256": "064d6b743c56bce5832b569559fd6431cafb7498dd6bbf7abcee98dfaed979d4",
+      "bytes": 1010
+    },
+    {
+      "path": "authlib/oauth2/rfc7592/__init__.py",
+      "sha256": "9e9c75116079d98208edaa2960161b87e04a3496015c983e9a659619b42be7f3",
+      "bytes": 271
+    },
+    {
+      "path": "authlib/oauth2/rfc7592/endpoint.py",
+      "sha256": "5b10f7f63afcc69e401f876fe6e2d3eca629c99e43994ad2c7e8808e7d05a1ad",
+      "bytes": 10454
+    },
+    {
+      "path": "authlib/oauth2/rfc7636/__init__.py",
+      "sha256": "a95e32b339d908a57641d5601677737f050737741282decaf998ac9285806bf1",
+      "bytes": 318
+    },
+    {
+      "path": "authlib/oauth2/rfc7636/challenge.py",
+      "sha256": "5eca8d72b0715c648027b587ab9b7ea4a3e6b001c927ec98ff8f435cd8857aa4",
+      "bytes": 8130
+    },
+    {
+      "path": "authlib/oauth2/rfc7662/__init__.py",
+      "sha256": "c5c1b1acba3826c771a39f5c18de64e2f031d40c589ec7980962cd017ee56b4c",
+      "bytes": 379
+    },
+    {
+      "path": "authlib/oauth2/rfc7662/introspection.py",
+      "sha256": "22c1621d1139d5fd9e4141e0ad0df83e5114425c7edc1518029a51e4489a094f",
+      "bytes": 5494
+    },
+    {
+      "path": "authlib/oauth2/rfc7662/models.py",
+      "sha256": "fff573be695d6665beb5ea22b000b3e59a60fc402220645cb23682d1c09e5e17",
+      "bytes": 989
+    },
+    {
+      "path": "authlib/oauth2/rfc7662/token_validator.py",
+      "sha256": "a6ac88a64122c4c903d4fa919e061314674d72dcaad2c333700ec26c0deae708",
+      "bytes": 1378
+    },
+    {
+      "path": "authlib/oauth2/rfc8414/__init__.py",
+      "sha256": "cfef14012df46fbed4620d1285aeaf5591e6cc77f430f0f343a4d4531e9b826e",
+      "bytes": 316
+    },
+    {
+      "path": "authlib/oauth2/rfc8414/models.py",
+      "sha256": "dd6e2597172d627188eaa620f6d233e4e43a122a562a302bfcc002c476837b16",
+      "bytes": 19000
+    },
+    {
+      "path": "authlib/oauth2/rfc8414/well_known.py",
+      "sha256": "0ff44e3f0e04a98dd1f3fae9e0a787b3787683c9cfcf9f8b0c47ded06948789e",
+      "bytes": 664
+    },
+    {
+      "path": "authlib/oauth2/rfc8628/__init__.py",
+      "sha256": "8798566de31f169092e82546b40342c25b26b0bf62a5a94a3dc17a756a9e2ccd",
+      "bytes": 730
+    },
+    {
+      "path": "authlib/oauth2/rfc8628/device_code.py",
+      "sha256": "a716e5633bbdfb2abed616b82f0375d7c748d12204980bfd436b997b619576d6",
+      "bytes": 7906
+    },
+    {
+      "path": "authlib/oauth2/rfc8628/endpoint.py",
+      "sha256": "9d7137b3437ae79e4d0c1e156d4bd054b76ee4b2741af5747039a4b73d3e0161",
+      "bytes": 7119
+    },
+    {
+      "path": "authlib/oauth2/rfc8628/errors.py",
+      "sha256": "5c3874070eb8c6269136d820c850f922d16035976f7b40f49fb7f7716ea08b6b",
+      "bytes": 922
+    },
+    {
+      "path": "authlib/oauth2/rfc8628/models.py",
+      "sha256": "6bc420b5b03148573215eba9333b8fee088969d9e5e7599278fdb654e74fcffd",
+      "bytes": 839
+    },
+    {
+      "path": "authlib/oauth2/rfc8693/__init__.py",
+      "sha256": "af01f8831e6286818e717df1bdb96a85f268339d3d4c4ce6603e2e6414d10a52",
+      "bytes": 138
+    },
+    {
+      "path": "authlib/oauth2/rfc9068/__init__.py",
+      "sha256": "f090af0947c49c72ea3e4126f7a32075e5589720b313a7cb49e016615581fec7",
+      "bytes": 332
+    },
+    {
+      "path": "authlib/oauth2/rfc9068/claims.py",
+      "sha256": "d697421be4848c573a021ff43c2c9d2eea022e67f3d9791100b77493d746954b",
+      "bytes": 1521
+    },
+    {
+      "path": "authlib/oauth2/rfc9068/introspection.py",
+      "sha256": "39eeb22b3f036a1660c4833ff2cd50fe1995dab4695e82b37ebb4ab76ce1c015",
+      "bytes": 4407
+    },
+    {
+      "path": "authlib/oauth2/rfc9068/revocation.py",
+      "sha256": "9b0ad8ff76cde8b56e4155fe6bab0065877bab18d8cda7c9f6129894860e50e5",
+      "bytes": 2663
+    },
+    {
+      "path": "authlib/oauth2/rfc9068/token.py",
+      "sha256": "35c40d201534c339ca4ef0c0c4b61b9adec93bc60f1f3c0fb9d81047f311cb25",
+      "bytes": 14007
+    },
+    {
+      "path": "authlib/oauth2/rfc9068/token_validator.py",
+      "sha256": "6017a08e2bc0410ec46d88354fac8238931289eda6506e1b1a68ae95fd4e1ad5",
+      "bytes": 6875
+    },
+    {
+      "path": "authlib/oauth2/rfc9101/__init__.py",
+      "sha256": "395eba6496ecda1fe227488f1f752f5a0fe45290b10c8da5f36ba5d610947dd2",
+      "bytes": 267
+    },
+    {
+      "path": "authlib/oauth2/rfc9101/authorization_server.py",
+      "sha256": "842b785c855715cac7bef9e6d1a291f4237edf1fb88a3b0bbe78a89f36fb3f80",
+      "bytes": 18563
+    },
+    {
+      "path": "authlib/oauth2/rfc9101/discovery.py",
+      "sha256": "17174185b88264ab75d9cb419f11bd7be478bd683b46e1fa99c534250661ed89",
+      "bytes": 859
+    },
+    {
+      "path": "authlib/oauth2/rfc9101/errors.py",
+      "sha256": "6992f28326a0013228d546768801770e8058b49181d27d3786aaa8290a4aa6f1",
+      "bytes": 999
+    },
+    {
+      "path": "authlib/oauth2/rfc9101/registration.py",
+      "sha256": "b219f6e3bf17e00daaa77929edb7174f97004ef7fe6e97cfc3996b5aaacb37e0",
+      "bytes": 1251
+    },
+    {
+      "path": "authlib/oauth2/rfc9207/__init__.py",
+      "sha256": "ced645c0e99a3a9a21632d4b288f4b60863f44347e86c0abea97f902f21bea51",
+      "bytes": 152
+    },
+    {
+      "path": "authlib/oauth2/rfc9207/discovery.py",
+      "sha256": "53fdbfada60f0e3ab6d1179e45f8ddd83963f21da5ea832fd00be1913ce0430d",
+      "bytes": 954
+    },
+    {
+      "path": "authlib/oauth2/rfc9207/parameter.py",
+      "sha256": "05c2592ec57d4ae099ad6302cc2548d3fde87f991339138c3cd49c43a8e53bf2",
+      "bytes": 1458
+    },
+    {
+      "path": "authlib/oauth2/rfc9449/__init__.py",
+      "sha256": "97ed502d561dfe56d6c74f281e54b1916f618e0ae061b60ae427a7b07207a46b",
+      "bytes": 798
+    },
+    {
+      "path": "authlib/oauth2/rfc9449/errors.py",
+      "sha256": "ca68b16b5e7b44a9a74f5efb0b30b3d990390a40c2d41c20f257b5d3a135dd5a",
+      "bytes": 1057
+    },
+    {
+      "path": "authlib/oauth2/rfc9449/protection.py",
+      "sha256": "d43ac10759033dbd5f7ebd69bb32d19426a84add8f6003c59c258583ac34ea37",
+      "bytes": 2672
+    },
+    {
+      "path": "authlib/oauth2/rfc9449/validator.py",
+      "sha256": "b71ba034d4167b7beb4aaea5756807d2e516e834427d04b1c07bc878a5cd6fce",
+      "bytes": 13748
+    },
+    {
+      "path": "authlib/oauth2/rfc9470/__init__.py",
+      "sha256": "b16a0fedc820fefba3c5070f10fe22ee252c42f441f1dfcaec33636a8b000966",
+      "bytes": 656
+    },
+    {
+      "path": "authlib/oauth2/rfc9470/authorization_server.py",
+      "sha256": "f585568bbbbbb531b6a7fe89ddde636b0ce044147f1a12779fac8fe3bac2dee1",
+      "bytes": 5923
+    },
+    {
+      "path": "authlib/oauth2/rfc9470/models.py",
+      "sha256": "8dd8fd7c69dc6e74abc7b09b12107645551e40f81cf33b0afffc9615a0971d65",
+      "bytes": 1173
+    },
+    {
+      "path": "authlib/oauth2/rfc9728/__init__.py",
+      "sha256": "1c0b63e786f1f734e692e1c98ed2ed8e3ea5038ec7e6b5df68a04920d11dfef0",
+      "bytes": 513
+    },
+    {
+      "path": "authlib/oauth2/rfc9728/discovery.py",
+      "sha256": "c2b205dafa4c1b6632a2c003479de099c21edf2a61cfeeba160a7c0e4acff9f6",
+      "bytes": 854
+    },
+    {
+      "path": "authlib/oauth2/rfc9728/models.py",
+      "sha256": "a36e7a8904a3df47c44b8ee4e23eb76c6d1b43f877e282ec0a14bafd25d83a05",
+      "bytes": 16912
+    },
+    {
+      "path": "authlib/oauth2/rfc9728/well_known.py",
+      "sha256": "c4f820508f1eca64b9bca7403ebf94d95bf6cbaa176600aeb53d1474e308168d",
+      "bytes": 1189
+    },
+    {
+      "path": "authlib/oidc/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "authlib/oidc/backchannel/__init__.py",
+      "sha256": "446052e736739f7aebaed5d82b2253f1120fdcb82cdbd0864fdc00f261d165ac",
+      "bytes": 576
+    },
+    {
+      "path": "authlib/oidc/backchannel/discovery.py",
+      "sha256": "14d9edb2bf995b5c2621b1b74104b0f14f84a6af9bf7541dd460e66a3082f60f",
+      "bytes": 1907
+    },
+    {
+      "path": "authlib/oidc/backchannel/logout_token.py",
+      "sha256": "50890e8fd7c19f9f823492a9cd5adbd8f770e794dd8b38ee8ea356a367e8a60b",
+      "bytes": 2804
+    },
+    {
+      "path": "authlib/oidc/backchannel/registration.py",
+      "sha256": "2ff10f8e634e6657e47a4b068633a2b65a5eee9b8defd1afa47ec22fab2a389b",
+      "bytes": 2431
+    },
+    {
+      "path": "authlib/oidc/backchannel/sender.py",
+      "sha256": "54df0477979f66702145b001bef6c570655792e06aafb93580b883a375499487",
+      "bytes": 9778
+    },
+    {
+      "path": "authlib/oidc/core/__init__.py",
+      "sha256": "530afd6bad89416b53185ffe20572e7d2f9a888da25b7d108c036f75f066dca7",
+      "bytes": 1275
+    },
+    {
+      "path": "authlib/oidc/core/authorization_request.py",
+      "sha256": "ec28952f5917c21b4d8cbbcaa428945106fcd0e265fb01c7c0a1cdbd1402e401",
+      "bytes": 1836
+    },
+    {
+      "path": "authlib/oidc/core/claims.py",
+      "sha256": "1a94096ff11d2cdd7d7de7dd5d2669d431aa20c16d0137b10820700a02e2b9b2",
+      "bytes": 11549
+    },
+    {
+      "path": "authlib/oidc/core/claims_parameter.py",
+      "sha256": "6938acbfaca4c6c84601a2bb3ebbc5ffcc02b7d2b17cdfaca8606068f51f3641",
+      "bytes": 6077
+    },
+    {
+      "path": "authlib/oidc/core/errors.py",
+      "sha256": "7feef59111b635fd9c37de5fecf08ab9c80270fa61213b4606172c8dc8e113a5",
+      "bytes": 2892
+    },
+    {
+      "path": "authlib/oidc/core/grants/__init__.py",
+      "sha256": "f928de96b92b0f7e5b9dbe6b219881a5b88bc60889b703171c95c7afca2f432a",
+      "bytes": 243
+    },
+    {
+      "path": "authlib/oidc/core/grants/_legacy.py",
+      "sha256": "68ae47c5d95a2774994c3dabbfa8186344c562c75a03f145fe3eb0bdc225f025",
+      "bytes": 2220
+    },
+    {
+      "path": "authlib/oidc/core/grants/code.py",
+      "sha256": "c90b157108571993c6ed73bf28634a3b48518c951972a8efa7d3bb573e162b16",
+      "bytes": 9493
+    },
+    {
+      "path": "authlib/oidc/core/grants/hybrid.py",
+      "sha256": "3468e53160d35aee2f21163e93a73417ef3bd5ffdf77810eb265e8958a9267a5",
+      "bytes": 3813
+    },
+    {
+      "path": "authlib/oidc/core/grants/implicit.py",
+      "sha256": "892066435848fe742225d06448aa2b99a58cf407e800d136c18dbfb7e5e8dcd4",
+      "bytes": 8595
+    },
+    {
+      "path": "authlib/oidc/core/grants/util.py",
+      "sha256": "387edff342c0aab751f651a55712678365e4185b085aa3f41473fdf996952ade",
+      "bytes": 21916
+    },
+    {
+      "path": "authlib/oidc/core/models.py",
+      "sha256": "3333fbc7a8380da5143a7236a0c2e431cfcb85a742749c1e5c43f9705d7f31bb",
+      "bytes": 3299
+    },
+    {
+      "path": "authlib/oidc/core/userinfo.py",
+      "sha256": "99759ea60c223f6988c45014719c186d99ec82d4801c6a539e9a4ad0df082a5f",
+      "bytes": 7846
+    },
+    {
+      "path": "authlib/oidc/core/util.py",
+      "sha256": "8a1b8a62585001598ae52221c319f993f3ea541d6ad0b9b0975b6ec114d0b9fe",
+      "bytes": 502
+    },
+    {
+      "path": "authlib/oidc/discovery/__init__.py",
+      "sha256": "adaa6492d7785cdd2de8b78739614f79e284ce517a8011ef5ac4caf493cb3d8d",
+      "bytes": 305
+    },
+    {
+      "path": "authlib/oidc/discovery/models.py",
+      "sha256": "377587c0def0e3f9eeb7aac121f7a0afbfba94384dfeb376013b0a7dce8eeee2",
+      "bytes": 12832
+    },
+    {
+      "path": "authlib/oidc/discovery/well_known.py",
+      "sha256": "af2d551f10a6c2f8e694cc4e1446d20ba16c13fb6d8a3c91727db1529bf609a5",
+      "bytes": 574
+    },
+    {
+      "path": "authlib/oidc/prompt_create/__init__.py",
+      "sha256": "9328ec9ed1f1b4070b39f76220a45ec155005d6cded08a0cf2f7dab0cb552e2f",
+      "bytes": 342
+    },
+    {
+      "path": "authlib/oidc/prompt_create/discovery.py",
+      "sha256": "cc872958e3e588e94cddd057f320ac7eec7672c8da33b798e7c7b63283adf8ee",
+      "bytes": 1839
+    },
+    {
+      "path": "authlib/oidc/prompt_create/prompt.py",
+      "sha256": "7e9dbe345be82ea15ae89c48fbf94e94c17c4ffda294d56b8eb510cd223a5ba2",
+      "bytes": 5547
+    },
+    {
+      "path": "authlib/oidc/registration/__init__.py",
+      "sha256": "955fce83e0cc14acd6598b1d2b4e2817cdf129419313681086290f3ec39d5bce",
+      "bytes": 77
+    },
+    {
+      "path": "authlib/oidc/registration/claims.py",
+      "sha256": "d6965d6aa265bb81972c74f166ae591d6c8408f3263f5214b312f6cb0232e90e",
+      "bytes": 17219
+    },
+    {
+      "path": "authlib/oidc/rpinitiated/__init__.py",
+      "sha256": "402064c17ed01395139306aecb03febb5123b29d1378598d29d9d9425eb80ec8",
+      "bytes": 484
+    },
+    {
+      "path": "authlib/oidc/rpinitiated/discovery.py",
+      "sha256": "60329fd70de428461befcebb4660a34d87bb383388c86c1aef364b10d7224a90",
+      "bytes": 576
+    },
+    {
+      "path": "authlib/oidc/rpinitiated/end_session.py",
+      "sha256": "ab00fb14436b85b12dbcc50ef5e2bb51d5401f6556f9b6194bd4414f9e166ab4",
+      "bytes": 11910
+    },
+    {
+      "path": "authlib/oidc/rpinitiated/registration.py",
+      "sha256": "ba09b602eb75b6626041a5315cf1109b97bc205aa12f2ddec2b72d3afe100f6f",
+      "bytes": 2129
+    },
+    {
+      "path": "authlib/oidc/unmet_authentication_requirements/__init__.py",
+      "sha256": "f30cf425a3db6b0dd7bb518cffd4c9cd093495365434cf2d6af1aa8714859090",
+      "bytes": 477
+    },
+    {
+      "path": "authlib/oidc/unmet_authentication_requirements/authorization_server.py",
+      "sha256": "c9005090a9ff89b75661a66bba54ba86203e1fdeab951d9d35adcf831cfca185",
+      "bytes": 3271
+    },
+    {
+      "path": "authlib/oidc/unmet_authentication_requirements/errors.py",
+      "sha256": "362a6c6770f21b8bc58a26c6f3cbc644231f6c735cf4f29886a2987f7194fac4",
+      "bytes": 389
+    },
+    {
+      "path": "changelog.d/20261014_142242_jm5343739_531_automatic_token_fetch.rst",
+      "sha256": "5fb941dc6e88c3458a348c65dac1e01b757a8856bdecddc801990c9c86132c74",
+      "bytes": 897
+    },
+    {
+      "path": "changelog.d/20261014_180000_eloi_non_ascii_client_secret.rst",
+      "sha256": "0b6495ea795143b3ab0853ce4b894a9f7f9b83ec04c8af720cbb7ed5821cf863",
+      "bytes": 1152
+    },
+    {
+      "path": "changelog.d/20261014_200000_eloi_python_315.rst",
+      "sha256": "698b83605c78c5cd2e1a8100e90e99ce98f91dbde53ca29a189d106eb9c1adce",
+      "bytes": 46
+    },
+    {
+      "path": "changelog.d/20261014_200000_eloi_rfc7592_errors.rst",
+      "sha256": "cd7cfd7e7446952ef53acbe2adb1b2919224f7b938fdfc23b90a6018a1970cd6",
+      "bytes": 712
+    },
+    {
+      "path": "changelog.d/20261014_230000_eloi_missing_authorization.rst",
+      "sha256": "e2e2c280892ccc44b84754c022d878f796b437adf3a37e104572bd55e28f3779",
+      "bytes": 472
+    },
+    {
+      "path": "changelog.d/20261014_235000_eloi_token_type_hint.rst",
+      "sha256": "accdcb03fe4d0bc740bfd1c52aa622c0dc51d7e25a8401f26e78790f4431bc24",
+      "bytes": 1222
+    },
+    {
+      "path": "changelog.d/20261015_064500_choksi2212_client_assertion_lifetime.rst",
+      "sha256": "ecabe8ceba92955c4e7c6688efa4c226a7a843b89dd17ece8f9882edc722842d",
+      "bytes": 179
+    },
+    {
+      "path": "changelog.d/20261015_064500_choksi2212_signed_userinfo_responses.rst",
+      "sha256": "82a6f24d2bffb857a44a48e82c318038f1ce6562a4ee2c3096061e694a4eb253",
+      "bytes": 242
+    },
+    {
+      "path": "changelog.d/20261015_120000_xander_client_kwargs_leeway.rst",
+      "sha256": "0738339fdd9e8d380d60564b0e7cd435c6339a03970140aca831f0e0d9e59c8a",
+      "bytes": 283
+    },
+    {
+      "path": "changelog.d/20261016_120000_eloi_backchannel_logout.rst",
+      "sha256": "bb46c5ab38c9b45f7b3d449173cd14a1f558cffb5ffe282906d126117441902a",
+      "bytes": 176
+    },
+    {
+      "path": "changelog.d/20261019_120000_yann_rfc9728_protected_resource_metadata.rst",
+      "sha256": "542885ae9f9d717dd13765f6bfae7cad0545ec46b8272469b06e61853f91aa5b",
+      "bytes": 137
+    },
+    {
+      "path": "changelog.d/20261019_152700_liudonggalaxy_copy_assertion_claims.rst",
+      "sha256": "3d9c0693d011ebad550a6c5caa124560ec52faf2ba2f73ee450f3c07c39f18d2",
+      "bytes": 282
+    },
+    {
+      "path": "changelog.d/20261020_120000_frohrlich_form_body_token.rst",
+      "sha256": "c2874f6d8beedf35c9f3f3fe0c9546c8d3eeb4c93a03cc66446d7f0fbfb4c5e6",
+      "bytes": 176
+    },
+    {
+      "path": "changelog.d/20261031_100000_g26karthik_insecure_transport_response.rst",
+      "sha256": "685e59ada855c22e6020ed098c20db674c07120e41fe442a7a9770e19542eefc",
+      "bytes": 249
+    },
+    {
+      "path": "changelog.d/20261101_220100_eloi_empty_audiences.rst",
+      "sha256": "59f714dc23a11f2f93cadd34fae3b6de5477a403876e64904947bfb44412248b",
+      "bytes": 233
+    },
+    {
+      "path": "changelog.d/20261102_120000_eloi_hooks_on_any_method.rst",
+      "sha256": "9ad4d94099aefa6d8116a57598aabe38459e38267d253599b451d0a52b6dbb5a",
+      "bytes": 1439
+    },
+    {
+      "path": "changelog.d/20261102_140000_cybersreejith_prompt_create.rst",
+      "sha256": "5a05e41512c422b38873c61af98be25a4ae620c6142566c0882541215f7b7dde",
+      "bytes": 272
+    },
+    {
+      "path": "changelog.d/20261102_230000_cpruijsen_httpx_super_init.rst",
+      "sha256": "4dc70398fa8b3a387bc33421c8e35d9fcbabf55d29ed81cad2f00e8cdc37e0b9",
+      "bytes": 222
+    },
+    {
+      "path": "changelog.d/20261103_103100_eloi_response_modes.rst",
+      "sha256": "25f82164888371a85f1f617284a4c17af3a5384b4147b4677ce7ac6a172bd0dc",
+      "bytes": 3435
+    },
+    {
+      "path": "changelog.d/20261103_115131_eloi_registration_metadata.rst",
+      "sha256": "1b2f73dde53a06f05e7ac483121159d5f95649b935cbe2ea8741009addedfcad",
+      "bytes": 1035
+    },
+    {
+      "path": "changelog.d/20261103_121408_eloi_response_type_order.rst",
+      "sha256": "163fb220cf8c38ba14bf30623babd5e2651e3d3f5710c75c79654364af3c951e",
+      "bytes": 280
+    },
+    {
+      "path": "changelog.d/20261104_123139_eloi_max_age.rst",
+      "sha256": "4c49598a06de829af917894a11f54902feed5d1ce1d21add432327121b00ed88",
+      "bytes": 1606
+    },
+    {
+      "path": "changelog.d/20261104_133942_eloi_python_3_11.rst",
+      "sha256": "a75e91412169032fe629e4f5b794e2ab0c6d0ab7093104f89cfe083c4c0c4a94",
+      "bytes": 116
+    },
+    {
+      "path": "changelog.d/20261104_141059_eloi_authorization_parameters.rst",
+      "sha256": "4449036dcdcb076847147b56b61f505d7cc95587d1cd570d985537e49ef29fdd",
+      "bytes": 600
+    },
+    {
+      "path": "changelog.d/20261104_160000_eloi_unknown_state_cache.rst",
+      "sha256": "fae6c28e19ff568fff057e3919fb0aa56e28297ff7e65786c9299996a8704b13",
+      "bytes": 229
+    },
+    {
+      "path": "changelog.d/20261104_165058_eloi_interactions.rst",
+      "sha256": "e62118b8c28045ef02bebcb3a29e55ced5b310b35112c760613dac8a34aff902",
+      "bytes": 1568
+    },
+    {
+      "path": "changelog.d/20261104_200000_eloi_id_jag_resolve_user.rst",
+      "sha256": "47c58feb393ba196498872feda2ca8290c20f802337e10375660c3ef368efa5d",
+      "bytes": 473
+    },
+    {
+      "path": "changelog.d/20261104_220000_eloi_remove_1_8_deprecations.rst",
+      "sha256": "6b740824281ff69d20cc2ba4b3f6dc0ea5dc668aa2f5a9ce649d2b9cea0ad457",
+      "bytes": 1511
+    },
+    {
+      "path": "changelog.d/20261105_084934_eloi_defer_anonymous_errors.rst",
+      "sha256": "51ce11768cf10b20237985df05ce3ef956f77993d1144da4f3f95000310595ee",
+      "bytes": 1464
+    },
+    {
+      "path": "changelog.d/20261105_120735_eloi_implicit_client_lookup.rst",
+      "sha256": "55b1894ef9af1d76976faf556b2790f8ec9a8bdfcbbc478f990990e8f3974455",
+      "bytes": 621
+    },
+    {
+      "path": "changelog.d/20261105_124555_eloi_rfc9068_userinfo.rst",
+      "sha256": "8ce0689b4db5803d747649281c1508922eb8e3863878eb5bc191878923530a3b",
+      "bytes": 406
+    },
+    {
+      "path": "changelog.d/20261105_170000_eloi_oidc_client_algorithms.rst",
+      "sha256": "8f8bbb81c8f8497b0f94cfa8abd91085d92ef03b8c866be956a8ef04a1647e7d",
+      "bytes": 518
+    },
+    {
+      "path": "changelog.d/20261105_170100_eloi_id_token_audience.rst",
+      "sha256": "9d2d3745437c583d3b6a299029eaaf79f682421af7f2cfc854890678859cead3",
+      "bytes": 194
+    },
+    {
+      "path": "changelog.d/20261105_170200_eloi_end_session_hint.rst",
+      "sha256": "14798b78ff8587199e1fd80c884efaa22211f80fe94a82b5ea07d3d894c47048",
+      "bytes": 286
+    },
+    {
+      "path": "changelog.d/20261105_180300_eloi_client_id_logs.rst",
+      "sha256": "9316f28020afce6c0525780df443fed9881e42e2d89148730b5b3dc0fcd3033d",
+      "bytes": 157
+    },
+    {
+      "path": "changelog.d/20261105_180400_eloi_jose_exceeded_size.rst",
+      "sha256": "6e0511ddbc3558d0d06e72bbd8be1e36e2b16b663c20ae7fd0012b4ab0030c7e",
+      "bytes": 231
+    },
+    {
+      "path": "changelog.d/20261105_180500_eloi_jwks_refresh_interval.rst",
+      "sha256": "221f04d75033e22265cf89c9e85d16f65bd75592aca3cbcb8d23bb581e9b1ea6",
+      "bytes": 203
+    },
+    {
+      "path": "changelog.d/20261105_190000_eloi_rfc9068_typ_required.rst",
+      "sha256": "8f4cf95cd985f60e2f25508e685bcc58908e2a2b00f69bf1e5580e646f66b9c5",
+      "bytes": 278
+    },
+    {
+      "path": "changelog.d/20261105_210000_eloi_rfc9068_default_audiences.rst",
+      "sha256": "828fec4f36356cf5c15c9f453b63427fbe0ae8d8d31e098608107756ce8f6739",
+      "bytes": 314
+    },
+    {
+      "path": "changelog.d/20261106_120000_eloi_client_repeated_parameters.rst",
+      "sha256": "6e14dc4b464d8862d5e332760273626a5ba4f1d32431b3489bf3b48e9e1e1512",
+      "bytes": 284
+    },
+    {
+      "path": "changelog.d/20261106_160000_eloi_pkce_authorization_checks.rst",
+      "sha256": "9b983db03a20bc860e0278491bc2795ad361fc08b7293a740f243dc61113c1ab",
+      "bytes": 883
+    },
+    {
+      "path": "changelog.d/20261106_170000_eloi_client_pkce_plain.rst",
+      "sha256": "0cb15a1e22c4375d110611ea005f60a0175cb01b44f4b83680e6c378e4d13893",
+      "bytes": 475
+    },
+    {
+      "path": "changelog.d/20261106_180000_eloi_client_registry.rst",
+      "sha256": "9564e82113d2e60102928a5663b45ea39b73baa16f6977d31bfddc0a49964534",
+      "bytes": 418
+    },
+    {
+      "path": "changelog.d/20261106_190000_eloi_redirect_303.rst",
+      "sha256": "ea362b54bd5914267176d743534e40907edd1eafbdb688e500a63c1ed5b059ee",
+      "bytes": 304
+    },
+    {
+      "path": "changelog.d/20261106_200000_eloi_private_key_jwt_keys.rst",
+      "sha256": "20e3edf85421304a6639c048de9675ea574d6e4290bae5cd6ca94cb5cdefc4c0",
+      "bytes": 486
+    },
+    {
+      "path": "changelog.d/20261106_210000_eloi_client_form_post_errors.rst",
+      "sha256": "337af9197e1aec16294bb18f70dd30f33421ce53ee83d6dcf1669de07bbb8f53",
+      "bytes": 306
+    },
+    {
+      "path": "changelog.d/20261106_220100_eloi_jose_canonical_base64.rst",
+      "sha256": "4140788fcce5865f049feea50274728a89652deb6341fb3474464389bed04514",
+      "bytes": 228
+    },
+    {
+      "path": "changelog.d/20261107_100000_eloi_url_objects.rst",
+      "sha256": "f1142bd7e66e2370f0cfb5278ce9e5dd2a93e4ade1b1d0c7e0c815070af31118",
+      "bytes": 194
+    },
+    {
+      "path": "changelog.d/20261107_110000_eloi_jwks_public_keys.rst",
+      "sha256": "dada95f05549006ddefcee1f832c83a438a20beab0b294a9782740361775e985",
+      "bytes": 263
+    },
+    {
+      "path": "changelog.d/20261107_130000_eloi_registration_token_state.rst",
+      "sha256": "ec68cbf0f24aac4b1542d5216075fa273c2aca808edcf4698c7472b547bd0e68",
+      "bytes": 194
+    },
+    {
+      "path": "changelog.d/20261107_180000_eloi_oauth_callback_confirmed.rst",
+      "sha256": "03f2183c7bfb0019a6fcdbd9f5f7e0d16197d8f10a289e5f45d7cd77dd59f367",
+      "bytes": 147
+    },
+    {
+      "path": "changelog.d/20261109_120000_eloi_jwe_crit.rst",
+      "sha256": "f70c0583b6e32bced460904559a71ac47bc8884fc250cf0bdad77f737dfca692",
+      "bytes": 275
+    },
+    {
+      "path": "changelog.d/20261110_120000_eloi_server_metadata_client.rst",
+      "sha256": "18aed26607afc5f57965e4ac3805577b9525c99e800c1a777ca4e1b8b011c78f",
+      "bytes": 273
+    },
+    {
+      "path": "changelog.d/20261110_150000_eloi_async_redirect_uri.rst",
+      "sha256": "3a6e8d84862f45c2d26ae7cb296a667fd49c86223e2be5d03ff78de041ef49f1",
+      "bytes": 179
+    },
+    {
+      "path": "changelog.d/20261110_200000_eloi_requests_session_headers.rst",
+      "sha256": "e73e283f1571a1812ac5579c3acc234028cc98b4a079311e684f6d42237a3ac2",
+      "bytes": 267
+    },
+    {
+      "path": "changelog.d/20261110_220000_eloi_rfc7523_validator_audience.rst",
+      "sha256": "336913cbead2da1d1275251c7f7b98436ae7d89d5aa784ca4aef80893e40e764",
+      "bytes": 819
+    },
+    {
+      "path": "changelog.d/20261110_oauth1_ipv6_base_string_uri.rst",
+      "sha256": "3bb0d762f96b3bd7a8486e190abc57336975724bb3905d56d314b897ad52da2b",
+      "bytes": 137
+    },
+    {
+      "path": "changelog.d/20261111_100000_eloi_rfc9068_expires_in.rst",
+      "sha256": "58b4f260313f76115e0d9bd73386df4876cd16d1db88d25a78d906c5b32a6de7",
+      "bytes": 203
+    },
+    {
+      "path": "changelog.d/20261111_120000_eloi_rfc7523_jwt_tokens_deprecated.rst",
+      "sha256": "bcf957e33b5842eb4e142f9e3e4562f5fc2b2ae5db63e3e8308842695c990aa8",
+      "bytes": 272
+    },
+    {
+      "path": "changelog.d/20261111_140000_eloi_acr_values.rst",
+      "sha256": "bc00e6548a590d643d0e52e999ae4fc5b0a8408ef89bca38bda0df289d5adb03",
+      "bytes": 605
+    },
+    {
+      "path": "changelog.d/20261111_160000_eloi_reused_code_revocation.rst",
+      "sha256": "a6f690030918cb4fb9b01698c8d59e2ffb5ac6bf5f36ea6de7bb15f0770fcbe0",
+      "bytes": 255
+    },
+    {
+      "path": "changelog.d/20261111_180000_eloi_claims_parameter.rst",
+      "sha256": "adec01ecffa089e9fd63be0b92ca69984432e797c3cd4f86f76cb66491e22fb7",
+      "bytes": 1089
+    },
+    {
+      "path": "changelog.d/20261112_120000_eloi_discovery_issuer.rst",
+      "sha256": "bf4e8a3f40ab42e3d2e2bf823371d9cc20240b76141e38320730645496712114",
+      "bytes": 598
+    },
+    {
+      "path": "changelog.d/20261112_140000_eloi_userinfo_sub.rst",
+      "sha256": "ff3079c23158fbe0d2cebaab6d1c8a0f232c0e0afd75898eff5b707bf7cc8a56",
+      "bytes": 214
+    },
+    {
+      "path": "changelog.d/20261113_150000_eloi_token_generator_request.rst",
+      "sha256": "f1133b6dffdcaf866517f028ae2e7d7b934c39c6b25fa4388c185c0c2c7eba9a",
+      "bytes": 1278
+    },
+    {
+      "path": "changelog.d/20261113_180000_eloi_form_post_csp.rst",
+      "sha256": "1ab96425b2137f46b71de2a45da4508a0a663a7edeee67d8e1aaae45cd521630",
+      "bytes": 236
+    },
+    {
+      "path": "changelog.d/20261114_120000_dpop_resource_server.rst",
+      "sha256": "9961b053ce6895e6a35e6b6ab1b882b53c40439135080615a34b1de8e35b2fac",
+      "bytes": 488
+    },
+    {
+      "path": "changelog.d/README.rst",
+      "sha256": "1067f0919c85a6c1a60f0516518d61b2a0ab2d118f6be7dea6877031dbc795d0",
+      "bytes": 106
+    },
+    {
+      "path": "docs/Makefile",
+      "sha256": "dd68d592d4505ea859900990702db5509da53a9496a061637e89c9ca1c75de56",
+      "bytes": 604
+    },
+    {
+      "path": "docs/_oauth_provider.py",
+      "sha256": "e3b1984c58b04bfa02caed43809e2dad451cf00ac5cf7d5270b1034c6188f644",
+      "bytes": 21327
+    },
+    {
+      "path": "docs/_static/custom.css",
+      "sha256": "a29b144d86e1e8e8ee6e6e76c4566e43dd768f2a04da468f7f3591aba64672e7",
+      "bytes": 662
+    },
+    {
+      "path": "docs/_static/dark-logo.svg",
+      "sha256": "54b370387fe732b4874160adb9498520fcf9eb7ca75bc13ee37949e25b99eb7e",
+      "bytes": 5665
+    },
+    {
+      "path": "docs/_static/icon.svg",
+      "sha256": "0b20863eef43584cba81496f8c2af12ef1f93ec77e2cd5ee6185364c98c88bc4",
+      "bytes": 674
+    },
+    {
+      "path": "docs/_static/light-logo.svg",
+      "sha256": "8e3c2da04e391ff4f2503b06ccc6ad68e779de476235699a494c3156f56524fb",
+      "bytes": 5668
+    },
+    {
+      "path": "docs/_templates/funding.html",
+      "sha256": "df50b328ca0b688e8989d08fb6a22e9be2410d8dfa95fb3cb5b8336f4a1722a1",
+      "bytes": 520
+    },
+    {
+      "path": "docs/basic/index.rst",
+      "sha256": "a4e4f9abc6a4eb1a6cab2286098f7438cd7ab312b3b9d9b093684b32ba546a8a",
+      "bytes": 206
+    },
+    {
+      "path": "docs/basic/install.rst",
+      "sha256": "3286a04c14627dea959841de816fc23cdd84133675f514779472bc67b9b04d9e",
+      "bytes": 1894
+    },
+    {
+      "path": "docs/basic/intro.rst",
+      "sha256": "efea95cd691075e829c032d51d02b0d347d2efe9733a029f0b0f7f9efcb13310",
+      "bytes": 2301
+    },
+    {
+      "path": "docs/basic/logging.rst",
+      "sha256": "4c923f3dec9d72ec567d15281026a4d4b9a488dfd30ba47d61510b1834fd826f",
+      "bytes": 422
+    },
+    {
+      "path": "docs/community/authors.rst",
+      "sha256": "69914278e80f002257fb186f4fb6aaf91c994c6c58824e9833fe8236a10ea0d2",
+      "bytes": 1297
+    },
+    {
+      "path": "docs/community/awesome.rst",
+      "sha256": "24961d860703aee2fbf53b0f07d624ddb01c767c05bd4faec9c35dc9f352a4da",
+      "bytes": 2172
+    },
+    {
+      "path": "docs/community/contribute.rst",
+      "sha256": "622438f1f1124e00033f7452708343540a960c4ae43fd0a4180f2dbbb327ecac",
+      "bytes": 4653
+    },
+    {
+      "path": "docs/community/funding.rst",
+      "sha256": "4b2ecca63ab18ea770d8473df3cc56c6d9f9c3dd96464451af6f0e37be79d153",
+      "bytes": 2601
+    },
+    {
+      "path": "docs/community/index.rst",
+      "sha256": "a2bf2ec7583ba35d0c88b685683498bc9b3df3f47d7a458c004959f46012e612",
+      "bytes": 267
+    },
+    {
+      "path": "docs/community/licenses.rst",
+      "sha256": "392a8aef60395b0686d202911701a11caecc6d588acb40a9109bd8ec6497a71e",
+      "bytes": 2094
+    },
+    {
+      "path": "docs/community/release.rst",
+      "sha256": "c6173cf52abdbbd041d59b82b9f33bd19362afa1cc1d6fa9663f0eafe65b0146",
+      "bytes": 2558
+    },
+    {
+      "path": "docs/community/security.rst",
+      "sha256": "926de78f81bbd46a4141e04aea6af7ec9a9da9f6515133c1d8593b6bd1df8d5a",
+      "bytes": 1435
+    },
+    {
+      "path": "docs/community/support.rst",
+      "sha256": "c3844d8867d713a33aa8349f8f3f563d5837442ce03285d123b042e9e6497fcd",
+      "bytes": 1030
+    },
+    {
+      "path": "docs/community/sustainable.rst",
+      "sha256": "43a171d1374ea3e4bd701f0005b031d3268e466ea57deeb2c7c006c3e1163954",
+      "bytes": 1557
+    },
+    {
+      "path": "docs/conf.py",
+      "sha256": "f99ef667d7d0027ef8557c1c2b4db6463e84666906b04195223019d3ce5d1e71",
+      "bytes": 2660
+    },
+    {
+      "path": "docs/conftest.py",
+      "sha256": "21b43150ad716e612452b8f8305f55d5f471d0ef06ec9fdbe68f7fa5e766c1f7",
+      "bytes": 28969
+    },
+    {
+      "path": "docs/index.rst",
+      "sha256": "6327518b40656fa0a5afc5a0fa28a465d12a1dd9669ef0e92ff7c9c53cccf01d",
+      "bytes": 748
+    },
+    {
+      "path": "docs/jose/index.rst",
+      "sha256": "dfd277f063e4eb0c6b2327eb3edfc52bcfd999612181c153e17fcbe54ae78ab3",
+      "bytes": 878
+    },
+    {
+      "path": "docs/jose/jwe.rst",
+      "sha256": "d058fbde96215b77c756ff58e3221257a53246412355f7dbba110151d53e3018",
+      "bytes": 3191
+    },
+    {
+      "path": "docs/jose/jwk.rst",
+      "sha256": "68681e21d2c2f3f75d588f42bda5f359a04a09f092434f068414d2b1f16393e8",
+      "bytes": 1232
+    },
+    {
+      "path": "docs/jose/jws.rst",
+      "sha256": "d7c74caf027bbae4071c1ce32b45a5f981746f53714b1644fd3d1178ac37bd60",
+      "bytes": 7538
+    },
+    {
+      "path": "docs/jose/jwt.rst",
+      "sha256": "6ff529a787c0a0212410f23a88256a9dda99841278003325e527da5320081553",
+      "bytes": 5999
+    },
+    {
+      "path": "docs/jose/specs/index.rst",
+      "sha256": "539a45cbd1786884bbb8ff36a7c1e7326f6f73b4f7cb9667dadda8aba163b823",
+      "bytes": 146
+    },
+    {
+      "path": "docs/jose/specs/rfc7515.rst",
+      "sha256": "be74df43870b9de97c53996d971a7f1f9a334a4f8eb95c404c87a5e1f8618200",
+      "bytes": 770
+    },
+    {
+      "path": "docs/jose/specs/rfc7516.rst",
+      "sha256": "2f715f661b8a4a014e20de44a21305847770027ad77e5973e1899f34d05fa5d9",
+      "bytes": 925
+    },
+    {
+      "path": "docs/jose/specs/rfc7517.rst",
+      "sha256": "6500fbf64f479c3c7e4c18bad4bbb247d6b6dd397e8ef35af9a0533e1ddd92e6",
+      "bytes": 958
+    },
+    {
+      "path": "docs/jose/specs/rfc7518.rst",
+      "sha256": "77cc3bc7bd65fc1cc2a95274eed1e6165dd6e1f052142a2b1ed170491f5f800d",
+      "bytes": 3084
+    },
+    {
+      "path": "docs/jose/specs/rfc7519.rst",
+      "sha256": "c23fd6f49d1f377d9b6972127523401e50db79ecf1a9c55430cd42c58aef312d",
+      "bytes": 770
+    },
+    {
+      "path": "docs/jose/specs/rfc7638.rst",
+      "sha256": "f247a311f8c2925cbdeebd3aaa777960d0223c4c93cfcf1870ddd85b11623950",
+      "bytes": 914
+    },
+    {
+      "path": "docs/jose/specs/rfc8037.rst",
+      "sha256": "6cc6b16b5af9423403d7e9becc1841d746870b6f47c07baaa729c8c58012054f",
+      "bytes": 2593
+    },
+    {
+      "path": "docs/oauth1/client/http/api.rst",
+      "sha256": "8bd9a3807b201c21d3e72baaf87786fe9f0ef56ba5f7412f37623772eef2262b",
+      "bytes": 879
+    },
+    {
+      "path": "docs/oauth1/client/http/httpx.rst",
+      "sha256": "5e55c4b09743e1d3871c759bad57142e4bde7d28ee59692f656801a98ac2b985",
+      "bytes": 2004
+    },
+    {
+      "path": "docs/oauth1/client/http/index.rst",
+      "sha256": "57bcad57a2829c0bf5d965173ab47d79111d7b774059da6855b868b71bd96ca5",
+      "bytes": 8552
+    },
+    {
+      "path": "docs/oauth1/client/http/requests.rst",
+      "sha256": "897a2ca858c8d9bbf3a58520774cb0a3f60b70aebee0de2dd8335c6a9df86b38",
+      "bytes": 1382
+    },
+    {
+      "path": "docs/oauth1/client/index.rst",
+      "sha256": "45de92d887c33c4eef6dcc0258b8b8b37fe22c25664853325c37bf2f5d63d81c",
+      "bytes": 1654
+    },
+    {
+      "path": "docs/oauth1/client/web/api.rst",
+      "sha256": "b439771babd27af6fad238aecf31b8599ce2f4265b959398ec1f921879cd4edf",
+      "bytes": 703
+    },
+    {
+      "path": "docs/oauth1/client/web/django.rst",
+      "sha256": "fa817df5e808fbfda569612e7371fac09525830378929bbcd30ce8d16d75feca",
+      "bytes": 3912
+    },
+    {
+      "path": "docs/oauth1/client/web/fastapi.rst",
+      "sha256": "caa2e2e4296963747254ac0e8796d45eba162225b3a3df34e1c30684835af398",
+      "bytes": 1875
+    },
+    {
+      "path": "docs/oauth1/client/web/flask.rst",
+      "sha256": "a2f99d08c2fd487a310b91ef3172398747dc615afebeda1c3e9073ec0785fa06",
+      "bytes": 6567
+    },
+    {
+      "path": "docs/oauth1/client/web/index.rst",
+      "sha256": "65c4352b3c5b4926bc71ed09174660b9e8018e4cfd881ea261c333c2c1ffb548",
+      "bytes": 9320
+    },
+    {
+      "path": "docs/oauth1/client/web/starlette.rst",
+      "sha256": "7746676af7d199d89894784791cde0eb1346ef05ef1a549527edba58c0db4ab2",
+      "bytes": 3949
+    },
+    {
+      "path": "docs/oauth1/concepts.rst",
+      "sha256": "de20429549412ecccc51800d07125d1aa69cbf548847867238b99466d5704e9e",
+      "bytes": 5343
+    },
+    {
+      "path": "docs/oauth1/index.rst",
+      "sha256": "22d9487d82f8d0600d0bf139e463e672b85cfcbbe20d7755b4dc87c6ede11cea",
+      "bytes": 117
+    },
+    {
+      "path": "docs/oauth1/provider/django/api.rst",
+      "sha256": "1c5f1b9db9bd266c8d0531883f32f4c8df169d8e6c14c1caa253053173201a38",
+      "bytes": 332
+    },
+    {
+      "path": "docs/oauth1/provider/django/authorization-server.rst",
+      "sha256": "be69f65e40a3f1e884cd35adadc22b51960b3c1a8fe649190b048e95daceeb21",
+      "bytes": 5337
+    },
+    {
+      "path": "docs/oauth1/provider/django/index.rst",
+      "sha256": "b637226ac9a6726e42ab77902cd36fea4cdc9f3a097cb1e52a1662b58283213d",
+      "bytes": 857
+    },
+    {
+      "path": "docs/oauth1/provider/django/resource-server.rst",
+      "sha256": "ebb5c847f6099b9079719b8d6d83368eae98743cff60666f1ccd48909939aeb6",
+      "bytes": 794
+    },
+    {
+      "path": "docs/oauth1/provider/flask/api.rst",
+      "sha256": "0ce28a722415c05d60c14e2ac9e8ae624369ad1a88c54c04143aba1ab9109a62",
+      "bytes": 409
+    },
+    {
+      "path": "docs/oauth1/provider/flask/authorization-server.rst",
+      "sha256": "7532ff4ec4c4e23acfe8baa4826df91d669841f4db4ef3e466647f7c04b1b00a",
+      "bytes": 12756
+    },
+    {
+      "path": "docs/oauth1/provider/flask/customize.rst",
+      "sha256": "34452f7e3428bd0b41d8d7710647fece4e2e72a0a67d3318f3de1fcf6b90d6d0",
+      "bytes": 2281
+    },
+    {
+      "path": "docs/oauth1/provider/flask/index.rst",
+      "sha256": "cb1f73c325a7506113273ba8ff3a922ed52302a5da2059f05a6f9ff007a1ba99",
+      "bytes": 837
+    },
+    {
+      "path": "docs/oauth1/provider/flask/resource-server.rst",
+      "sha256": "0e1b6ae3177b13393e5b4573981b74eec6409790a55f906a6a727a5a0ecd6e8c",
+      "bytes": 3392
+    },
+    {
+      "path": "docs/oauth1/provider/index.rst",
+      "sha256": "ce2dd89898bbd281181e4087e6877ce7a151ffb4c93f0e8d5c23f2081f03f0f0",
+      "bytes": 83
+    },
+    {
+      "path": "docs/oauth1/specs/index.rst",
+      "sha256": "61747379bb8a8a1d3613508fcdef9f01196549a72628e155c00eedf465601e24",
+      "bytes": 74
+    },
+    {
+      "path": "docs/oauth1/specs/rfc5849.rst",
+      "sha256": "509708dd61af2ad290f420e61d1a19aaa479762028742310fba6e78f3349171d",
+      "bytes": 843
+    },
+    {
+      "path": "docs/oauth2/authorization-server/authorization-session.rst",
+      "sha256": "fe19628fa1b1e8269544ea6d3bbafe1075106171814341b90909de220ef46efb",
+      "bytes": 9838
+    },
+    {
+      "path": "docs/oauth2/authorization-server/django/api.rst",
+      "sha256": "f82da080dcc0ceae976a8bd915e40af1e470ca367ede4aafe9fb3f9b70f8da97",
+      "bytes": 848
+    },
+    {
+      "path": "docs/oauth2/authorization-server/django/authorization-server.rst",
+      "sha256": "ceb8c11fbe903a365c3d1a078b798fcff6972cc440e58332b5f814b01d8891a5",
+      "bytes": 7864
+    },
+    {
+      "path": "docs/oauth2/authorization-server/django/endpoints.rst",
+      "sha256": "5974b6a9e772bb2e6620cedfa76fe85a44ef58adb3a7865d02227acce7092bd6",
+      "bytes": 1751
+    },
+    {
+      "path": "docs/oauth2/authorization-server/django/grants.rst",
+      "sha256": "a46c833c1ec140efc1ce16a67d68d6598c746b58a5edc7d88c0bfb717e5dec8d",
+      "bytes": 13393
+    },
+    {
+      "path": "docs/oauth2/authorization-server/django/index.rst",
+      "sha256": "c67076aaa3e9eb338261ff4336b7ea9fbb5e9f533100298726430e0d11732eb7",
+      "bytes": 1038
+    },
+    {
+      "path": "docs/oauth2/authorization-server/django/openid-connect.rst",
+      "sha256": "e4157feb8c519e17c0295f6faed2e54fe18c249cb80fea329bef45841c28d005",
+      "bytes": 15864
+    },
+    {
+      "path": "docs/oauth2/authorization-server/flask/api.rst",
+      "sha256": "24c4f9adba6456077ad12bc4bf6bc131120c798e1e86322759907a0e11e35278",
+      "bytes": 1460
+    },
+    {
+      "path": "docs/oauth2/authorization-server/flask/authorization-server.rst",
+      "sha256": "d0a3a12cdefad28accdfb51b6d441f58f7affbc5a39150aa40ac554b914a2350",
+      "bytes": 9814
+    },
+    {
+      "path": "docs/oauth2/authorization-server/flask/endpoints.rst",
+      "sha256": "f7bf62986c3043f6a9a994974a005cfb0b9dcdd5fb0ecbe66955ac13d71c005d",
+      "bytes": 272
+    },
+    {
+      "path": "docs/oauth2/authorization-server/flask/grants.rst",
+      "sha256": "188c0430c7b742154dca43b07b2d6ef8d4cafd50b0668db8e9d6749f3f741555",
+      "bytes": 12517
+    },
+    {
+      "path": "docs/oauth2/authorization-server/flask/index.rst",
+      "sha256": "45dbf6267d9cdfe138cb1c6f0926d2004607fdc3b164e1be5f0f347fbf540da2",
+      "bytes": 1362
+    },
+    {
+      "path": "docs/oauth2/authorization-server/flask/openid-connect.rst",
+      "sha256": "c292f2d6816dac4d4a4075497cf76daf17dd9461b7172f04b198f53a1e305106",
+      "bytes": 16286
+    },
+    {
+      "path": "docs/oauth2/authorization-server/index.rst",
+      "sha256": "934483ecec6d3e597163e64e29eca1acaba6f8bf708f6e329c70b82d6b3064b0",
+      "bytes": 1170
+    },
+    {
+      "path": "docs/oauth2/client/http/api.rst",
+      "sha256": "7be659422d0bf187823e8a01d20f07c396aa77f48c046df8847772c6e8be215a",
+      "bytes": 1258
+    },
+    {
+      "path": "docs/oauth2/client/http/httpx.rst",
+      "sha256": "1e98a654cae12bc439503a6c9961f95096e18a61bd6ae4a8f01ab37732b22443",
+      "bytes": 5762
+    },
+    {
+      "path": "docs/oauth2/client/http/index.rst",
+      "sha256": "098b93842f8dbd2000d5bf323e8f6f7d3a4138143def11cbf71896c946cb7106",
+      "bytes": 21647
+    },
+    {
+      "path": "docs/oauth2/client/http/requests.rst",
+      "sha256": "16739e6740029d84dd130eab2a2e42568e740fd760077ee9b701df01953ba132",
+      "bytes": 4519
+    },
+    {
+      "path": "docs/oauth2/client/index.rst",
+      "sha256": "bb83efc1e72669d67bfecbfdb3e86213024c06940073050b5d4583e925a30dab",
+      "bytes": 1260
+    },
+    {
+      "path": "docs/oauth2/client/web/api.rst",
+      "sha256": "8430daa1eba0cd76a775c1aad1e766ab69b20d2cc19de93f863c98c53a52cf8b",
+      "bytes": 790
+    },
+    {
+      "path": "docs/oauth2/client/web/django.rst",
+      "sha256": "08ae1b732b8807eaed07e8fbe8657efa8c4a72771f4f4654fa333b7cdfea0841",
+      "bytes": 7227
+    },
+    {
+      "path": "docs/oauth2/client/web/fastapi.rst",
+      "sha256": "68292d372b0c464efe26104817ad64d738c8ae88a4e78d9f9a6174679b509fe7",
+      "bytes": 1905
+    },
+    {
+      "path": "docs/oauth2/client/web/flask.rst",
+      "sha256": "3a4f2ccd9a2ed251c49e13bab70c1628db81d5551d617a689f4d7f0c340ff345",
+      "bytes": 9983
+    },
+    {
+      "path": "docs/oauth2/client/web/index.rst",
+      "sha256": "7a7489a4d80bbd5889599a7055a6f6cc04139840cf187f333ac6e6e9182f2819",
+      "bytes": 27449
+    },
+    {
+      "path": "docs/oauth2/client/web/starlette.rst",
+      "sha256": "c5f0cd75e5df26eb3202f808d5c2dd1581cf06f2b29746dfecf4748beeb05b5a",
+      "bytes": 6684
+    },
+    {
+      "path": "docs/oauth2/concepts.rst",
+      "sha256": "4979ceeaedce8f465db3609602543b8d70ee9ae813cdfd2be27a832316238b1b",
+      "bytes": 5830
+    },
+    {
+      "path": "docs/oauth2/index.rst",
+      "sha256": "be76fc8d2bfd60381f30ed6cbf0ab1fc6530ec4f783e719cd6b8ef2f99d222c8",
+      "bytes": 169
+    },
+    {
+      "path": "docs/oauth2/resource-server/django.rst",
+      "sha256": "c7551725fa81ae72d7c9e186f0f38231914c63d5002f6f3f4150fbb19245ef1d",
+      "bytes": 2823
+    },
+    {
+      "path": "docs/oauth2/resource-server/flask.rst",
+      "sha256": "1efc50ab43716f33e2690db5929289acf77329b87115f947c0e971b2abcc788f",
+      "bytes": 8648
+    },
+    {
+      "path": "docs/oauth2/resource-server/index.rst",
+      "sha256": "8b414ca4281cc4e5b1f1f9e70c3dcacec424dd106a617bfff5681b8442603762",
+      "bytes": 992
+    },
+    {
+      "path": "docs/oauth2/specs/backchannel.rst",
+      "sha256": "28d7f83db32d41327bb29c4c1d667abc2fa86016b97089497d02cb14f18fb71f",
+      "bytes": 15329
+    },
+    {
+      "path": "docs/oauth2/specs/form-post.rst",
+      "sha256": "89a3d096f0370ce00388412690f92e471dcd6f058953a4dcf2448a05b4685881",
+      "bytes": 3213
+    },
+    {
+      "path": "docs/oauth2/specs/id-jag.rst",
+      "sha256": "e44b5cabe8dfd7b487f1a359893a9de50dc7fd78529a589366b25d967555e33b",
+      "bytes": 11391
+    },
+    {
+      "path": "docs/oauth2/specs/index.rst",
+      "sha256": "84011034da93c741b34b4275636e3b12f3399befa5698ee4953d92c03775938b",
+      "bytes": 404
+    },
+    {
+      "path": "docs/oauth2/specs/multiple-response-types.rst",
+      "sha256": "416706f4887dec3e489e2099c68a570241592d2b5c1550b67f56ddcd6bb918c5",
+      "bytes": 3364
+    },
+    {
+      "path": "docs/oauth2/specs/oidc.rst",
+      "sha256": "d0f7eb7e2b4844ad63558eccebba783d918cd40cab55a4ab71d83d52f9aecfa6",
+      "bytes": 4800
+    },
+    {
+      "path": "docs/oauth2/specs/prompt-create.rst",
+      "sha256": "17de0617b974790d43a6777a7d4f6d4338bcd4bc185c52fb1623a4f5e2037778",
+      "bytes": 4187
+    },
+    {
+      "path": "docs/oauth2/specs/rfc6749.rst",
+      "sha256": "236005f7acce629248ebde09c5c0b2629ec7049840b782aebbb4bd9d8964432e",
+      "bytes": 2303
+    },
+    {
+      "path": "docs/oauth2/specs/rfc6750.rst",
+      "sha256": "4a3cc2a34091707ef2b868ee37958a3d50194caae4fb745a9cae86e2e88b66be",
+      "bytes": 2053
+    },
+    {
+      "path": "docs/oauth2/specs/rfc7009.rst",
+      "sha256": "4590000915d5059825b2f6053c8fd3cfd30918fb6bfb829b001a09475f7996f5",
+      "bytes": 2785
+    },
+    {
+      "path": "docs/oauth2/specs/rfc7523.rst",
+      "sha256": "01f578c959c1f6e21675a66a44b3f716d422de72ddbd088d6dd4319981e0ba05",
+      "bytes": 11772
+    },
+    {
+      "path": "docs/oauth2/specs/rfc7591.rst",
+      "sha256": "b3765314bf326926065ee9e3cab03e88571da13f558e9add9264aee85547c44c",
+      "bytes": 5005
+    },
+    {
+      "path": "docs/oauth2/specs/rfc7592.rst",
+      "sha256": "cf18916f1cd0e13fdaceacae83e9f4dbe6ef4a48890a4500b86e6eff5f4aea2d",
+      "bytes": 4942
+    },
+    {
+      "path": "docs/oauth2/specs/rfc7636.rst",
+      "sha256": "5ea445bce803e1f65e2cad11bbdd8e30a90423015b0dbba80860606d7e00c373",
+      "bytes": 7621
+    },
+    {
+      "path": "docs/oauth2/specs/rfc7662.rst",
+      "sha256": "8d8c10b3ceb074e7593bfc3eb8c566e9b22d861b9d9fb7379b7e1c187aeef604",
+      "bytes": 6634
+    },
+    {
+      "path": "docs/oauth2/specs/rfc8414.rst",
+      "sha256": "c3d9c965a898c7e93fc139d80cb18085ca2fa477808d14c890fafd8ad9ee4d46",
+      "bytes": 272
+    },
+    {
+      "path": "docs/oauth2/specs/rfc8628.rst",
+      "sha256": "102db5d081e3889b83fd0fc27fac0e4e85d69d60e1f815210e444bee1fc56e88",
+      "bytes": 6536
+    },
+    {
+      "path": "docs/oauth2/specs/rfc9068.rst",
+      "sha256": "62e249f405b3a383636ce09767ba110731ad0b48d84a23fa649932ec4c9cc2d7",
+      "bytes": 5649
+    },
+    {
+      "path": "docs/oauth2/specs/rfc9101.rst",
+      "sha256": "f2a610285140c22e75e4935439ce76e4236827d987f5cc02c4f8d308860259e6",
+      "bytes": 6445
+    },
+    {
+      "path": "docs/oauth2/specs/rfc9207.rst",
+      "sha256": "96911493a14e686783f3c5ab03345e3bee3db61fd039e36c624e8f6ac8b71b3b",
+      "bytes": 1798
+    },
+    {
+      "path": "docs/oauth2/specs/rfc9449.rst",
+      "sha256": "78ef1e89a98174ef9ba2f0b4d34a20fe24f4d2e64a25a07ed6708b78b017035c",
+      "bytes": 9908
+    },
+    {
+      "path": "docs/oauth2/specs/rfc9470.rst",
+      "sha256": "b1ccd4e155f1ad1634dee282e2bf6e85821c72aa2d267ba95116f42176f9e45b",
+      "bytes": 1935
+    },
+    {
+      "path": "docs/oauth2/specs/rfc9728.rst",
+      "sha256": "df9d7a302e0ae2ba03de2d9937c70b387be23d29e15f4df32ec65896966d4fdf",
+      "bytes": 8445
+    },
+    {
+      "path": "docs/oauth2/specs/rpinitiated.rst",
+      "sha256": "1e7c7fa82263ebf7b214cc42e1c487c474763cb516d6139540ee9f5fe1dbedfe",
+      "bytes": 8844
+    },
+    {
+      "path": "docs/oauth2/specs/unmet-authentication-requirements.rst",
+      "sha256": "7219ab8dc913d91705270d123f09f7ffc3faf8ca5122438691db20662254a301",
+      "bytes": 1749
+    },
+    {
+      "path": "docs/upgrades/changelog.rst",
+      "sha256": "05dc305606570ac68fe52ba7508d04b7d2d6b08a85ccd74e68e70016bbdc0078",
+      "bytes": 55314
+    },
+    {
+      "path": "docs/upgrades/index.rst",
+      "sha256": "b90fc93165e447bcb2bed305a24e77ae1367f413c1a5da6843d7ae06c7d47e9f",
+      "bytes": 73
+    },
+    {
+      "path": "docs/upgrades/jose.rst",
+      "sha256": "a7f4e8cc613771ff0d57df68181e76126ede66b7c6f42b04c68dba2374109f0d",
+      "bytes": 3878
+    },
+    {
+      "path": "examples/dpop_resource_server.py",
+      "sha256": "5813cb9cdbcf99f026cc942162a78e55862db2ac88d0b1c35011442c72f2709c",
+      "bytes": 8649
+    },
+    {
+      "path": "pyproject.toml",
+      "sha256": "838fff5d693706e53102e9d0494e195c94ea03474438119a4a75a2bde2eda612",
+      "bytes": 3772
+    },
+    {
+      "path": "serve.py",
+      "sha256": "e39386e272bcd9b1410421e5325541684afec5f45631b068d20c4627bea48dd0",
+      "bytes": 212
+    },
+    {
+      "path": "sonar-project.properties",
+      "sha256": "9e00b65171f92c3d770115621a7d3d1be87f3a3760de76365cd7b449fad8a7a0",
+      "bytes": 249
+    },
+    {
+      "path": "tests/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "tests/clients/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "tests/clients/asgi_helper.py",
+      "sha256": "4d50a6d9afdf1f2d65bbea3e88ba10553ae3498676a3e5fa85d4c18c60c4ab2a",
+      "bytes": 2896
+    },
+    {
+      "path": "tests/clients/keys/jwks_private.json",
+      "sha256": "46fb011891456af8f3628b81c911e5881f704a83133f4e46a7ca844c988de636",
+      "bytes": 3364
+    },
+    {
+      "path": "tests/clients/keys/jwks_public.json",
+      "sha256": "b08e786ec47faa1eb41953659556ed997d7cc7a503617982401cae1dedbbfecc",
+      "bytes": 856
+    },
+    {
+      "path": "tests/clients/keys/rsa_private.pem",
+      "sha256": "866aaf545f43fd4e808d5b841fa7e6c8d6f5cd052b214c4af45eb91a98fee29c",
+      "bytes": 1675
+    },
+    {
+      "path": "tests/clients/test_django/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "tests/clients/test_django/conftest.py",
+      "sha256": "2a57c00fa58e44d41f1218ffd636cdc67de4009d968e148da05566c37d0da08d",
+      "bytes": 121
+    },
+    {
+      "path": "tests/clients/test_django/test_oauth_client.py",
+      "sha256": "ca81026c59593ff3093d739794f7ec072054fc23e8934a6c6b18dd91440c10c1",
+      "bytes": 18902
+    },
+    {
+      "path": "tests/clients/test_flask/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "tests/clients/test_flask/test_oauth_client.py",
+      "sha256": "a8df87bf7751594220bd191aac0835800d3bb18bebc2100be179e52e701a7651",
+      "bytes": 47065
+    },
+    {
+      "path": "tests/clients/test_flask/test_user_mixin.py",
+      "sha256": "c6646beb5f79403ae253950f4bb18de3ce08b151671a7ff1e44b88c5adc4ea1c",
+      "bytes": 29863
+    },
+    {
+      "path": "tests/clients/test_httpx/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "tests/clients/test_httpx/test_assertion_client.py",
+      "sha256": "53636d942e34c5ed90e176fd0112009552f2c2d725922b375167b7036c893b1c",
+      "bytes": 2983
+    },
+    {
+      "path": "tests/clients/test_httpx/test_async_assertion_client.py",
+      "sha256": "7bfa28e5ebff85cc4cee983a5d91dc7c7d6f21a4470c6219b4ee94676e3b17b0",
+      "bytes": 3839
+    },
+    {
+      "path": "tests/clients/test_httpx/test_async_oauth1_client.py",
+      "sha256": "73b6e04403d3633c0d41418187ce4dd90be006f351aacd5de265747044c847e9",
+      "bytes": 6806
+    },
+    {
+      "path": "tests/clients/test_httpx/test_async_oauth2_client.py",
+      "sha256": "d946b87e309e892f5dafb00645c52718c88b7fda41ccde634c4426ad0973bcaf",
+      "bytes": 24200
+    },
+    {
+      "path": "tests/clients/test_httpx/test_compat.py",
+      "sha256": "e67f788314d64728a93958408c6695654ab755416c101b6079a37b002f590dd8",
+      "bytes": 805
+    },
+    {
+      "path": "tests/clients/test_httpx/test_instrumented_httpx.py",
+      "sha256": "df9498ac0931eb4c31d11862fb85001ac19a03dae08dd5b01e4e5c268c14a434",
+      "bytes": 2390
+    },
+    {
+      "path": "tests/clients/test_httpx/test_oauth1_client.py",
+      "sha256": "e64bed2274e825cf7ca3fa8c8f2bd3256416884f3bf07679c43260896c93f3fd",
+      "bytes": 6246
+    },
+    {
+      "path": "tests/clients/test_httpx/test_oauth2_client.py",
+      "sha256": "52219beacefdfdeb550e60cd57339354506bbc795bbdaf1af2af393af6653915",
+      "bytes": 21972
+    },
+    {
+      "path": "tests/clients/test_requests/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "tests/clients/test_requests/test_assertion_session.py",
+      "sha256": "7bba34cf8eeb00316281e01bf3095cfcbf781578e487b7420234b265d8c41d3d",
+      "bytes": 6329
+    },
+    {
+      "path": "tests/clients/test_requests/test_oauth1_session.py",
+      "sha256": "e999432cf8ba1d0984f8256462ba5ebc2a218e8302f246d0461e3d556dd0bcdf",
+      "bytes": 10845
+    },
+    {
+      "path": "tests/clients/test_requests/test_oauth2_session.py",
+      "sha256": "a7c2bde03983e1c6befe61a7025608e4bcb48be70c171866bb23fe7f01404d99",
+      "bytes": 29299
+    },
+    {
+      "path": "tests/clients/test_starlette/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "tests/clients/test_starlette/test_oauth_client.py",
+      "sha256": "a34f8facf23657a68a1a512420196781505bf90c34750f65737eb529e398c63a",
+      "bytes": 34084
+    },
+    {
+      "path": "tests/clients/test_starlette/test_user_mixin.py",
+      "sha256": "394da280c39327ab4397401c81eeacae7f522c22660dca4602331d6a6db94554",
+      "bytes": 18712
+    },
+    {
+      "path": "tests/clients/test_url_objects.py",
+      "sha256": "12728d7b84fc5d722ddd0355536fd2625e920f56fd8719ec235f0f6ec13a1aca",
+      "bytes": 7076
+    },
+    {
+      "path": "tests/clients/util.py",
+      "sha256": "c6df08205116091dd400fe6429b3af5d2345d651d8982855f7116b1b7e895317",
+      "bytes": 1325
+    },
+    {
+      "path": "tests/clients/wsgi_helper.py",
+      "sha256": "5ef0436468f61a4aa5d13337031892a06e30dd53ede98a652ee0ee8e0c13af1b",
+      "bytes": 1067
+    },
+    {
+      "path": "tests/core/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "tests/core/test_common_encoding.py",
+      "sha256": "522fae37e9d07335e3afeec80048d3628ab12612548dcf35abc2594c855926d9",
+      "bytes": 214
+    },
+    {
+      "path": "tests/core/test_common_hooks.py",
+      "sha256": "c09789646388af9dd8143ab8e2eb9e1ca89bec8f6c3e696e297f17a72f80f4dc",
+      "bytes": 9152
+    },
+    {
+      "path": "tests/core/test_common_security.py",
+      "sha256": "1176274db0780594d1179156fe6d4b71dc2ad90eca27346a0d29b8b10f67b6a8",
+      "bytes": 3644
+    },
+    {
+      "path": "tests/core/test_common_urls.py",
+      "sha256": "288e91fe8bd85f4c4a9955c3711594daa392099e66c1947cb21bf198e80f7531",
+      "bytes": 2626
+    },
+    {
+      "path": "tests/core/test_joserfc_helpers.py",
+      "sha256": "b3eb075e8e5a7e40642b8bbc38f4d1fbbb514ff1abd453ed6d4763c16b7f0ba5",
+      "bytes": 714
+    },
+    {
+      "path": "tests/core/test_legacy.py",
+      "sha256": "207addba7ff4f29a48166c5b6670609aceb468995b5cc0e91e4b672c4dcbb244",
+      "bytes": 1644
+    },
+    {
+      "path": "tests/core/test_oauth1/test_signature.py",
+      "sha256": "78d371f59f3aa1b62b69af827113a440a5bee970110f061192d59fbadae66a33",
+      "bytes": 1914
+    },
+    {
+      "path": "tests/core/test_oauth2/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "tests/core/test_oauth2/test_authorization_session.py",
+      "sha256": "c530c4dd4074d8107c064a06828e5a773bc12571467f7ff3aee4d5f6d2bbd6d3",
+      "bytes": 3960
+    },
+    {
+      "path": "tests/core/test_oauth2/test_id_jag.py",
+      "sha256": "2b8935f1b2733a95efc60a22c37182c150d7f8cc13fba4a0dd41417fb8f37b3a",
+      "bytes": 18709
+    },
+    {
+      "path": "tests/core/test_oauth2/test_rfc6749_misc.py",
+      "sha256": "515288db6839afd449f95563fcd4860eaee568cd510df1168d56643c1933aaf9",
+      "bytes": 10298
+    },
+    {
+      "path": "tests/core/test_oauth2/test_rfc6750.py",
+      "sha256": "0f7cb6dd6b8c2c06681e9b20a4d377598e5effced02403837d995f20fbe7306a",
+      "bytes": 9412
+    },
+    {
+      "path": "tests/core/test_oauth2/test_rfc7523_assertion.py",
+      "sha256": "adb4436549ac928532da9b952233d54dbf78d06b0d976ffdae41286259d00e6f",
+      "bytes": 3485
+    },
+    {
+      "path": "tests/core/test_oauth2/test_rfc7523_client_secret.py",
+      "sha256": "8056e50c57c2f0f69f21edb58c261e211c0679f24accee60b14f526e4b852428",
+      "bytes": 7380
+    },
+    {
+      "path": "tests/core/test_oauth2/test_rfc7523_private_key.py",
+      "sha256": "e6b9194ad98f7eceb6ed2d0e591bbc8f55016dd62a24977548d8d94bf8eb04e3",
+      "bytes": 9782
+    },
+    {
+      "path": "tests/core/test_oauth2/test_rfc7523_validator.py",
+      "sha256": "f9b31b784cf9e215eb0096eab1bfea5f86251af924bbbf261460f6c6173f03e3",
+      "bytes": 5283
+    },
+    {
+      "path": "tests/core/test_oauth2/test_rfc7591.py",
+      "sha256": "a97da88daccc9a3e228612101cb1d3d6431330dbf82ff705fe3866105403779e",
+      "bytes": 1420
+    },
+    {
+      "path": "tests/core/test_oauth2/test_rfc7636.py",
+      "sha256": "eb0600dc75583d91fdda2c943c0013d22b128228c6ac7d861418bb42f1431a3d",
+      "bytes": 1368
+    },
+    {
+      "path": "tests/core/test_oauth2/test_rfc7662.py",
+      "sha256": "5f63c59bea7af3eb696405a8f5fd0ee154f9bc228c0506a9428b82703ceb2f4f",
+      "bytes": 1538
+    },
+    {
+      "path": "tests/core/test_oauth2/test_rfc8414.py",
+      "sha256": "e67b63a0509c7c841ed8765cc3c20f8ca7e569db64e0756c46be27b9477efe1f",
+      "bytes": 16964
+    },
+    {
+      "path": "tests/core/test_oauth2/test_rfc9068_token_validator.py",
+      "sha256": "2efc7da9a5b51f1ac999b5dd30fdf0675a21f3cc15d76d278c5e63252b5b9d0e",
+      "bytes": 2835
+    },
+    {
+      "path": "tests/core/test_oauth2/test_rfc9207.py",
+      "sha256": "5b917c1c1ad74a4ab00d3f6f450b8a8a6633e76f8318cea0a06f3638b66b7bea",
+      "bytes": 1708
+    },
+    {
+      "path": "tests/core/test_oauth2/test_rfc9449_dpop.py",
+      "sha256": "a61736756d8a9131f7f944a0c2409aceaddeb939fac39d6b6e5002721a44c32c",
+      "bytes": 26469
+    },
+    {
+      "path": "tests/core/test_oauth2/test_rfc9470.py",
+      "sha256": "51c99aaa99a8b20b91ad1f21b83510d8c9692cc862e1fe995e7ee88179082ee0",
+      "bytes": 6582
+    },
+    {
+      "path": "tests/core/test_oauth2/test_rfc9728.py",
+      "sha256": "130954e7c602f7c79adfcba930c07bb467798ea44017ac9c11c255ab4ae42abf",
+      "bytes": 28652
+    },
+    {
+      "path": "tests/core/test_oidc/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "tests/core/test_oidc/test_backchannel.py",
+      "sha256": "c217b47c75fbe21e01ea17f821c825caf59b10bf9fe91c01c85aa8a9b1a389f9",
+      "bytes": 22645
+    },
+    {
+      "path": "tests/core/test_oidc/test_core.py",
+      "sha256": "a53633ac064d4230d6b229a058a1e0cbc96692edf0425451c13280ce8582e751",
+      "bytes": 20516
+    },
+    {
+      "path": "tests/core/test_oidc/test_discovery.py",
+      "sha256": "5b4401981557eb3d6561b2e3cf2030aadc36a6a77346aa308d08bca47a9637dd",
+      "bytes": 6236
+    },
+    {
+      "path": "tests/core/test_oidc/test_prompt_create.py",
+      "sha256": "7b8caad811f11d03c1fecc6b1ffcb4482cd4253ec3f3c5b1dd9b695efcb4010d",
+      "bytes": 3816
+    },
+    {
+      "path": "tests/core/test_oidc/test_registration.py",
+      "sha256": "3a2d87c146caeef02665261bf1a7785a8a6a0abc15cee712578c24a78bf2ee99",
+      "bytes": 2830
+    },
+    {
+      "path": "tests/core/test_oidc/test_rpinitiated.py",
+      "sha256": "5e16f163834d5ad4799d40b8429ea7b67f5106d2f95db4dbd9e90866c01cad55",
+      "bytes": 3559
+    },
+    {
+      "path": "tests/core/test_oidc/test_utils.py",
+      "sha256": "09dff8429bf7fefaa41ffe89cb8e6d98869918eb6ad1fe2d8a5bc06cee0adebb",
+      "bytes": 1589
+    },
+    {
+      "path": "tests/django/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "tests/django/conftest.py",
+      "sha256": "2a57c00fa58e44d41f1218ffd636cdc67de4009d968e148da05566c37d0da08d",
+      "bytes": 121
+    },
+    {
+      "path": "tests/django/docs/__init__.py",
+      "sha256": "be0753c942089c566ff56c8dd71af86f4e22f52739e6506ac766ecb29db3f4ed",
+      "bytes": 78
+    },
+    {
+      "path": "tests/django/test_oauth1/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "tests/django/test_oauth1/conftest.py",
+      "sha256": "7502f338ff86aded290510b829cbf6879ff6037a1244980ced2b99382d20bf99",
+      "bytes": 1424
+    },
+    {
+      "path": "tests/django/test_oauth1/models.py",
+      "sha256": "3cb5b9ae7b70e1355de80a92a4ea6c677fbbe1461415ca422d1c0a92fb60b1eb",
+      "bytes": 1162
+    },
+    {
+      "path": "tests/django/test_oauth1/test_authorize.py",
+      "sha256": "e503b359f692db131f2e2e30da4bd438de40f833760dc668b2d21ac2ec76417f",
+      "bytes": 4245
+    },
+    {
+      "path": "tests/django/test_oauth1/test_resource_protector.py",
+      "sha256": "01bcbc0886ca0bdc02665018a9acbbfe81031dc740d0aaaf8a9b95cea5ed0ebf",
+      "bytes": 6313
+    },
+    {
+      "path": "tests/django/test_oauth1/test_token_credentials.py",
+      "sha256": "41168d3ad4cb6544c85ce37b771c5d98c9cd97bc6b94890d37b5c7444eeb4467",
+      "bytes": 5866
+    },
+    {
+      "path": "tests/django/test_oauth2/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "tests/django/test_oauth2/conftest.py",
+      "sha256": "a367abcf105e65bf67ae5fa3d86e33c8254b517694ac6b39e4d84a5959909c75",
+      "bytes": 987
+    },
+    {
+      "path": "tests/django/test_oauth2/models.py",
+      "sha256": "f372def7bce0630c2711e5c7d4caa9fe263ac140af93fd16a185323b8b98d964",
+      "bytes": 4870
+    },
+    {
+      "path": "tests/django/test_oauth2/oauth2_server.py",
+      "sha256": "da773cbf5067204b380b6c3fcce0df99d492af24a980d74ff089e3aa1bae0986",
+      "bytes": 271
+    },
+    {
+      "path": "tests/django/test_oauth2/test_authorization_code_grant.py",
+      "sha256": "7819b734a802ae5c79d6a9e3946b3a1799dfdcc2eaf061707ce093dd23e93ccf",
+      "bytes": 7765
+    },
+    {
+      "path": "tests/django/test_oauth2/test_client_credentials_grant.py",
+      "sha256": "e343eb40ff2a349f95264fe4c70c0d07ac2efad262e1dda119e30b1412781b49",
+      "bytes": 3016
+    },
+    {
+      "path": "tests/django/test_oauth2/test_client_registration_endpoint.py",
+      "sha256": "b179eaaa3253aa7968c2e41af934c7b383665a51b926eaffa46125168a0076fe",
+      "bytes": 2284
+    },
+    {
+      "path": "tests/django/test_oauth2/test_implicit_grant.py",
+      "sha256": "c50179395794a7f152e2277d6b61637eec9e12eaaa06cfc144ddc7201a498a8e",
+      "bytes": 2749
+    },
+    {
+      "path": "tests/django/test_oauth2/test_password_grant.py",
+      "sha256": "532c5ed6e506bb8893c6e7bb3b2727f5dcfe75f369e97bfda17368a0d30b0ea7",
+      "bytes": 4788
+    },
+    {
+      "path": "tests/django/test_oauth2/test_refresh_token.py",
+      "sha256": "baba2813f7e6f6715718b70e9aa962c5a884001421dc441c30f233d6d1acbc16",
+      "bytes": 4971
+    },
+    {
+      "path": "tests/django/test_oauth2/test_resource_protector.py",
+      "sha256": "4eef7f986627224818c962ab240ed1d6bb9dd96063d7abbe20f6a1743f0e01f5",
+      "bytes": 10012
+    },
+    {
+      "path": "tests/django/test_oauth2/test_revocation_endpoint.py",
+      "sha256": "ecc632c24a0a3289ca5da1108d0af9c9111b158b3e5c7b3a4e7f1a94d925d78b",
+      "bytes": 3663
+    },
+    {
+      "path": "tests/django_helper.py",
+      "sha256": "7742a094bb5ae6c15af5728a2fea015a4e43a46a8632e3a6d573fd83df020392",
+      "bytes": 554
+    },
+    {
+      "path": "tests/django_settings.py",
+      "sha256": "b7ed600010d7da68ec118ed56e08ace0ebf448ada0e06788c9f557f6820b8e2b",
+      "bytes": 933
+    },
+    {
+      "path": "tests/files/ed25519-pkcs8.pem",
+      "sha256": "c4932a9b6b97423b249a53e58d706f820185467464699038ed7ca5b29815ba03",
+      "bytes": 119
+    },
+    {
+      "path": "tests/files/ed25519-pub.pem",
+      "sha256": "7f2d9ed0b71b8e5a6c5cf30e647d6e20b5bca6dac8071f11abe3fef8014db610",
+      "bytes": 113
+    },
+    {
+      "path": "tests/files/ed25519-ssh.pub",
+      "sha256": "31ae33040a4dfe54a673168c7a444695f8b35fbaefc281b7687286f7e6c94e85",
+      "bytes": 98
+    },
+    {
+      "path": "tests/files/jwk_private.json",
+      "sha256": "36144c482618d2fd978bd27c509048efd29abf6cb41ab2576ce16da78716075f",
+      "bytes": 1688
+    },
+    {
+      "path": "tests/files/jwk_public.json",
+      "sha256": "4c726de0cbd1794f94cb1f5330604ae661fc033c14b1d89f117b67f4299b2fb8",
+      "bytes": 434
+    },
+    {
+      "path": "tests/files/jwks_private.json",
+      "sha256": "46fb011891456af8f3628b81c911e5881f704a83133f4e46a7ca844c988de636",
+      "bytes": 3364
+    },
+    {
+      "path": "tests/files/jwks_public.json",
+      "sha256": "b08e786ec47faa1eb41953659556ed997d7cc7a503617982401cae1dedbbfecc",
+      "bytes": 856
+    },
+    {
+      "path": "tests/files/jwks_single_private.json",
+      "sha256": "07a3f3258d456c8f9e9f81d84e297b61107862ed534cea233d46c2ba9293265f",
+      "bytes": 1657
+    },
+    {
+      "path": "tests/files/jwks_single_public.json",
+      "sha256": "83658f1aab2a901c7c5a0b27c40b52aac7b3302e7572e5c91cd6ad8abf0599f9",
+      "bytes": 417
+    },
+    {
+      "path": "tests/files/rsa_private.pem",
+      "sha256": "866aaf545f43fd4e808d5b841fa7e6c8d6f5cd052b214c4af45eb91a98fee29c",
+      "bytes": 1675
+    },
+    {
+      "path": "tests/files/rsa_public.pem",
+      "sha256": "60b6737cd7da707aecb7d593b09d01ed5c8c6adacd5a3f03fa1089c7ee8d364a",
+      "bytes": 451
+    },
+    {
+      "path": "tests/files/secp256k1-private.pem",
+      "sha256": "95f72b083a9ff40103dcb7ca2ab45e7a82eee85805f0976ff292a575d34a9899",
+      "bytes": 237
+    },
+    {
+      "path": "tests/files/secp256k1-pub.pem",
+      "sha256": "2ea119d1ac2c19a75e0ae6c230cd6ff48c78c649146238061dac3c2e87b3600b",
+      "bytes": 174
+    },
+    {
+      "path": "tests/files/secp521r1-private.json",
+      "sha256": "aca1c7cd0e139c5019c50a5a318a6efaf11c9e84ffbc633f3f3c75d3543efe01",
+      "bytes": 376
+    },
+    {
+      "path": "tests/files/secp521r1-public.json",
+      "sha256": "361c1849dfe4ca04f8ac6c9f087555ed3edd157eac02baebc822e23d76b428af",
+      "bytes": 279
+    },
+    {
+      "path": "tests/files/ssh_private.pem",
+      "sha256": "be04e9a46fe5cbf88f3cc5f2ede1ee946141ad4aecc99fff59fc8f5886b1ca56",
+      "bytes": 1823
+    },
+    {
+      "path": "tests/files/ssh_public.pem",
+      "sha256": "878d840c8c36a30020fbfb51ec92efd89a3b36cd47a37324cb203eb15415cc83",
+      "bytes": 398
+    },
+    {
+      "path": "tests/files/thumbprint_example.json",
+      "sha256": "50beff9810ff593767508db6ba00403b8d2aaab45c7ae8b22fbbb5b570d2f97e",
+      "bytes": 428
+    },
+    {
+      "path": "tests/flask/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "tests/flask/cache.py",
+      "sha256": "c06e7d328eaf1baedd5179f40be0fb65a0c04f910e35d36a696f351b26e7a512",
+      "bytes": 1715
+    },
+    {
+      "path": "tests/flask/test_oauth1/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "tests/flask/test_oauth1/conftest.py",
+      "sha256": "5a02cbb645f25d17bcaf9d43a3f1d62024cbf453a5119f9e7b676399930cab62",
+      "bytes": 948
+    },
+    {
+      "path": "tests/flask/test_oauth1/oauth1_server.py",
+      "sha256": "e2d34c6343bffe5631101d603f6ee0e0a09eae49c9f4dc17357a8a758dbd47b6",
+      "bytes": 9138
+    },
+    {
+      "path": "tests/flask/test_oauth1/test_authorize.py",
+      "sha256": "a93b1fd08a49c4192fb9643303618455bdc16b408d12d3f8f9c4e9ced1045f5d",
+      "bytes": 4036
+    },
+    {
+      "path": "tests/flask/test_oauth1/test_resource_protector.py",
+      "sha256": "4f5e8f9fe574a8a668619fed19d0407e387bd27eab57ec9c7d4016dd88ccd2ec",
+      "bytes": 6067
+    },
+    {
+      "path": "tests/flask/test_oauth1/test_temporary_credentials.py",
+      "sha256": "135958ab7bab28c3fb6855bcab5514658e745aa093c564a37be341c63fc7b043",
+      "bytes": 10841
+    },
+    {
+      "path": "tests/flask/test_oauth1/test_token_credentials.py",
+      "sha256": "3410f0a8765c9afbd56739c3907b000affa1a92361439226f2312456b31a0e6e",
+      "bytes": 6978
+    },
+    {
+      "path": "tests/flask/test_oauth2/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "tests/flask/test_oauth2/conftest.py",
+      "sha256": "bc5e2eb59ea384a859fe75fcc6dc670347fc3762179ee407148d6c43cf576760",
+      "bytes": 2827
+    },
+    {
+      "path": "tests/flask/test_oauth2/models.py",
+      "sha256": "06d7a915233885682397881dce3921767451d315ac3c86366b663e458428d75d",
+      "bytes": 5353
+    },
+    {
+      "path": "tests/flask/test_oauth2/oauth2_server.py",
+      "sha256": "0fb0e49b1b92dbee54432b3eb08a93a5cc135862deacccbfebe5ded53e51ee8e",
+      "bytes": 3735
+    },
+    {
+      "path": "tests/flask/test_oauth2/rfc9068/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "tests/flask/test_oauth2/rfc9068/test_resource_server.py",
+      "sha256": "0d7a3f520e189d8e7d3d8533bdfa6395adec2ea364e82264a5d92b2cc36c8c7a",
+      "bytes": 13368
+    },
+    {
+      "path": "tests/flask/test_oauth2/rfc9068/test_token_generation.py",
+      "sha256": "a61efd2a58b415d4ef474ca259183a5380ee13af034db502a53409f335d6de6d",
+      "bytes": 16201
+    },
+    {
+      "path": "tests/flask/test_oauth2/rfc9068/test_token_introspection.py",
+      "sha256": "dc78bc8152be02c60bf6f5dbf33ab2d84b956ca5ebbb766ecebfa71119c6ad24",
+      "bytes": 9452
+    },
+    {
+      "path": "tests/flask/test_oauth2/rfc9068/test_token_revocation.py",
+      "sha256": "d811022477469acaad1bbe7aadb2efa1a83401d84da5ebeec106947b703f7181",
+      "bytes": 7281
+    },
+    {
+      "path": "tests/flask/test_oauth2/rfc9068/test_userinfo.py",
+      "sha256": "587dc67274b967a5cb15c0d458eb73d9f2fc6a21480f8a9e9f7cc7d5d5e766f4",
+      "bytes": 6254
+    },
+    {
+      "path": "tests/flask/test_oauth2/test_authorization_code_grant.py",
+      "sha256": "210a7773daa88565ed76889bf064a55f88a34720e08f7ab6a37cbc2bb2031a46",
+      "bytes": 20537
+    },
+    {
+      "path": "tests/flask/test_oauth2/test_authorization_code_iss_parameter.py",
+      "sha256": "45f4e437a155875334d70be1667db5d5220479dc670521ebaa1a93075c7fadf6",
+      "bytes": 5747
+    },
+    {
+      "path": "tests/flask/test_oauth2/test_authorization_errors.py",
+      "sha256": "7867fb48f826f9db372ed8888d472829a4c77d46432b56e9fe5de3d156d44253",
+      "bytes": 5893
+    },
+    {
+      "path": "tests/flask/test_oauth2/test_authorization_response.py",
+      "sha256": "6ce477ef3e228b5449897996b0016852c14199f09644d864741faa5e376ce295",
+      "bytes": 4598
+    },
+    {
+      "path": "tests/flask/test_oauth2/test_client_configuration_endpoint.py",
+      "sha256": "961e07f6713d89370ce55dec5d1dd625be6d9c4a07839347d1803d18a41e3a1d",
+      "bytes": 21411
+    },
+    {
+      "path": "tests/flask/test_oauth2/test_client_credentials_grant.py",
+      "sha256": "702b6f29f5a1aa4d151bae6f4e61821822970413bea076918e78b1acfdd23ac0",
+      "bytes": 7479
+    },
+    {
+      "path": "tests/flask/test_oauth2/test_client_registration_endpoint_oauth2.py",
+      "sha256": "c40bb0a2ff7239d2d31eb452e515bab2942df7c831a7dc789af4201619170ee6",
+      "bytes": 19304
+    },
+    {
+      "path": "tests/flask/test_oauth2/test_client_registration_endpoint_oidc.py",
+      "sha256": "4bf523fcde1f229346531fe1b94c5d5e0f25ed835eccdb8e53e062606ab50fe4",
+      "bytes": 24584
+    },
+    {
+      "path": "tests/flask/test_oauth2/test_code_challenge.py",
+      "sha256": "c97f768cf78f337e9f99b1bbf9a731701b05e0addc1f1e4432b6ebc6ba2565de",
+      "bytes": 15922
+    },
+    {
+      "path": "tests/flask/test_oauth2/test_device_code_grant.py",
+      "sha256": "788bb0ccfb548c15e03e31986e37e881509c2488bf46d85bb391eef7cdbc4eba",
+      "bytes": 8499
+    },
+    {
+      "path": "tests/flask/test_oauth2/test_end_session.py",
+      "sha256": "f56cb3f920e055a332d1110c12a05e695a31ef09565a2b0d1af0cacaa99f820b",
+      "bytes": 18702
+    },
+    {
+      "path": "tests/flask/test_oauth2/test_form_post.py",
+      "sha256": "21eafd33bc1f04ad93840a0eba42b35557e0acc0f17737aa6c40198f284aa6b8",
+      "bytes": 6791
+    },
+    {
+      "path": "tests/flask/test_oauth2/test_id_jag_grant.py",
+      "sha256": "deb6669d55b2787c0f2bb767eea6cbc7a38e134fada19a51d04737a396417714",
+      "bytes": 19373
+    },
+    {
+      "path": "tests/flask/test_oauth2/test_implicit_grant.py",
+      "sha256": "c706087fe9d3c4f810d957158750405cfc31cc893a2a7717ad8de6f58434d5b7",
+      "bytes": 5457
+    },
+    {
+      "path": "tests/flask/test_oauth2/test_introspection_endpoint.py",
+      "sha256": "55923e9465092f185918243da9a82d7891b9696d04b1464d4edb4ddf5ad5e34d",
+      "bytes": 5329
+    },
+    {
+      "path": "tests/flask/test_oauth2/test_jwt_authorization_request.py",
+      "sha256": "b785a9ea3088508bde489a7e511eebe636ef5f92f694b289e9aa54191507c0db",
+      "bytes": 35974
+    },
+    {
+      "path": "tests/flask/test_oauth2/test_jwt_bearer_client_auth.py",
+      "sha256": "e09938a6fe458510db606192e1947ef5dc770d7e4edf57892859d7baa818c830",
+      "bytes": 17289
+    },
+    {
+      "path": "tests/flask/test_oauth2/test_jwt_bearer_grant.py",
+      "sha256": "c28a221d0a05ae928ecee167cdcde6968479a0342f797906771f8b1c8254b741",
+      "bytes": 13526
+    },
+    {
+      "path": "tests/flask/test_oauth2/test_multiple_response_types.py",
+      "sha256": "7b16c1e2b439ee10dbf6ee07d57a73a6dd14897adf18d946375dd650a1e90097",
+      "bytes": 7647
+    },
+    {
+      "path": "tests/flask/test_oauth2/test_none_response_type.py",
+      "sha256": "230b0f5c7760f8f7f645dcc2ebf60320b8521e9bb39f88970f4c35f5cbbec202",
+      "bytes": 3977
+    },
+    {
+      "path": "tests/flask/test_oauth2/test_oauth2_response.py",
+      "sha256": "0ed6abc7e1cb98bdeeb72cf4382bc97b7714368aa05e74b6ec0ed0f992e995c8",
+      "bytes": 4915
+    },
+    {
+      "path": "tests/flask/test_oauth2/test_oauth2_server.py",
+      "sha256": "ff554002a0fc58f9a9cd6fe64b6f6ecef510e3542c0f317948cbe057b3ea4d08",
+      "bytes": 6249
+    },
+    {
+      "path": "tests/flask/test_oauth2/test_openid_code_grant.py",
+      "sha256": "85ce5c7b85baa9c6fd233c0f88d2695c0858eb43a3730fa7041f0fe35b830d0b",
+      "bytes": 58298
+    },
+    {
+      "path": "tests/flask/test_oauth2/test_openid_hybrid_grant.py",
+      "sha256": "51da24881e9456dbfaafa255cc377f080c947de541b8bf8b2c7c8d0c40f23dd2",
+      "bytes": 25224
+    },
+    {
+      "path": "tests/flask/test_oauth2/test_openid_implict_grant.py",
+      "sha256": "d1bbedc9866158cd6e5466245fd6c4ff728f1a5ef07cd2b20d330dd916e5b7dd",
+      "bytes": 33475
+    },
+    {
+      "path": "tests/flask/test_oauth2/test_password_grant.py",
+      "sha256": "9822770b18d3174377352635fe159dc27693389bcac09a349adf7edc61943e61",
+      "bytes": 6694
+    },
+    {
+      "path": "tests/flask/test_oauth2/test_protected_resource_metadata.py",
+      "sha256": "075513cde002f728c63a5a02ff1d23d5a6c51b6e5ca9e316ab718c2e32ac3ad0",
+      "bytes": 2785
+    },
+    {
+      "path": "tests/flask/test_oauth2/test_refresh_token.py",
+      "sha256": "0a4babbbcba41be8f55e20a3ef3c3a0873ede6dd43804e2eae2fe381116dada1",
+      "bytes": 7066
+    },
+    {
+      "path": "tests/flask/test_oauth2/test_revocation_endpoint.py",
+      "sha256": "270e71e53a960a0ea3d6a6f09c841306a78422ce566a835fcdfb3870e77751d3",
+      "bytes": 5511
+    },
+    {
+      "path": "tests/flask/test_oauth2/test_userinfo.py",
+      "sha256": "737ca69d1c69c34e6aec1f17da363c2b6c62c284efbfbcee090744dc3d38d8bd",
+      "bytes": 15673
+    },
+    {
+      "path": "tests/jose/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "tests/jose/test_chacha20.py",
+      "sha256": "ba20857e8a4e7d52c0954a0146ad2acafe8443fb60a2de0c9f3f35c168cfc17f",
+      "bytes": 2704
+    },
+    {
+      "path": "tests/jose/test_ecdh_1pu.py",
+      "sha256": "521837ecc1794b4b2ba2c4548d9c9d293c2aacbfb2358458595faff4ccc13ebd",
+      "bytes": 53539
+    },
+    {
+      "path": "tests/jose/test_jwe.py",
+      "sha256": "7e04e0bdc1341db26dcfb7b4804630cc9149760cd44bd709e6c8802752ada327",
+      "bytes": 53734
+    },
+    {
+      "path": "tests/jose/test_jwk.py",
+      "sha256": "c02bb2c6a25cbdbe80d1bb616e1a8d444b5469f7ed4084c503403135ce524c46",
+      "bytes": 9811
+    },
+    {
+      "path": "tests/jose/test_jws.py",
+      "sha256": "4299733cecafc798e0975815bf24c983a4ed84b742957b1f23817fabf00e42d4",
+      "bytes": 12762
+    },
+    {
+      "path": "tests/jose/test_jwt.py",
+      "sha256": "4ea23724eae366a699897971acbf2ae66c9fb6338d33a69f94d42f55746bfa01",
+      "bytes": 15300
+    },
+    {
+      "path": "tests/jose/test_rfc8037.py",
+      "sha256": "d16c321b7fa70ba50a269ecf335de0ad14069371ab644409ef65577e72f2ccc1",
+      "bytes": 483
+    },
+    {
+      "path": "tests/util.py",
+      "sha256": "e3fd9155094cc3c8fc131d168d0cc5c1806ac0775fcee4b11088dce73f49fccb",
+      "bytes": 1533
+    },
+    {
+      "path": "tox.ini",
+      "sha256": "d8c78bd7763db9f9874f739d495ef940488689eb6f0a67f1297be3cd94829a06",
+      "bytes": 1194
+    }
+  ],
+  "no_postrun_product_changes": true
+}

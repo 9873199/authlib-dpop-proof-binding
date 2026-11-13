@@ -1,0 +1,1 @@
+{"fixture_only": "PASS", "in_memory_P256": true, "direct_cryptography_signing": true, "dependency_cross_verification": true, "RFC7638_thumbprint_cross_check": true, "tampered_signature_rejected": true, "product_evaluated": false}

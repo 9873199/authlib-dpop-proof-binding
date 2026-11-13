@@ -1,0 +1,16 @@
+1. legitimate DPoP request:
+   ACCEPTED 200
+2. the same proof replayed:
+   REJECTED 401 (DPoP error="invalid_dpop_proof", error_description="The DPoP proof is invalid.")
+3. a proof signed with another key (stolen token, wrong key):
+   REJECTED 401 (DPoP error="invalid_dpop_proof", error_description="The DPoP proof is invalid.")
+4. a proof bound to another HTTP method:
+   REJECTED 401 (DPoP error="invalid_dpop_proof", error_description="The DPoP proof is invalid.")
+5. the bound token presented as plain Bearer:
+   REJECTED: the DPoP-bound token cannot bypass the proof check
+6. an unbound legacy token still works over plain Bearer:
+   ACCEPTED: unbound legacy token
+7. replay storage outage (no Bearer downgrade):
+   REJECTED 401 (DPoP error="invalid_dpop_proof", error_description="The DPoP proof is invalid.")
+8. a failed request did not consume its jti:
+   ACCEPTED 200

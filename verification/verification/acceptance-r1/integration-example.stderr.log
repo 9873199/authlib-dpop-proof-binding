@@ -1,0 +1,5 @@
+WARNING Rejected DPoP proof: replay_detected
+WARNING Rejected DPoP proof: key_confirmation_mismatch
+WARNING Rejected DPoP proof: htm_mismatch
+WARNING Rejected DPoP proof: bearer_bypass_forbidden
+WARNING Rejected DPoP proof: replay_storage_error

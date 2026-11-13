@@ -1,0 +1,40 @@
+{
+  "source_native_sha256": "8ac591b56673b7efb3c44a3dbd366be3265b817bf9539b46f858d6eb777fe5dc",
+  "private_reasoning_excluded": true,
+  "selected_actual_tool_events": [
+    {
+      "line": 527,
+      "type": "tool_call",
+      "name": "Edit",
+      "id": "call_bujrstglcqs7dp89bxffut9n",
+      "input": {
+        "replace_all": false,
+        "file_path": "D:\\hc\\userFeedback\\cache\\replacement-1746-20261114-r1\\source\\authlib\\oauth2\\rfc9449\\validator.py",
+        "old_string": "    def _reject(self, reason, exc=None):\n        # Log only a fixed reason code: the token and the proof are never\n        # written to the logs.\n        logger.warning(\"Rejected DPoP proof: %s\", reason, exc_info=exc)\n        raise InvalidDPoPProofError() from exc",
+        "new_string": "    def _reject(self, reason, exc=None):\n        # Log only a fixed reason code: the token and the proof are never\n        # written to the logs. Exception details stay at debug level.\n        logger.warning(\"Rejected DPoP proof: %s\", reason)\n        if exc is not None:\n            logger.debug(\"DPoP rejection detail for %s\", reason, exc_info=exc)\n        raise InvalidDPoPProofError() from exc"
+      }
+    },
+    {
+      "line": 734,
+      "type": "tool_result",
+      "tool_use_id": "call_nm9ve4wtm651iwvh9x6rimkb",
+      "is_error": false,
+      "output": ".................................................                        [100%]\r\n625 passed in 8.68s\r\nRejected DPoP proof: replay_detected\r\nRejected DPoP proof: bearer_bypass_forbidden\r\n4 docs blocks execute OK"
+    },
+    {
+      "line": 781,
+      "type": "tool_result",
+      "tool_use_id": "call_totzjq8koj83wenhhwi5y795",
+      "is_error": false,
+      "output": ".................................................                        [100%]\r\n625 passed in 20.87s\r\n M docs/oauth2/resource-server/index.rst\n M docs/oauth2/specs/index.rst\n?? authlib/oauth2/rfc9449/\n?? changelog.d/20261114_120000_dpop_resource_server.rst\n?? docs/oauth2/specs/rfc9449.rst\n?? examples/\n?? tests/core/test_oauth2/test_rfc9449_dpop.py"
+    },
+    {
+      "line": 799,
+      "type": "tool_result",
+      "tool_use_id": "call_mxstuayqbgmn21e4q6o7f3jx",
+      "is_error": false,
+      "output": "warning: in the working copy of 'docs/oauth2/resource-server/index.rst', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'docs/oauth2/specs/index.rst', LF will be replaced by CRLF the next time Git touches it\ndiff --git a/docs/oauth2/resource-server/index.rst b/docs/oauth2/resource-server/index.rst\nindex b6ad583..8062613 100644\n--- a/docs/oauth2/resource-server/index.rst\n+++ b/docs/oauth2/resource-server/index.rst\n@@ -35,4 +35,5 @@ Reference\n ---------\n \n * :doc:`../specs/rfc6750` — Bearer Token Usage\n+* :doc:`../specs/rfc9449` — DPoP Proof of Possession\n * :doc:`../specs/rfc7662` — Token Introspection\ndiff --git a/docs/oauth2/specs/index.rst b/docs/oauth2/specs/index.rst\nindex 44557ab..92e0e3c 100644\n--- a/docs/oauth2/specs/index.rst\n+++ b/docs/oauth2/specs/index.rst\n@@ -18,6 +18,7 @@ Specifications\n     rfc9068\n     rfc9101\n     rfc9207\n+    rfc9449\n     rfc9470\n     rfc9728\n     multiple-response-types\n43 passed in 0.82s"
+    }
+  ],
+  "not_a_native_trajectory": true
+}

@@ -1,0 +1,57 @@
+{
+  "uid": 1746,
+  "run_id": "uf-20261114-replace1746-dpop-retry-1",
+  "revision": "acceptance-r2",
+  "reviewed": true,
+  "reviewer": "Codex primary reviewer, AI-assisted",
+  "frozen_trace_sha256": "8ac591b56673b7efb3c44a3dbd366be3265b817bf9539b46f858d6eb777fe5dc",
+  "product_modules": [
+    "authlib.oauth2.rfc9449"
+  ],
+  "support_files": [
+    {
+      "source": "D:\\hc\\userFeedback\\cache\\replacement-1746-20261114-r1\\test_review_dpop_r2.py",
+      "path": "test_review_dpop.py",
+      "sha256": "db9257fc264b75f0a82baba33d058ae9703dee17869adfe9697f841a81f6ed7c"
+    },
+    {
+      "source": "D:\\hc\\userFeedback\\cache\\replacement-1746-20261114-r1\\review-crypto-fixture.py",
+      "path": "review_crypto.py",
+      "sha256": "958f60691907b571750ed0df78dd88b224d32fd19635a910c0323b15e67e3790"
+    }
+  ],
+  "commands": [
+    {
+      "name": "fixture-control",
+      "argv": [
+        "{python}",
+        "-B",
+        "{verification}/review_crypto.py"
+      ]
+    },
+    {
+      "name": "independent-acceptance",
+      "argv": [
+        "{python}",
+        "-B",
+        "-m",
+        "pytest",
+        "{verification}/test_review_dpop.py",
+        "--confcutdir={verification}",
+        "-q",
+        "--tb=short",
+        "-p",
+        "no:cacheprovider",
+        "--junitxml={verification}/independent-results.xml"
+      ]
+    },
+    {
+      "name": "integration-example",
+      "argv": [
+        "{python}",
+        "-B",
+        "examples/dpop_resource_server.py"
+      ]
+    }
+  ]
+}

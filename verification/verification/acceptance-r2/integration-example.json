@@ -1,0 +1,12 @@
+{
+  "time": "2026-11-14T02:49:06+08:00",
+  "argv": [
+    "D:\\hc\\userFeedback\\cache\\replacement-1746-20261114-r1\\env\\Scripts\\python.exe",
+    "-B",
+    "examples/dpop_resource_server.py"
+  ],
+  "cwd": "D:\\hc\\userFeedback\\cache\\execution-security-new11-20261112\\evaluation\\uf-20261114-replace1746-dpop-retry-1\\verification\\acceptance-r2\\replay-source",
+  "exit_code": 0,
+  "stdout_log": "D:\\hc\\userFeedback\\cache\\execution-security-new11-20261112\\evaluation\\uf-20261114-replace1746-dpop-retry-1\\verification\\acceptance-r2\\integration-example.stdout.log",
+  "stderr_log": "D:\\hc\\userFeedback\\cache\\execution-security-new11-20261112\\evaluation\\uf-20261114-replace1746-dpop-retry-1\\verification\\acceptance-r2\\integration-example.stderr.log"
+}

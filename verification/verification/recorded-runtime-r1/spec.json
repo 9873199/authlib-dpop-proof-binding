@@ -1,0 +1,58 @@
+{
+  "title": "Access token proof checks",
+  "directory": "D:\\hc\\userFeedback\\cache\\execution-security-new11-20261112\\evaluation\\uf-20261114-replace1746-dpop-retry-1\\recording\\r2",
+  "cwd": "D:\\hc\\userFeedback\\cache\\execution-security-new11-20261112\\evaluation\\uf-20261114-replace1746-dpop-retry-1\\verification\\acceptance-r2\\replay-source",
+  "capture": "wgc",
+  "console_start_delay_seconds": 3,
+  "environment": {
+    "PYTHONPATH": "D:\\hc\\userFeedback\\cache\\execution-security-new11-20261112\\evaluation\\uf-20261114-replace1746-dpop-retry-1\\verification\\acceptance-r2\\replay-source;D:\\hc\\userFeedback\\cache\\execution-security-new11-20261112\\evaluation\\uf-20261114-replace1746-dpop-retry-1\\verification\\acceptance-r2",
+    "PYTHONPYCACHEPREFIX": "D:\\hc\\userFeedback\\cache\\execution-security-new11-20261112\\evaluation\\uf-20261114-replace1746-dpop-retry-1\\recording\\r2\\bytecode",
+    "PYTHONIOENCODING": "utf-8",
+    "PYTHONUNBUFFERED": "1"
+  },
+  "commands": [
+    {
+      "id": "example",
+      "label": "Resource access example",
+      "display": "python examples/dpop_resource_server.py",
+      "argv": [
+        "D:\\hc\\userFeedback\\cache\\replacement-1746-20261114-r1\\env\\Scripts\\python.exe",
+        "-B",
+        "examples/dpop_resource_server.py"
+      ],
+      "start_at_seconds": 0
+    },
+    {
+      "id": "acceptance",
+      "label": "Signature, binding and replay checks",
+      "display": "python -m pytest review/test_review_dpop.py -q --tb=no --show-capture=no -o asyncio_default_fixture_loop_scope=function",
+      "argv": [
+        "D:\\hc\\userFeedback\\cache\\replacement-1746-20261114-r1\\env\\Scripts\\python.exe",
+        "-B",
+        "-m",
+        "pytest",
+        "D:\\hc\\userFeedback\\cache\\execution-security-new11-20261112\\evaluation\\uf-20261114-replace1746-dpop-retry-1\\verification\\acceptance-r2\\test_review_dpop.py",
+        "--confcutdir=D:\\hc\\userFeedback\\cache\\execution-security-new11-20261112\\evaluation\\uf-20261114-replace1746-dpop-retry-1\\verification\\acceptance-r2",
+        "-q",
+        "--tb=no",
+        "--show-capture=no",
+        "-p",
+        "no:cacheprovider",
+        "-o",
+        "asyncio_default_fixture_loop_scope=function"
+      ],
+      "start_at_seconds": 25
+    },
+    {
+      "id": "boundaries",
+      "label": "Error handling and log output",
+      "display": "python review/observe-boundaries.py",
+      "argv": [
+        "D:\\hc\\userFeedback\\cache\\replacement-1746-20261114-r1\\env\\Scripts\\python.exe",
+        "-B",
+        "D:\\hc\\userFeedback\\cache\\replacement-1746-20261114-r1\\observe-boundaries.py"
+      ],
+      "start_at_seconds": 53
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "independent_acceptance_r2": {
+    "passed": 48,
+    "failed": 3,
+    "total": 51,
+    "root_causes": 2
+  },
+  "independent_acceptance_r1": {
+    "passed": 47,
+    "failed": 4,
+    "excluded_fixture_failures": 1
+  },
+  "independent_core": {
+    "passed": 625,
+    "includes_model_DPoP_tests": 43
+  },
+  "model_native_feature_tests": {
+    "passed": 43,
+    "last_native_line": 799
+  },
+  "model_native_core_jose": {
+    "passed": 852,
+    "skipped": 2,
+    "native_line": 693,
+    "independently_rerun": false
+  },
+  "model_native_doc_blocks": {
+    "executed": 4,
+    "native_line": 734,
+    "full_Sphinx_build": false
+  },
+  "example": {
+    "scenarios": 8,
+    "exit_code": 0
+  },
+  "counts_not_summed_due_to_overlap": true
+}

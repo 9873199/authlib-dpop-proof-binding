@@ -1,0 +1,29 @@
+{
+  "time": "2026-11-14T02:42:45+08:00",
+  "uid": 1746,
+  "status": "PASS",
+  "single_native_trace": "D:\\hc\\userFeedback\\cache\\runs\\uf-20261114-replace1746-dpop-retry-1\\frozen\\trajectory-original.jsonl",
+  "trace_sha256": "8ac591b56673b7efb3c44a3dbd366be3265b817bf9539b46f858d6eb777fe5dc",
+  "session_id": "544cf8b7-9fb5-4183-8181-d5b53ca2f987",
+  "prompt_id": "da06f5a4-00e7-4ad9-aa9f-25520f4dc674",
+  "exact_single_prompt": true,
+  "native_models": [
+    "auto_model/urm"
+  ],
+  "native_efforts": [
+    "high"
+  ],
+  "three_explicit_high_settings": true,
+  "native_success": true,
+  "frozen_files_unchanged": true,
+  "private_reasoning_excluded": true,
+  "event_counts": {
+    "queue-operation": 2,
+    "user": 171,
+    "attachment": 151,
+    "atis-latch": 46,
+    "assistant": 374,
+    "last-prompt": 46,
+    "system": 13
+  }
+}

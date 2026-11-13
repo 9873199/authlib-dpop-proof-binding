@@ -1,0 +1,30 @@
+实现完成，所有验证离线通过。下面是交付总结。
+
+## 实现内容
+
+新增 RFC 9449 资源服务器模块（遵守 AGENTS.md：新 RFC 独立成模块，未改动 `rfc6749/`，使用 joserfc 而非已弃用的 `authlib.jose`）：
+
+| 文件 | 作用 |
+|---|---|
+| `authlib/oauth2/rfc9449/validator.py` | `DPoPTokenValidator`、`DPoPReplayStore`、`DPoPProof`、`compute_ath`、`canonical_request_url` |
+| `authlib/oauth2/rfc9449/protection.py` | `DPoPProtection` 扩展，以 hook 方式接管 `ResourceProtector.validate_request` |
+| `authlib/oauth2/rfc9449/errors.py` | `InvalidDPoPProofError`：401 + `WWW-Authenticate: DPoP error="invalid_dpop_proof"`，不含令牌/证明内容 |
+| `tests/core/test_oauth2/test_rfc9449_dpop.py` | 43 个测试，P-256 密钥进程内现签、线程安全假存储、纯内存请求 |
+| `examples/dpop_resource_server.py` | 可直接 `python examples/dpop_resource_server.py` 运行的端到端接入例子（含原子性与失败语义注释） |
+| `docs/oauth2/specs/rfc9449.rst` 等 | 文档页（代码块经 Sybil 命名空间实测可执行）、索引与 changelog 片段 |
+
+## 关键语义落实
+
+- **接入方式**：业务实现两个回调——`get_token_confirmation(token)` 读 `cnf.jkt`；`register_proof_confirmation(jkt, jti, expires_at)` 原子登记并返回是否首次。登记只在验签、令牌状态、scope、密钥绑定、请求绑定全部合格后执行，失败请求不占编号；存储抛错即拒绝，绝不退回 Bearer；`expires_at = iat + proof_max_age + clock_skew`，覆盖证明全部可接受窗口。
+- **证明校验**：JWS 注册表只允许 ES256，天然拒绝 `none`/对称算法；强制 `typ=dpop+jwt`；`jku`/`x5u`/`x5c`/`x5t` 一律拒绝（不产生下载）；只接受无 `d` 的 EC P-256 公钥 JWK；用证明内嵌公钥验签并按 RFC 7638 算指纹与 `cnf.jkt` 比对。
+- **绑定**：`ath` 必须等于当前 access token 的无填充 base64url(SHA-256)，常量时间比较，签名正确但 ath 不符照样拒绝；`htm` 精确匹配方法；`htu` 去 query/fragment、scheme/host 忽略大小写、443/80 默认端口折叠、路径转义不解码、路径大小写不折叠。
+- **时间**：可注入时钟、可配 `proof_max_age` 与 `clock_skew`；`jti` 必须非空字符串，`iat` 必须为整数（布尔排除）；过旧或超出未来偏差均拒绝。
+- **绕行防护**：开启后带 `cnf.jkt` 的令牌走 Bearer 头直接拒绝；未绑定的老令牌仍可走 Bearer；未注册扩展的 ResourceProtector 行为完全不变；与 `FormEncodedBodyToken` 扩展可共存。
+- **并发**：8 线程屏障并发重放同一证明，严格只放行 1 个。
+- **日志卫生**：失败只记录固定原因码（如 `replay_detected`），异常细节降为 debug，测试断言输出与日志中均无 token 和完整证明。
+
+## 验证结果
+
+- `pytest tests/core`：**625 passed**（其中新模块 43 个，重复 5 轮并发测试稳定）
+- `python examples/dpop_resource_server.py`：8 个场景全部符合预期且无敏感信息泄漏
+- 文档 4 个 Python 代码块在共享命名空间中实测可执行；全部离线，无网络、无 GPG、无口令交互

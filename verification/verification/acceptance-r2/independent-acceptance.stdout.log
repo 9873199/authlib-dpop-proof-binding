@@ -1,0 +1,68 @@
+....F............................................FF                      [100%]
+================================== FAILURES ===================================
+____________ test_bad_claims_do_not_consume[ath-\u4e0d\u662fASCII] ____________
+..\test_review_dpop.py:73: in test_bad_claims_do_not_consume
+    def test_bad_claims_do_not_consume(w,field,value):reject_and_recover(w,w.proof(w.claims(**{field:value})))
+                                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\test_review_dpop.py:57: in reject_and_recover
+    with pytest.raises(OAuth2Error):w.request(proof,**kwargs)
+                                    ^^^^^^^^^^^^^^^^^^^^^^^^^
+..\test_review_dpop.py:48: in request
+    return (self.legacy if legacy else self.rp).validate_request(['read'] if scopes is None else scopes,OAuth2Request(method,uri,headers=h))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+authlib\common\hooks.py:147: in wrapper
+    result = effective_call(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+authlib\common\hooks.py:140: in call
+    return hook(self, prev, *a, **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+authlib\oauth2\rfc9449\protection.py:54: in _validate_request
+    return validator.validate_dpop_request(
+authlib\oauth2\rfc9449\validator.py:234: in validate_dpop_request
+    if not proof.ath or not _constant_time_equal(proof.ath, expected_ath):
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+authlib\oauth2\rfc9449\validator.py:376: in _constant_time_equal
+    return hmac.compare_digest(a, b)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+E   TypeError: comparing strings with non-ASCII characters is not supported
+___________ test_debug_logs_do_not_disclose_token_or_complete_proof ___________
+..\test_review_dpop.py:141: in test_debug_logs_do_not_disclose_token_or_complete_proof
+    assert TOKEN not in caplog.text,'DEBUG logs disclosed the synthetic access token'
+E   AssertionError: DEBUG logs disclosed the synthetic access token
+E   assert 'review-synthetic-access-A' not in 'WARNING  au...C3XEQszDVQ\n'
+E     
+E     'review-synthetic-access-A' is contained here:
+E        failure: review-synthetic-access-A eyJhbGciOiJFUzI1NiIsImp3ayI6eyJjcnYiOiJQLTI1NiIsImt0eSI6IkVDIiwieCI6Im9aZkpNa0FLWjBna3gxdVRhSFJ4b19LVWd5Xy1jVEV1TkZZTS1fUmYxTlEiLCJ5IjoiMmtqOFZNN09acnZ3QVp1MjN4V01lTWxDM3R0ZEVxRnBUeV9xQ3lUc3hmYyJ9LCJ0eXAiOiJkcG9wK2p3dCJ9.eyJhdGgiOiJ6bzJKRDRJVS1sbUk0UC0tMTVKTWM0ZnRRdThweVRlNmF6Q2w4c2l6RXBJIiwiaHRtIjoiR0VUIiwiaHR1IjoiaHR0cHM6Ly9hcGkuZXhhbXBsZS5pbnZhbGlkL2ZpbGVzIiwiaWF0IjoxMDAwMDAwLCJqdGkiOiJzaW5nbGUtdXNlLTEifQ.zpxbdQoIpi2DzO8TMcrLxFRUcazT93Cct8cVddx_I7Tw4sN8-kWzm16OTst4gJcK9cxyF6wSNtW1C3XEQszDVQ
+E     ?           +++++++++++++++++++++++++
+------------------------------ Captured log call ------------------------------
+WARNING  authlib.oauth2.rfc9449.validator:validator.py:369 Rejected DPoP proof: replay_storage_error
+DEBUG    authlib.oauth2.rfc9449.validator:validator.py:371 DPoP rejection detail for replay_storage_error
+Traceback (most recent call last):
+  File "D:\hc\userFeedback\cache\execution-security-new11-20261112\evaluation\uf-20261114-replace1746-dpop-retry-1\verification\acceptance-r2\replay-source\authlib\oauth2\rfc9449\validator.py", line 247, in validate_dpop_request
+    first_use = self.register_proof_confirmation(
+        proof.jkt, proof.jti, expires_at
+    )
+  File "D:\hc\userFeedback\cache\execution-security-new11-20261112\evaluation\uf-20261114-replace1746-dpop-retry-1\verification\acceptance-r2\replay-source\authlib\oauth2\rfc9449\validator.py", line 209, in register_proof_confirmation
+    return self.replay_store.register_proof_confirmation(jkt, jti, expires_at)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\hc\userFeedback\cache\execution-security-new11-20261112\evaluation\uf-20261114-replace1746-dpop-retry-1\verification\acceptance-r2\test_review_dpop.py", line 22, in register_proof_confirmation
+    if self.error: raise RuntimeError(self.error)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: synthetic callback failure: review-synthetic-access-A eyJhbGciOiJFUzI1NiIsImp3ayI6eyJjcnYiOiJQLTI1NiIsImt0eSI6IkVDIiwieCI6Im9aZkpNa0FLWjBna3gxdVRhSFJ4b19LVWd5Xy1jVEV1TkZZTS1fUmYxTlEiLCJ5IjoiMmtqOFZNN09acnZ3QVp1MjN4V01lTWxDM3R0ZEVxRnBUeV9xQ3lUc3hmYyJ9LCJ0eXAiOiJkcG9wK2p3dCJ9.eyJhdGgiOiJ6bzJKRDRJVS1sbUk0UC0tMTVKTWM0ZnRRdThweVRlNmF6Q2w4c2l6RXBJIiwiaHRtIjoiR0VUIiwiaHR1IjoiaHR0cHM6Ly9hcGkuZXhhbXBsZS5pbnZhbGlkL2ZpbGVzIiwiaWF0IjoxMDAwMDAwLCJqdGkiOiJzaW5nbGUtdXNlLTEifQ.zpxbdQoIpi2DzO8TMcrLxFRUcazT93Cct8cVddx_I7Tw4sN8-kWzm16OTst4gJcK9cxyF6wSNtW1C3XEQszDVQ
+__________ test_formatted_exception_does_not_disclose_token_or_proof __________
+..\test_review_dpop.py:149: in test_formatted_exception_does_not_disclose_token_or_proof
+    assert TOKEN not in rendered,'Exception chain disclosed the synthetic access token'
+E   AssertionError: Exception chain disclosed the synthetic access token
+E   assert 'review-synthetic-access-A' not in 'Traceback (...s invalid.\n'
+E     
+E     'review-synthetic-access-A' is contained here:
+E        failure: review-synthetic-access-A eyJhbGciOiJFUzI1NiIsImp3ayI6eyJjcnYiOiJQLTI1NiIsImt0eSI6IkVDIiwieCI6InI1QTIyVEFpZFdjWHpwUklSRmVOQVMzaWZQLWdjRFRZZ3FYdFVsYm9xc1EiLCJ5IjoiUmtydDNBelB0QWkwcUF2V2VRWTZSZVBYeVl0NC1tT1N1emR5N25BR09iUSJ9LCJ0eXAiOiJkcG9wK2p3dCJ9.eyJhdGgiOiJ6bzJKRDRJVS1sbUk0UC0tMTVKTWM0ZnRRdThweVRlNmF6Q2w4c2l6RXBJIiwiaHRtIjoiR0VUIiwiaHR1IjoiaHR0cHM6Ly9hcGkuZXhhbXBsZS5pbnZhbGlkL2ZpbGVzIiwiaWF0IjoxMDAwMDAwLCJqdGkiOiJzaW5nbGUtdXNlLTEifQ.TTOEB0UqtCCHSmK9iE4E8yMTzdkfaDIuSkLDyoC1yxBPFTQYFhsKqRJyQWJoi7mFUOTPdoj2cISr35uVr...
+E     
+E     ...Full output truncated, use '-vv' to show
+------------------------------ Captured log call ------------------------------
+WARNING  authlib.oauth2.rfc9449.validator:validator.py:369 Rejected DPoP proof: replay_storage_error
+=========================== short test summary info ===========================
+FAILED ..\test_review_dpop.py::test_bad_claims_do_not_consume[ath-\u4e0d\u662fASCII]
+FAILED ..\test_review_dpop.py::test_debug_logs_do_not_disclose_token_or_complete_proof
+FAILED ..\test_review_dpop.py::test_formatted_exception_does_not_disclose_token_or_proof
+3 failed, 48 passed in 0.89s

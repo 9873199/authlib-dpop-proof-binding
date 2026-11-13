@@ -1,0 +1,10 @@
+{
+  "r1_preserved": true,
+  "tool_issue_excluded": "HTTP default-port equivalence test was blocked before DPoP by existing upstream OAuth2Request HTTPS policy. Only that parametrized offline test now sets AUTHLIB_INSECURE_TRANSPORT via pytest monkeypatch; restored after test. Product unchanged.",
+  "confirmed_product_issues": [
+    "non-ASCII signed ath raises uncaught TypeError",
+    "DEBUG callback exception details leak synthetic token/proof",
+    "formatted exception cause leaks synthetic token/proof"
+  ],
+  "no_full_core_rerun_needed": "r1 core result bound separately; r2 only fixture env correction"
+}

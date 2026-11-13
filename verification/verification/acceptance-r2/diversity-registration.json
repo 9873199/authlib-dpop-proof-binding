@@ -1,0 +1,40 @@
+{
+  "metric": "uf-template-v2",
+  "passed": true,
+  "minimum_lexical_difference": 0.9573934837092732,
+  "threshold": "strictly > 0.90",
+  "history_count": 39,
+  "nearest": [
+    {
+      "id": "uf-20261110-06-hls-resume",
+      "similarity": 0.042606516290726815,
+      "same_style": false,
+      "same_task_signature": false
+    },
+    {
+      "id": "uf-20261110-10-scrapy-checkpoints",
+      "similarity": 0.038901601830663615,
+      "same_style": false,
+      "same_task_signature": false
+    },
+    {
+      "id": "uf-20261111-sec-05-schema-provenance",
+      "similarity": 0.036170212765957444,
+      "same_style": false,
+      "same_task_signature": false
+    },
+    {
+      "id": "uf-20261110-08-avro-append",
+      "similarity": 0.03398058252427184,
+      "same_style": false,
+      "same_task_signature": false
+    },
+    {
+      "id": "uf-20261111-sec-01-http-framing",
+      "similarity": 0.03303964757709251,
+      "same_style": false,
+      "same_task_signature": false
+    }
+  ],
+  "semantic_distinctness": "REQUIRES_CONTENT_REVIEW"
+}

@@ -1,0 +1,8 @@
+Signed proof with invalid ath:
+  uncaught TypeError: comparing strings with non-ASCII characters is not supported
+Storage failure under DEBUG logging (synthetic data):
+  access token present in logs: True
+  complete proof present in logs: True
+  access token present in exception chain: True
+  complete proof present in exception chain: True
+Raw synthetic token and proof are intentionally not displayed.

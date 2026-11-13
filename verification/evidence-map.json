@@ -1,0 +1,64 @@
+{
+  "process": [
+    {
+      "native_lines": [
+        527
+      ],
+      "fact": "Observable Edit moved exc_info from WARNING to DEBUG and preserved raise ... from exc; final model test only captures WARNING."
+    },
+    {
+      "native_lines": [
+        734,
+        781,
+        799
+      ],
+      "fact": "Native core625, docs4 blocks and DPoP43 passed in their stated scopes; this did not test DEBUG callback-secret errors or non-ASCII ath."
+    }
+  ],
+  "product": [
+    {
+      "file": "authlib/oauth2/rfc9449/validator.py",
+      "lines": [
+        234,
+        365,
+        369,
+        371,
+        372,
+        376
+      ],
+      "functions": [
+        "validate_dpop_request",
+        "_reject",
+        "_constant_time_equal"
+      ],
+      "fact": "ath is checked only as nonempty str before compare_digest; callback errors are logged with exc_info and retained as cause."
+    },
+    {
+      "file": "tests/core/test_oauth2/test_rfc9449_dpop.py",
+      "lines": [
+        719,
+        725,
+        731
+      ],
+      "fact": "The log-hygiene test uses a wrong-key request at WARNING, checks body+caplog, not DEBUG storage-error or formatted cause."
+    }
+  ],
+  "requirements": {
+    "real_ES256_public_P256_JWK_RFC7638": "test_valid_real_signature_and_single_use, test_signature_tamper, test_other_key_rejected",
+    "typ_algorithms_private_JWK_no_remote_download": "test_disallowed_header_no_download, test_private_jwk; socket tripwires",
+    "ath_method_URL_binding": "test_bad_claims_do_not_consume, test_token_switch_ath, test_url_equivalence, test_distinct_path_port",
+    "types_time_and_retention": "test_required_claim, test_injected_time_endpoints, test_future_proof_record_covers_remaining_window",
+    "atomic_replay_and_failure_ordering": "test_two_threads_only_one_accepts, test_bad_token_state_no_registration, test_storage_failure_rejects_then_recovery",
+    "bound_Bearer_no_bypass_legacy_unchanged": "test_bearer_bypass_and_legacy_compatibility",
+    "error_and_log_hygiene": "test_debug_logs_do_not_disclose_token_or_complete_proof, test_formatted_exception_does_not_disclose_token_or_proof",
+    "runnable_example_and_callback_contract": "examples/dpop_resource_server.py, docs/oauth2/specs/rfc9449.rst, integration-example output"
+  },
+  "defect_scope": "Synthetic callback exception content can be exposed at DEBUG and in cause formatting. Not claiming ordinary callback arguments include raw secrets, actual production leakage, signature forgery, replay bypass or HTTP 500 observed in a web server.",
+  "helper_issues_excluded": "D:\\hc\\userFeedback\\cache\\execution-security-new11-20261112\\evaluation\\uf-20261114-replace1746-dpop-retry-1\\verification\\acceptance-r2\\acceptance-contract-review-r2.json",
+  "diversity": "D:\\hc\\userFeedback\\cache\\execution-security-new11-20261112\\evaluation\\uf-20261114-replace1746-dpop-retry-1\\verification\\acceptance-r2\\diversity-registration.json",
+  "time": "2026-11-14T02:56:11+08:00",
+  "uid": 1746,
+  "frozen_commit": "28df94a838c7f769ed3d6c70bd0635e2d06a9c49",
+  "native_trace_sha256": "8ac591b56673b7efb3c44a3dbd366be3265b817bf9539b46f858d6eb777fe5dc",
+  "no_model_source_changes_after_freeze": true
+}

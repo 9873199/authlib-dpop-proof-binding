@@ -1,0 +1,42 @@
+[
+  {
+    "id": "example",
+    "argv": [
+      "D:\\hc\\userFeedback\\cache\\replacement-1746-20261114-r1\\env\\Scripts\\python.exe",
+      "-B",
+      "examples/dpop_resource_server.py"
+    ],
+    "exit_code": 0,
+    "finished_at_seconds": 1.27
+  },
+  {
+    "id": "acceptance",
+    "argv": [
+      "D:\\hc\\userFeedback\\cache\\replacement-1746-20261114-r1\\env\\Scripts\\python.exe",
+      "-B",
+      "-m",
+      "pytest",
+      "D:\\hc\\userFeedback\\cache\\execution-security-new11-20261112\\evaluation\\uf-20261114-replace1746-dpop-retry-1\\verification\\acceptance-r2\\test_review_dpop.py",
+      "--confcutdir=D:\\hc\\userFeedback\\cache\\execution-security-new11-20261112\\evaluation\\uf-20261114-replace1746-dpop-retry-1\\verification\\acceptance-r2",
+      "-q",
+      "--tb=no",
+      "--show-capture=no",
+      "-p",
+      "no:cacheprovider",
+      "-o",
+      "asyncio_default_fixture_loop_scope=function"
+    ],
+    "exit_code": 1,
+    "finished_at_seconds": 28.56
+  },
+  {
+    "id": "boundaries",
+    "argv": [
+      "D:\\hc\\userFeedback\\cache\\replacement-1746-20261114-r1\\env\\Scripts\\python.exe",
+      "-B",
+      "D:\\hc\\userFeedback\\cache\\replacement-1746-20261114-r1\\observe-boundaries.py"
+    ],
+    "exit_code": 1,
+    "finished_at_seconds": 55.75
+  }
+]
