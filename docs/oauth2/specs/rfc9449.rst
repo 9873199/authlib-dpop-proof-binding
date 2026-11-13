@@ -1,0 +1,289 @@
+.. _specs/rfc9449:
+
+RFC 9449: OAuth 2.0 Demonstrating Proof of Possession (DPoP)
+============================================================
+
+.. meta::
+    :description: Python API reference for DPoP (RFC 9449) on the resource
+        server side: proof validation, key confirmation, replay protection
+        and Bearer bypass prevention.
+
+.. module:: authlib.oauth2.rfc9449
+
+This section contains the resource server implementation of :rfc:`9449`.
+DPoP binds an access token to a key the client holds: a stolen token copied
+away from the client is useless without the matching private key, because
+every request must carry a proof signed with that key.
+
+The authorization endpoint parts of DPoP (issuing tokens with a
+``cnf.jkt`` confirmation) are not implemented. This module only validates
+proofs presented with **already issued** tokens.
+
+How it works
+------------
+
+The client sends two headers:
+
+.. code-block:: http
+
+    GET /resource HTTP/1.1
+    Host: api.example.com
+    Authorization: DPoP kT~9BCZwpWx...
+    DPoP: eyJhbGciOiJFUzI1NiIsImRwb3Ai...
+
+The ``DPoP`` header is a JWT signed with the client's private key. Its
+protected header carries the public key as an EC JWK, and its claims bind
+the proof to the request and to the access token:
+
+- ``jti``: a unique, non-empty string identifying the proof;
+- ``iat``: an integer issuance timestamp;
+- ``htm``: the HTTP method of the request;
+- ``htu``: the externally visible URL of the request, without query or
+  fragment;
+- ``ath``: the base64url encoding without padding of the SHA-256 hash of
+  the access token.
+
+The resource server verifies the signature with the embedded public key,
+computes its :rfc:`7638` thumbprint and checks it against the ``cnf.jkt``
+value stored on the token, then records the proof so it cannot be replayed.
+
+Integration
+-----------
+
+Register a :class:`DPoPTokenValidator` and the :class:`DPoPProtection`
+extension on a :class:`~authlib.oauth2.rfc6749.ResourceProtector`. Two
+callbacks are yours to implement:
+
+1. :meth:`DPoPTokenValidator.get_token_confirmation` reads the
+   ``cnf.jkt`` confirmation from the token object.
+2. :meth:`DPoPTokenValidator.register_proof_confirmation` records a used
+   proof through your database.
+
+The blocks below form a complete, runnable setup: the storage is an
+in-memory dict instead of a database table, and the HTTP layer is an
+:class:`~authlib.oauth2.rfc6749.OAuth2Request`.
+
+.. code-block:: python
+
+    import json
+    import threading
+
+    from authlib.oauth2.rfc6749 import OAuth2Request
+    from authlib.oauth2.rfc6749 import ResourceProtector
+    from authlib.oauth2.rfc6750 import BearerTokenValidator
+    from authlib.oauth2.rfc9449 import DPoPProtection
+    from authlib.oauth2.rfc9449 import DPoPReplayStore
+    from authlib.oauth2.rfc9449 import DPoPTokenValidator
+
+
+    class ReplayStore(DPoPReplayStore):
+        """In-memory stand-in for a table with a UNIQUE (jkt, jti) constraint."""
+
+        def __init__(self):
+            self._lock = threading.Lock()
+            self._rows = {}
+
+        def register_proof_confirmation(self, jkt, jti, expires_at):
+            with self._lock:  # the atomicity a unique constraint would provide
+                key = (jkt, jti)
+                if key in self._rows:
+                    return False  # already recorded: replay
+                self._rows[key] = expires_at
+                return True  # first registration
+
+
+    class Token:
+        def __init__(self, access_token, jkt):
+            self.access_token = access_token
+            self.jkt = jkt  # the cnf.jkt stored when the token was issued
+
+        def is_expired(self):
+            return False
+
+        def is_revoked(self):
+            return False
+
+        def get_scope(self):
+            return "profile"
+
+
+    class MyDPoPTokenValidator(DPoPTokenValidator):
+        def authenticate_token(self, token_string):
+            return tokens.get(token_string)
+
+        def get_token_confirmation(self, token):
+            return token.jkt if token is not None else None
+
+
+    class MyBearerTokenValidator(BearerTokenValidator):
+        def authenticate_token(self, token_string):
+            return tokens.get(token_string)
+
+
+    replay_store = ReplayStore()
+    tokens = {}
+
+    require_oauth = ResourceProtector()
+    require_oauth.register_token_validator(MyBearerTokenValidator())
+    require_oauth.register_token_validator(MyDPoPTokenValidator(replay_store))
+    require_oauth.register_extension(DPoPProtection())
+
+Now generate a P-256 proof key, issue a token bound to its thumbprint, and
+sign a real proof with the private key:
+
+.. code-block:: python
+
+    import time
+
+    from joserfc import jws
+    from joserfc.jwk import ECKey
+
+    from authlib.oauth2.rfc9449 import compute_ath
+
+    resource_url = "https://api.example.com/resource"
+    access_token = "issued-access-token"
+
+    proof_key = ECKey.generate_key("P-256", private=True)
+    tokens[access_token] = Token(access_token, proof_key.thumbprint())
+
+
+    def sign_proof(jti, method, htu, key=proof_key):
+        protected = {"alg": "ES256", "typ": "dpop+jwt", "jwk": key.as_dict()}
+        claims = {
+            "jti": jti,
+            "iat": int(time.time()),
+            "htm": method,
+            "htu": htu,
+            "ath": compute_ath(access_token),
+        }
+        return jws.serialize_compact(protected, json.dumps(claims), key)
+
+
+    proof = sign_proof("proof-1", "GET", resource_url)
+    request = OAuth2Request(
+        "GET",
+        resource_url,
+        headers={"Authorization": f"DPoP {access_token}", "DPoP": proof},
+    )
+    token = require_oauth.validate_request(None, request)
+    assert token.access_token == access_token
+
+The same proof cannot be used twice:
+
+.. code-block:: python
+
+    from authlib.oauth2.rfc9449 import InvalidDPoPProofError
+
+    try:
+        require_oauth.validate_request(None, request)
+    except InvalidDPoPProofError:
+        replay_rejected = True
+    assert replay_rejected
+
+And the bound token cannot bypass the proof by switching to the Bearer
+scheme:
+
+.. code-block:: python
+
+    bearer_request = OAuth2Request(
+        "GET",
+        resource_url,
+        headers={"Authorization": f"Bearer {access_token}"},
+    )
+    try:
+        require_oauth.validate_request(None, bearer_request)
+    except InvalidDPoPProofError:
+        bypass_rejected = True
+    assert bypass_rejected
+
+A complete example with wrong-key, wrong-method and storage-failure
+scenarios lives in ``examples/dpop_resource_server.py`` and can be run
+directly with ``python examples/dpop_resource_server.py``.
+
+Atomicity and failure semantics of the replay store
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+:meth:`~DPoPReplayStore.register_proof_confirmation` receives the public
+key fingerprint, the proof ``jti`` and an expiration timestamp, and returns
+whether this is the first registration:
+
+- the check-and-insert **must be atomic**, for example an ``INSERT`` on a
+  unique constraint, an upsert or Redis ``SET NX``. When the same proof
+  arrives on two threads at the same time, exactly one call returns
+  ``True`` and the other returns ``False``;
+- ``expires_at`` covers the whole remaining acceptable window of the
+  proof (``iat + proof_max_age + clock_skew``), so a cleanup job can
+  delete the row afterwards without weakening replay protection;
+- if the storage raises, the request is rejected with
+  ``invalid_dpop_proof``. The validator never falls back to plain Bearer
+  validation, and no exception text, token or proof is exposed in the
+  response;
+- the registration only happens after the signature, token state, scopes,
+  key binding and request binding have all passed. A failed request never
+  consumes a ``jti``.
+
+Bearer bypass
+~~~~~~~~~~~~~
+
+Once :class:`DPoPProtection` is enabled, a token that carries a
+``cnf.jkt`` confirmation can no longer be used with the plain ``Bearer``
+scheme: presenting it without a valid proof is rejected. Legacy tokens
+without a confirmation keep working through a registered
+:class:`~authlib.oauth2.rfc6750.BearerTokenValidator`. A
+:class:`~authlib.oauth2.rfc6749.ResourceProtector` without the extension
+is unchanged, so existing deployments stay compatible.
+
+Accepted proofs
+---------------
+
+Only ``ES256`` proofs are accepted. The protected header must have
+``typ`` equal to ``dpop+jwt`` and an inline public EC JWK for the
+P-256 curve. The following are rejected before any signature check:
+
+- the ``none`` algorithm and symmetric algorithms such as ``HS256``;
+- JWKs containing private fields (``d``) or symmetric keys;
+- ``jku`` and ``x5u`` (and the other certificate headers): a proof never
+  triggers a key download;
+- any other signing algorithm or curve.
+
+The signature is verified with the public key embedded in the proof, and
+its :rfc:`7638` thumbprint must equal the token ``cnf.jkt``.
+
+The ``htu`` comparison removes the query and the fragment, compares the
+scheme and host case-insensitively, folds the default ports (443 for
+HTTPS, 80 for HTTP), keeps percent-encoded bytes undecoded and does not
+fold the path case. The ``ath`` claim must equal the SHA-256 hash of the
+presented access token, encoded with unpadded base64url — a valid
+signature on its own is never enough.
+
+Proofs are accepted inside a configurable window: ``iat`` must not be
+older than ``proof_max_age`` and not further in the future than
+``clock_skew``. Both values, as well as the clock itself, are injectable
+on the validator.
+
+API Reference
+-------------
+
+.. autoclass:: DPoPTokenValidator
+    :member-order: bysource
+    :members:
+
+.. autoclass:: DPoPProtection
+    :member-order: bysource
+    :members:
+
+.. autoclass:: DPoPReplayStore
+    :member-order: bysource
+    :members:
+
+.. autoclass:: DPoPProof
+    :member-order: bysource
+    :members:
+
+.. autoclass:: InvalidDPoPProofError
+    :member-order: bysource
+    :members:
+
+.. autofunction:: compute_ath
+
+.. autofunction:: canonical_request_url
