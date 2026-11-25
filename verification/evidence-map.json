@@ -1,0 +1,150 @@
+{
+  "frozen_commit": "a9776e42da5b929a4b98969e77c3b1d72734fb53",
+  "native_sha256": "1180a54c6efdfca8e4c5a160cd1ec0ada0e2da0044bc5fdc4ae858dfde423ff7",
+  "observable_test_actions": [
+    {
+      "native_line": 196,
+      "tool_name": "shell_command",
+      "command": "cd \"D:\\hc\\userFeedback\\cache\\execution-security30-20261125-r1\\workspaces\\pushed-authorization\" && Get-ChildItem -Recurse -Filter AGENTS.md | Select-Object FullName; echo \"--- uv/python ---\"; uv --version 2>&1; python --version 2>&1; echo \"--- pytest ini ---\"; Get-Content pyproject.toml | Select-String -Pattern \"pytest|testpaths|ruff\" -Context 0,3 | Select-Object -First 20"
+    },
+    {
+      "native_line": 200,
+      "tool_name": "shell_command",
+      "command": "cd \"D:\\hc\\userFeedback\\cache\\execution-security30-20261125-r1\\workspaces\\pushed-authorization\" && Test-Path .venv; uv run --all-groups python -c \"import pytest, authlib; print('ok', authlib.__version__)\" 2>&1 | Select-Object -Last 5"
+    },
+    {
+      "native_line": 204,
+      "tool_name": "shell_command",
+      "command": "cd \"D:\\hc\\userFeedback\\cache\\execution-security30-20261125-r1\\workspaces\\pushed-authorization\" && uv run --all-groups pytest tests/core/test_oauth2/test_rfc7636.py -q 2>&1 | Select-Object -Last 15"
+    },
+    {
+      "native_line": 208,
+      "tool_name": "shell_command",
+      "command": "cd \"D:\\hc\\userFeedback\\cache\\execution-security30-20261125-r1\\workspaces\\pushed-authorization\" && uv run --all-groups python -c \"import pytest_socket; print('socket ok')\" 2>&1 | Select-Object -Last 3; uv run --all-groups pytest -o addopts=\"\" tests/core/test_oauth2/test_rfc7636.py -q 2>&1 | Select-Object -Last 8"
+    },
+    {
+      "native_line": 212,
+      "tool_name": "shell_command",
+      "command": "cd \"D:\\hc\\userFeedback\\cache\\execution-security30-20261125-r1\\workspaces\\pushed-authorization\" && rg -n \"pytest-socket|pytest_socket|addopts\" pyproject.toml; echo \"--- runtime env ---\"; Test-Path \"D:\\hc\\userFeedback\\cache\\execution-security30-20261125-r1\\runtime-tasks\\pushed-authorization\\env\\Scripts\\python.exe\"; & \"D:\\hc\\userFeedback\\cache\\execution-security30-20261125-r1\\runtime-tasks\\pushed-authorization\\env\\Scripts\\python.exe\" -c \"import pytest_socket, authlib; print('runtime env ok')\" 2>&1 | Select-Object -Last 3"
+    },
+    {
+      "native_line": 216,
+      "tool_name": "shell_command",
+      "command": "cd \"D:\\hc\\userFeedback\\cache\\execution-security30-20261125-r1\\workspaces\\pushed-authorization\" && echo \"PYTEST_ADDOPTS=$env:PYTEST_ADDOPTS\"; echo \"VIRTUAL_ENV=$env:VIRTUAL_ENV\"; rg -n \"disable-socket|allow-hosts\" --glob \"*.toml\" --glob \"*.ini\" --glob \"*.cfg\" . | Select-Object -First 10; echo \"--- runtime pytest version ---\"; & \"D:\\hc\\userFeedback\\cache\\execution-security30-20261125-r1\\runtime-tasks\\pushed-authorization\\env\\Scripts\\python.exe\" -m pytest --version 2>&1 | Select-Object -First 3"
+    },
+    {
+      "native_line": 222,
+      "tool_name": "shell_command",
+      "command": "cd \"D:\\hc\\userFeedback\\cache\\execution-security30-20261125-r1\\workspaces\\pushed-authorization\" && & \"D:\\hc\\userFeedback\\cache\\execution-security30-20261125-r1\\runtime-tasks\\pushed-authorization\\env\\Scripts\\python.exe\" -m pytest tests/core/test_oauth2/test_rfc7636.py -q 2>&1 | Select-Object -Last 8"
+    },
+    {
+      "native_line": 337,
+      "tool_name": "shell_command",
+      "command": "cd \"D:\\hc\\userFeedback\\cache\\execution-security30-20261125-r1\\workspaces\\pushed-authorization\" && & \"D:\\hc\\userFeedback\\cache\\execution-security30-20261125-r1\\runtime-tasks\\pushed-authorization\\env\\Scripts\\python.exe\" -m pytest tests/core/test_oauth2/test_rfc9126.py -q -p no:randomly 2>&1 | Select-Object -Last 60"
+    },
+    {
+      "native_line": 343,
+      "tool_name": "shell_command",
+      "command": "cd \"D:\\hc\\userFeedback\\cache\\execution-security30-20261125-r1\\workspaces\\pushed-authorization\" && & \"D:\\hc\\userFeedback\\cache\\execution-security30-20261125-r1\\runtime-tasks\\pushed-authorization\\env\\Scripts\\python.exe\" -m pytest tests/core/test_oauth2/test_rfc9126.py::test_legacy_authorization_code_flow_still_works -q 2>&1 | Select-String -Pattern \"AttributeError|line 2[0-9][0-9]|Error|assert\" | Select-Object -First 25"
+    },
+    {
+      "native_line": 371,
+      "tool_name": "shell_command",
+      "command": "cd \"D:\\hc\\userFeedback\\cache\\execution-security30-20261125-r1\\workspaces\\pushed-authorization\" && & \"D:\\hc\\userFeedback\\cache\\execution-security30-20261125-r1\\runtime-tasks\\pushed-authorization\\env\\Scripts\\python.exe\" -m pytest tests/core/test_oauth2/test_rfc9126.py -q 2>&1 | Select-Object -Last 45"
+    },
+    {
+      "native_line": 377,
+      "tool_name": "shell_command",
+      "command": "cd \"D:\\hc\\userFeedback\\cache\\execution-security30-20261125-r1\\workspaces\\pushed-authorization\" && for ($i=0; $i -lt 8; $i++) { & \"D:\\hc\\userFeedback\\cache\\execution-security30-20261125-r1\\runtime-tasks\\pushed-authorization\\env\\Scripts\\python.exe\" -m pytest tests/core/test_oauth2/test_rfc9126.py -q -p no:cacheprovider 2>&1 | Select-String -Pattern \"passed|failed|error\" | Select-Object -Last 1 }"
+    },
+    {
+      "native_line": 381,
+      "tool_name": "shell_command",
+      "command": "1..8 | ForEach-Object { & \"D:\\hc\\userFeedback\\cache\\execution-security30-20261125-r1\\runtime-tasks\\pushed-authorization\\env\\Scripts\\python.exe\" -m pytest tests/core/test_oauth2/test_rfc9126.py -q -p no:cacheprovider 2>&1 | Select-String -Pattern \"passed|failed|error\" | Select-Object -Last 1 }"
+    },
+    {
+      "native_line": 387,
+      "tool_name": "shell_command",
+      "command": "& \"D:\\hc\\userFeedback\\cache\\execution-security30-20261125-r1\\runtime-tasks\\pushed-authorization\\env\\Scripts\\python.exe\" -m pytest tests/core/test_oauth2 -q -p no:cacheprovider 2>&1 | Select-Object -Last 15"
+    },
+    {
+      "native_line": 406,
+      "tool_name": "shell_command",
+      "command": "& \"D:\\hc\\userFeedback\\cache\\execution-security30-20261125-r1\\runtime-tasks\\pushed-authorization\\env\\Scripts\\python.exe\" -m pytest tests/flask/test_oauth2/test_pushed_authorization.py -q -p no:cacheprovider 2>&1 | Select-Object -Last 40"
+    },
+    {
+      "native_line": 417,
+      "tool_name": "shell_command",
+      "command": "& \"D:\\hc\\userFeedback\\cache\\execution-security30-20261125-r1\\runtime-tasks\\pushed-authorization\\env\\Scripts\\python.exe\" -m pytest tests/flask/test_oauth2/test_pushed_authorization.py -q -p no:cacheprovider 2>&1 | Select-Object -Last 12"
+    },
+    {
+      "native_line": 452,
+      "tool_name": "shell_command",
+      "command": "uvx ruff@0.17.2 check authlib/oauth2/rfc9126 tests/core/test_oauth2/test_rfc9126.py tests/flask/test_oauth2/test_pushed_authorization.py 2>&1 | Select-Object -Last 5; & \"D:\\hc\\userFeedback\\cache\\execution-security30-20261125-r1\\runtime-tasks\\pushed-authorization\\env\\Scripts\\python.exe\" -m pytest tests/core/test_oauth2/test_rfc9126.py tests/flask/test_oauth2/test_pushed_authorization.py -q -p no:cacheprovider 2>&1 | Select-Object -Last 6"
+    },
+    {
+      "native_line": 493,
+      "tool_name": "shell_command",
+      "command": "Get-Content pyproject.toml | Select-Object -Skip 128 -First 40; echo \"=== docs conftest? ===\"; Get-ChildItem docs -Filter conftest.py -ErrorAction SilentlyContinue | Select-Object FullName; rg -n \"doctest|testpaths|addopts\" pyproject.toml setup.cfg pytest.ini tox.ini 2>$null"
+    },
+    {
+      "native_line": 499,
+      "tool_name": "shell_command",
+      "command": "& \"D:\\hc\\userFeedback\\cache\\execution-security30-20261125-r1\\runtime-tasks\\pushed-authorization\\env\\Scripts\\python.exe\" -m pytest tests docs -q 2>&1 | Select-Object -Last 35"
+    },
+    {
+      "native_line": 511,
+      "tool_name": "shell_command",
+      "command": "rg -n \"Sybil\\(|parsers|CodeBlockParser|patterns|setup|teardown|pytest_collect|skip\" docs/conftest.py | Select-Object -First 40"
+    },
+    {
+      "native_line": 540,
+      "tool_name": "shell_command",
+      "command": "uv run --all-groups --with pytest-socket pytest docs/oauth2/specs/rfc9126.rst -q 2>&1 | Select-Object -Last 30"
+    },
+    {
+      "native_line": 546,
+      "tool_name": "shell_command",
+      "command": "uv run --all-groups --with pytest-socket pytest tests docs -q -p no:randomly 2>&1 | Tee-Object -FilePath .full-test.log | Select-Object -Last 5; \"EXIT=$LASTEXITCODE\""
+    },
+    {
+      "native_line": 634,
+      "tool_name": "shell_command",
+      "command": "uvx codespell@v2.4.3 --exclude-file=- . 2>&1 | Select-String -Pattern \"rfc9126|pushed|par_|PushedAuthorization\" | Select-Object -First 20; \"codespell-scan-done\"; & \"D:\\hc\\userFeedback\\cache\\execution-security30-20261125-r1\\runtime-tasks\\pushed-authorization\\env\\Scripts\\python.exe\" -c \"from authlib.oauth2.rfc9126 import PushedAuthorizationRequest, PushedAuthorizationRequests; assert PushedAuthorizationRequest is PushedAuthorizationRequests; print('alias ok')\"; & \"D:\\hc\\userFeedback\\cache\\execution-security30-20261125-r1\\runtime-tasks\\pushed-authorization\\env\\Scripts\\python.exe\" -m pytest tests/core/test_oauth2/test_rfc9126.py tests/flask/test_oauth2/test_pushed_authorization.py -q -p no:cache"
+    },
+    {
+      "native_line": 651,
+      "tool_name": "shell_command",
+      "command": "uvx ruff@0.17.2 check authlib/oauth2/rfc9126 2>&1 | Select-Object -Last 3; uvx ruff@0.17.2 format --check authlib/oauth2/rfc9126 tests/core/test_oauth2/test_rfc9126.py tests/flask/test_oauth2/test_pushed_authorization.py 2>&1 | Select-Object -Last 2; & \"D:\\hc\\userFeedback\\cache\\execution-security30-20261125-r1\\runtime-tasks\\pushed-authorization\\env\\Scripts\\python.exe\" -m pytest tests/core/test_oauth2/test_rfc9126.py tests/flask/test_oauth2/test_pushed_authorization.py -q -p no:cacheprovider 2>&1 | Select-Object -Last 4"
+    },
+    {
+      "native_line": 664,
+      "tool_name": "shell_command",
+      "command": "uvx ruff@0.17.2 check authlib/oauth2/rfc9126 tests/core/test_oauth2/test_rfc9126.py tests/flask/test_oauth2/test_pushed_authorization.py 2>&1 | Select-Object -Last 2; & \"D:\\hc\\userFeedback\\cache\\execution-security30-20261125-r1\\runtime-tasks\\pushed-authorization\\env\\Scripts\\python.exe\" -m pytest tests/core/test_oauth2/test_rfc9126.py -q -p no:cacheprovider 2>&1 | Select-Object -Last 3; echo \"=== key lines ===\"; rg -n \"^class |^def |    def (consume|create_endpoint_response|_around|_before|_after)\" authlib/oauth2/rfc9126/storage.py authlib/oauth2/rfc9126/endpoint.py authlib/oauth2/rfc9126/extension.py | Select-Object -First 40"
+    },
+    {
+      "native_line": 670,
+      "tool_name": "shell_command",
+      "command": "& \"D:\\hc\\userFeedback\\cache\\execution-security30-20261125-r1\\runtime-tasks\\pushed-authorization\\env\\Scripts\\python.exe\" -m pytest tests/flask/test_oauth2/test_pushed_authorization.py -q -p no:cacheprovider 2>&1 | Select-Object -Last 3; echo \"=== git status ===\"; git status --short; echo \"=== stray logs? ===\"; Get-ChildItem -File | Where-Object { $_.Name -match \"\\.log$|rfc9126\\.txt\" } | Select-Object Name"
+    }
+  ],
+  "facts": [
+    {
+      "fact": "Default redirect not persisted after validation",
+      "code": "authlib/oauth2/rfc9126/endpoint.py: grant.validate_authorization_request return value is discarded; _collect_parameters copies only input parameters and resolved scope",
+      "case": "default_redirect_frozen",
+      "result": "303 redirects to changed /second-cb; one code issued"
+    },
+    {
+      "fact": "Basic authenticated client still requires body client_id",
+      "code": "authlib/oauth2/rfc9126/endpoint.py: presented_client_id absence raises InvalidRequestError",
+      "case": "basic_without_body_client_id",
+      "result": "400 invalid_request"
+    },
+    {
+      "fact": "Process coverage omission",
+      "code": "tests/core/test_oauth2/test_rfc9126.py: ParLocalClient.push always supplies redirect_uri in default body",
+      "result": "New tests did not exercise omitted redirect_uri followed by changed default registration"
+    }
+  ]
+}

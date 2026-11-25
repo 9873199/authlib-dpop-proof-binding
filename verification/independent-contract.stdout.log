@@ -1,0 +1,124 @@
+{
+  "scope": "New contract probes; local transport helpers reused, no model test assertions reused",
+  "results": [
+    {
+      "case": "authenticated_roundtrip",
+      "status": "PASS",
+      "observed": {
+        "issued": 1,
+        "status": 303
+      }
+    },
+    {
+      "case": "refresh_does_not_consume",
+      "status": "PASS",
+      "observed": {
+        "refreshes": 5,
+        "status": "active",
+        "issued": 0
+      }
+    },
+    {
+      "case": "parameter_tampering",
+      "status": "PASS",
+      "observed": {
+        "scope": "invalid_request",
+        "redirect_uri": "invalid_request",
+        "code_challenge": "invalid_request",
+        "state": "invalid_request"
+      }
+    },
+    {
+      "case": "cross_client",
+      "status": "PASS",
+      "observed": {
+        "error": "invalid_request_uri",
+        "issued": 0
+      }
+    },
+    {
+      "case": "bad_secret",
+      "status": "PASS",
+      "observed": {
+        "status": 401,
+        "records": 0
+      }
+    },
+    {
+      "case": "exact_redirect",
+      "status": "PASS",
+      "observed": {
+        "status": 400,
+        "records": 0
+      }
+    },
+    {
+      "case": "pkce_token",
+      "status": "PASS",
+      "observed": {
+        "wrong_verifier": 400,
+        "right_verifier": 200
+      }
+    },
+    {
+      "case": "expiry_boundary",
+      "status": "PASS",
+      "observed": {
+        "status": 400,
+        "issued": 0
+      }
+    },
+    {
+      "case": "parallel_confirm",
+      "status": "PASS",
+      "observed": {
+        "statuses": [
+          303,
+          400
+        ],
+        "issued": 1
+      }
+    },
+    {
+      "case": "denied_terminal",
+      "status": "PASS",
+      "observed": {
+        "denied": 303,
+        "retry": 400,
+        "issued": 0
+      }
+    },
+    {
+      "case": "callback_failure_terminal",
+      "status": "PASS",
+      "observed": {
+        "first": 500,
+        "retry": 400,
+        "status": "failed"
+      }
+    },
+    {
+      "case": "temporary_storage_failure",
+      "status": "PASS",
+      "observed": {
+        "first": 500,
+        "retry": 303,
+        "issued": 1
+      }
+    },
+    {
+      "case": "basic_without_body_client_id",
+      "status": "FAIL",
+      "exception": "AssertionError",
+      "detail": "{'status': 400, 'body': {'error': 'invalid_request', 'error_description': \"Missing 'client_id' in pushed request.\"}}"
+    },
+    {
+      "case": "default_redirect_frozen",
+      "status": "FAIL",
+      "exception": "AssertionError",
+      "detail": "{'stored_redirect': None, 'browser_location': 'https://client.example.com/second-cb?code=D5ksIw62kSOhc06PUy9uc5sonDIKhlBHhbA8G9Co2w3CkvDL', 'status': 303, 'issued': 1}"
+    }
+  ],
+  "passed": 12,
+  "failed": 2
+}

@@ -1,0 +1,4 @@
+PAR client mismatch handle=1cea62e5309c
+PAR consume rejected handle=19d3adf7c3db reason=PushedAuthorizationConflict
+PAR issuance failed after consume handle=8c648546bf12 reason=RuntimeError
+PAR consume rejected handle=ef64c5aafdf7 reason=RuntimeError

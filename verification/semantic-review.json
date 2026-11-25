@@ -1,0 +1,26 @@
+{
+  "uid": 12433,
+  "score": 3,
+  "status": "SEMANTIC_REVIEW_COMPLETE_MEDIA_AND_PUBLICATION_PENDING",
+  "feedback": "推送时没填 redirect_uri，后来把客户端默认回调从 /cb 换成 /second-cb，同一个旧句柄就把授权码送到新地址了。_collect_parameters 没存下当时解析出的默认回调，新增测试又都显式传了地址，漏过了这条冻结边界。推送、PKCE、刷新不消费、两线程只发一次码和失败后的终态都能跑；另一个兼容问题是 Basic 已认证、正文不重复 client_id 的请求仍被拒绝。",
+  "actual_product_tests": {
+    "command": "model-tests.command.json",
+    "output": "model-tests.stdout.log",
+    "result": "26 passed"
+  },
+  "new_contract_probes": {
+    "command": "independent-contract.command.json",
+    "output": "independent-contract.stdout.log",
+    "passed": 12,
+    "failed": 2,
+    "adapter_scope": "Model local transport fixtures reused; independently authored assertions. No corrective behavior."
+  },
+  "rating_basis": "Main PAR/PKCE/atomic one-code flow runs; resolved default callback is not frozen, so an existing handle follows changed client default. Also Basic authentication without duplicate body client_id is rejected. This requires a code correction in the request freezing boundary.",
+  "limitations": [
+    "No claim that an arbitrary browser can edit client registration. The reproduced callback change is made in registered client configuration.",
+    "Model full-suite claim is separate from the26 model tests rerun here."
+  ],
+  "product_unchanged": true,
+  "reviewer": "Codex (AI-assisted)",
+  "automatic_submission": false
+}
