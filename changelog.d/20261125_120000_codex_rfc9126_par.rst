@@ -1,0 +1,11 @@
+Added
+~~~~~
+
+- Added RFC 9126 Pushed Authorization Requests support in
+  ``authlib.oauth2.rfc9126``: an authenticated ``PushedAuthorizationEndpoint``,
+  a ``PushedAuthorizationRequests`` server extension that freezes and resolves
+  ``request_uri`` handles, an atomic-consumption grant extension, and the
+  minimal ``PushedAuthorizationStorage`` protocol with a thread-safe in-memory
+  reference implementation. Browser requests cannot override frozen
+  ``scope``, ``redirect_uri`` or PKCE parameters or use a handle with another
+  ``client_id``, and concurrent confirmations issue at most one code.

@@ -1,0 +1,118 @@
+.. _specs/rfc9126:
+
+RFC 9126: OAuth 2.0 Pushed Authorization Requests (PAR)
+=======================================================
+
+This section contains the implementation of :rfc:`9126`.
+
+With PAR, the client posts the authorization parameters to an authenticated
+``/par`` endpoint. The server validates them exactly like an authorization
+request and stores the *frozen* parameters behind an opaque, single-use
+``request_uri`` handle. The browser then only presents ``client_id`` and
+``request_uri`` to ``/authorize``:
+
+.. code-block:: http
+
+    POST /oauth/par HTTP/1.1
+    Content-Type: application/x-www-form-urlencoded
+    Authorization: Basic ...
+
+    response_type=code&client_id=client-id&redirect_uri=...&code_challenge=...
+
+.. code-block:: http
+
+    HTTP/1.1 201 Created
+    Content-Type: application/json
+
+    {"request_uri": "urn:ietf:params:oauth:request_uri:6esc...", "expires_in": 60}
+
+.. code-block:: http
+
+    GET /oauth/authorize?client_id=client-id
+        &request_uri=urn%3Aietf%3Aparams%3Aoauth%3Arequest_uri%3A6esc... HTTP/1.1
+
+Storage protocol
+----------------
+
+The handle storage is injectable. A backend implements four operations:
+
+* ``create(*, client_id, params, expires_in)`` validates and generates the
+  opaque handle and a unique compare-and-set ``version``, and stores the
+  frozen parameters, client identity and expiration time.
+* ``get(handle)`` is a non-consuming read used to render the consent page.
+* ``consume(handle, *, client_id, version, decision)`` atomically transitions
+  an ``active`` record to ``consumed``, guarded by its version and client.
+* ``mark_failed(handle, *, version, reason)`` marks a claimed record as
+  terminally failed when code issuance fails afterwards.
+
+:class:`~authlib.oauth2.rfc9126.MemoryPushedAuthorizationStorage` is a
+thread-safe in-memory reference implementation suitable for tests and single
+process deployments. A database backend MUST implement ``consume`` as a single
+conditional ``UPDATE`` (or equivalent row lock).
+
+Server wiring
+-------------
+
+.. skip: start "illustrative wiring, not a runnable example"
+
+.. code-block:: python
+
+    from authlib.oauth2.rfc7636 import CodeChallenge
+    from authlib.oauth2.rfc9126 import MemoryPushedAuthorizationStorage
+    from authlib.oauth2.rfc9126 import PushedAuthorizationRequests
+
+    par_storage = MemoryPushedAuthorizationStorage()
+    par = PushedAuthorizationRequests(par_storage, expires_in=60)
+
+    server.register_extension(par)
+    server.register_grant(
+        AuthorizationCodeGrant,
+        [par.grant_extension, CodeChallenge()],
+    )
+
+.. skip: end
+
+The extension registers the ``pushed_authorization`` endpoint, available as
+``server.create_endpoint_response("pushed_authorization", request)``. Expose
+it on a POST-only route:
+
+.. skip: start "illustrative route, not a runnable example"
+
+.. code-block:: python
+
+    @app.route("/oauth/par", methods=["POST"])
+    def pushed_authorization():
+        return server.create_endpoint_response("pushed_authorization")
+
+.. skip: end
+
+Consumption boundary
+--------------------
+
+Opening the authorization page, refreshing it or asking the user to log in
+only calls ``get`` and never consumes the handle. The handle is atomically
+consumed when the final decision is submitted through
+``create_authorization_response``:
+
+* an approval is consumed as ``approved`` immediately before the code is
+  generated and saved;
+* a denial is consumed as ``denied`` before the normal ``access_denied``
+  response;
+* two concurrent confirmations race on the same version: exactly one
+  compare-and-set succeeds and issues a code, the other receives
+  ``invalid_request_uri``;
+* a failure after the claim marks the record ``failed``, which is terminal.
+
+``consumed`` and ``failed`` records can never become ``active`` again.
+
+Frozen request rules
+--------------------
+
+When a PAR ``request_uri`` is resolved, its stored parameters replace the
+request payload instead of being merged with the URL. Only ``client_id`` and
+``request_uri`` are accepted on the browser request. Any other known
+authorization parameter (such as ``scope``, ``redirect_uri``, ``state`` or the
+PKCE parameters) is rejected with ``invalid_request``. A handle presented with
+another ``client_id``, an unknown/expired/consumed handle, returns
+``invalid_request_uri``. The exact ``redirect_uri`` and PKCE checks run at push
+time and again on the frozen request.
